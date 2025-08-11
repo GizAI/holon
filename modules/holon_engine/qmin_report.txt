@@ -1,0 +1,4 @@
+Gamma=Z6
+SNF diag: [6]
+mutual_locality m_vec: [3]
+q_min: 0.3333333333333333
