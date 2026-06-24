@@ -1,0 +1,118 @@
+{
+  "DFC": {
+    "construction": [
+      {
+        "component": 0,
+        "den": 8,
+        "float": 0.125,
+        "num": 1,
+        "supertrace_den": 8,
+        "supertrace_num": 1
+      },
+      {
+        "component": 1,
+        "den": 48,
+        "float": -0.020833333333333332,
+        "num": -1,
+        "supertrace_den": 48,
+        "supertrace_num": -1
+      },
+      {
+        "component": 2,
+        "den": 32,
+        "float": 0.03125,
+        "num": 1,
+        "supertrace_den": 32,
+        "supertrace_num": 1
+      }
+    ],
+    "target": [
+      {
+        "den": 8,
+        "float": 0.125,
+        "num": 1
+      },
+      {
+        "den": 48,
+        "float": -0.020833333333333332,
+        "num": -1
+      },
+      {
+        "den": 32,
+        "float": 0.03125,
+        "num": 1
+      }
+    ]
+  },
+  "LCI": {
+    "construction": [
+      {
+        "den": 3,
+        "float": 3.6666666666666665,
+        "num": 11
+      },
+      {
+        "den": 1,
+        "float": 0.0,
+        "num": 0
+      },
+      {
+        "den": 1,
+        "float": 5.0,
+        "num": 5
+      }
+    ],
+    "target": [
+      {
+        "den": 3,
+        "float": 3.6666666666666665,
+        "num": 11
+      },
+      {
+        "den": 1,
+        "float": 0.0,
+        "num": 0
+      },
+      {
+        "den": 1,
+        "float": 5.0,
+        "num": 5
+      }
+    ]
+  },
+  "TCPS_clock": {
+    "construction": {
+      "high": 6,
+      "low": 13
+    },
+    "target": {
+      "den": 13,
+      "float": 0.46153846153846156,
+      "num": 6
+    }
+  },
+  "alpha_U_inv": {
+    "construction": {
+      "D5_cartan_sector": {
+        "den": 1,
+        "float": 5.0,
+        "num": 5
+      },
+      "D5_root_sector": {
+        "den": 1,
+        "float": 40.0,
+        "num": 40
+      },
+      "T3_torsion_sector": {
+        "den": 2,
+        "float": 1.5,
+        "num": 3
+      }
+    },
+    "target": {
+      "den": 2,
+      "float": 46.5,
+      "num": 93
+    }
+  }
+}

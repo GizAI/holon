@@ -1,0 +1,387 @@
+{
+  "packet": {
+    "protocol": "STRICT_FREEZE_BEFORE_REVEAL_EXTERNAL_HOLDOUT_v1",
+    "freeze_time_utc": "2026-06-24T02:15:00Z",
+    "model_name": "ISDLC-TCPS-Fnu-chi Cabibbo-clock frozen extension, external-holdout packet",
+    "source_packet_sha256": "e0855d9ba75a7b58a66cadf60dcbcdedae18bf8e3bdd9eff63b8afe73af8aaaa",
+    "allowed_inputs": [
+      "r=6/13",
+      "alpha_U_inv=93/2",
+      "M_U=Mbar_Pl/40",
+      "rank_two_normal_neutrino_extension_m1=0",
+      "leading_order_CKM_unitarity_convention"
+    ],
+    "trained_on_declared": [
+      "alpha_em_inv_mz",
+      "sin2theta_hat_mz",
+      "alpha3_mz",
+      "rhoLambda_planck4"
+    ],
+    "new_external_holdout_targets_declared_before_reveal": [
+      "CKM_abs_Vtd",
+      "CKM_abs_Vts",
+      "CKM_abs_Vtb",
+      "CKM_gamma_deg",
+      "CKM_sin2beta",
+      "neutrino_sum_masses_eV",
+      "beta_decay_mbeta_eV_bound",
+      "proton_p_to_e_pi0_lifetime_bound_years",
+      "lightest_new_charged_threshold_GeV_bound",
+      "lightest_new_colored_threshold_GeV_bound",
+      "quark_ms_over_mb_external",
+      "quark_mc_over_mt_external"
+    ],
+    "predictions": {
+      "CKM_abs_Vus_diagnostic": 0.22645540682891915,
+      "CKM_abs_Vcb_diagnostic": 0.041871619534755176,
+      "CKM_abs_Vub_diagnostic": 0.0038710325953661396,
+      "CKM_J_diagnostic": 3.3716010047370996e-05,
+      "CKM_wolfenstein_A": 0.816496580927726,
+      "CKM_wolfenstein_rho_LO": 0.16137430609197567,
+      "CKM_wolfenstein_eta_LO": 0.375,
+      "CKM_abs_Vtd": 0.008710690688894424,
+      "CKM_abs_Vts": 0.041532912940577975,
+      "CKM_abs_Vtb": 0.9991155001220742,
+      "CKM_gamma_deg": 66.71626827889489,
+      "CKM_beta_deg": 24.09229117440546,
+      "CKM_sin2beta": 0.7452966162888277,
+      "PMNS_sin2_theta12_diagnostic": 0.31717171717171716,
+      "PMNS_sin2_theta23_diagnostic": 0.5512820512820513,
+      "PMNS_sin2_theta13_diagnostic": 0.02366863905325444,
+      "neutrino_m1_eV": 0.0,
+      "neutrino_m2_eV": 0.008574929257125443,
+      "neutrino_m3_eV": 0.05,
+      "neutrino_sum_masses_eV": 0.058574929257125444,
+      "beta_decay_mbeta_eV": 0.009052130160788001,
+      "proton_p_to_e_pi0_lifetime_years": 8.516862452184991e+37,
+      "lightest_new_charged_threshold_GeV": 6.0875e+16,
+      "lightest_new_colored_threshold_GeV": 6.0875e+16,
+      "quark_ms_over_mb_external": 0.02564102564102564,
+      "quark_mc_over_mt_external": 0.007889546351084813
+    },
+    "anti_abuse_rules": [
+      "No formula coefficients may be changed after this packet hash.",
+      "If target lacks prediction it counts as no-prediction, not success.",
+      "Bounds are scored only as pass/fail and do not count as precision hits.",
+      "Candidate selection after reveal is forbidden; this is a single frozen candidate test.",
+      "Passing this tranche is not equivalent to complete first-principles derivation."
+    ],
+    "claim_ceiling": "external replication attempt for a frozen candidate; not complete SM+LCDM first-principles derivation",
+    "sha256": "74e16bedd02799dab4fb3322516dc3a4648233df5742f20b9ad4056cf06e32ad"
+  },
+  "summary": {
+    "audit_name": "academic_external_holdout_audit_v0_7",
+    "generated_utc": "2026-06-24T02:09:52.679340+00:00",
+    "packet_path": "/mnt/data/strict_freeze_external_holdout/external_holdout_frozen_packet.json",
+    "packet_embedded_sha256": "74e16bedd02799dab4fb3322516dc3a4648233df5742f20b9ad4056cf06e32ad",
+    "packet_raw_file_sha256": "08cb6fcc767d547e9b5b7d8e19fcd6e499f9cce8e6d8766b911ba2b4e376b60f",
+    "packet_canonical_without_embedded_sha256": "74e16bedd02799dab4fb3322516dc3a4648233df5742f20b9ad4056cf06e32ad",
+    "source_packet_sha256": "e0855d9ba75a7b58a66cadf60dcbcdedae18bf8e3bdd9eff63b8afe73af8aaaa",
+    "external_precision_numeric_count": 5,
+    "external_precision_chi2": 11.782925279492321,
+    "external_precision_reduced_chi2": 2.3565850558984645,
+    "external_precision_max_abs_z": 3.2996923898934316,
+    "external_precision_failures": [
+      {
+        "quantity": "CKM_sin2beta",
+        "domain": "CKM_external",
+        "prediction": 0.7452966162888277,
+        "central": 0.709,
+        "sigma_minus": 0.011,
+        "sigma_plus": 0.011,
+        "z": 3.2996923898934316,
+        "abs_z": 3.2996923898934316,
+        "status": "fail_gt_3sigma",
+        "source": "PDG CKM review 2025 sin2beta world average",
+        "note": ""
+      }
+    ],
+    "bound_pass_count": 3,
+    "not_scoreable_count": 4,
+    "strict_academic_external_tranche_verdict": "FAIL",
+    "partial_positive_result": "CKM Vtd/Vts/Vtb/gamma pass; neutrino-sum, beta-decay, proton bound pass; sin2beta fails >3σ; thresholds and quark ratios are not publication-grade scoreable as frozen.",
+    "complete_SM_LCDM_first_principles_derivation_success": false,
+    "why_not_complete": [
+      "alpha(0), charged-lepton Yukawa ratios, full quark/lepton Yukawa matrices, Higgs-sector parameters, neutrino CP phase/absolute scale likelihood, and all six ΛCDM parameters are not derived from a microscopic action.",
+      "The packet has a >3σ failure in sin2β in the new CKM external tranche.",
+      "Threshold spectrum is not resolved into representations/couplings/decays, so collider comparison is not well-defined.",
+      "Quark mass ratios lack a common renormalization scheme and matching scale."
+    ]
+  },
+  "external_tranche_rows": [
+    {
+      "quantity": "CKM_abs_Vtd",
+      "domain": "CKM_external",
+      "prediction": 0.008710690688894424,
+      "central": 0.00858,
+      "sigma_minus": 0.00017,
+      "sigma_plus": 0.00019,
+      "z": 0.6878457310232812,
+      "abs_z": 0.6878457310232812,
+      "status": "pass_3sigma",
+      "source": "PDG CKM matrix global fit 2025 Eq. 12.27",
+      "note": ""
+    },
+    {
+      "quantity": "CKM_abs_Vts",
+      "domain": "CKM_external",
+      "prediction": 0.041532912940577975,
+      "central": 0.04111,
+      "sigma_minus": 0.00068,
+      "sigma_plus": 0.00077,
+      "z": 0.5492375851662002,
+      "abs_z": 0.5492375851662002,
+      "status": "pass_3sigma",
+      "source": "PDG CKM matrix global fit 2025 Eq. 12.27",
+      "note": ""
+    },
+    {
+      "quantity": "CKM_abs_Vtb",
+      "domain": "CKM_external",
+      "prediction": 0.9991155001220742,
+      "central": 0.999118,
+      "sigma_minus": 3.4e-05,
+      "sigma_plus": 2.9e-05,
+      "z": -0.07352582134637566,
+      "abs_z": 0.07352582134637566,
+      "status": "pass_3sigma",
+      "source": "PDG CKM matrix global fit 2025 Eq. 12.27",
+      "note": ""
+    },
+    {
+      "quantity": "CKM_gamma_deg",
+      "domain": "CKM_external",
+      "prediction": 66.71626827889489,
+      "central": 65.7,
+      "sigma_minus": 3.0,
+      "sigma_plus": 3.0,
+      "z": 0.3387560929649614,
+      "abs_z": 0.3387560929649614,
+      "status": "pass_3sigma",
+      "source": "PDG CKM review 2025 gamma average",
+      "note": ""
+    },
+    {
+      "quantity": "CKM_sin2beta",
+      "domain": "CKM_external",
+      "prediction": 0.7452966162888277,
+      "central": 0.709,
+      "sigma_minus": 0.011,
+      "sigma_plus": 0.011,
+      "z": 3.2996923898934316,
+      "abs_z": 3.2996923898934316,
+      "status": "fail_gt_3sigma",
+      "source": "PDG CKM review 2025 sin2beta world average",
+      "note": ""
+    },
+    {
+      "quantity": "neutrino_sum_masses_eV",
+      "domain": "cosmology_bound",
+      "prediction": 0.058574929257125444,
+      "limit": 0.12,
+      "cl": "95%",
+      "ratio_to_limit": 0.4881244104760454,
+      "status": "pass_upper_bound",
+      "source": "Planck 2018 + BAO bound",
+      "note": "bound only; not a precision hit"
+    },
+    {
+      "quantity": "beta_decay_mbeta_eV",
+      "domain": "direct_neutrino_mass_bound",
+      "prediction": 0.009052130160788001,
+      "limit": 0.45,
+      "cl": "90%",
+      "ratio_to_limit": 0.020115844801751114,
+      "status": "pass_upper_bound",
+      "source": "KATRIN 259-day 2025 bound",
+      "note": "bound only; not a precision hit"
+    },
+    {
+      "quantity": "proton_p_to_e_pi0_lifetime_years",
+      "domain": "proton_decay_bound",
+      "prediction": 8.516862452184991e+37,
+      "limit": 2.4e+34,
+      "cl": "90%",
+      "ratio_to_limit": 3548.692688410413,
+      "status": "pass_lower_bound",
+      "source": "Super-K p->e+pi0 450 kton-year bound",
+      "note": "bound only; not a precision hit"
+    },
+    {
+      "quantity": "lightest_new_charged_threshold_GeV",
+      "domain": "threshold_spectrum",
+      "prediction": 6.0875e+16,
+      "status": "not_scoreable_academic",
+      "note": "No model-independent collider bound exists for an unspecified charged threshold representation/couplings/decays. Prediction is only decoupled-at-GUT-scale, not an externally resolved spectrum."
+    },
+    {
+      "quantity": "lightest_new_colored_threshold_GeV",
+      "domain": "threshold_spectrum",
+      "prediction": 6.0875e+16,
+      "status": "not_scoreable_academic",
+      "note": "No model-independent collider bound exists for an unspecified colored threshold representation/couplings/decays. Prediction is only decoupled-at-GUT-scale, not an externally resolved spectrum."
+    },
+    {
+      "quantity": "quark_ms_over_mb_external",
+      "domain": "quark_mass_ratio",
+      "prediction": 0.02564102564102564,
+      "status": "not_scoreable_academic",
+      "note": "Frozen prediction does not specify common MSbar scale/RGE matching. PDG quotes m_s at 2 GeV and m_b at μ=m_b; direct ratio is scheme/scale inconsistent."
+    },
+    {
+      "quantity": "quark_mc_over_mt_external",
+      "domain": "quark_mass_ratio",
+      "prediction": 0.007889546351084813,
+      "status": "not_scoreable_academic",
+      "note": "Frozen prediction does not specify common MSbar scale/RGE/top mass definition. PDG top mass has direct/pole/MS ambiguities."
+    }
+  ],
+  "diagnostic_rows_not_part_of_strict_external_tranche": [
+    {
+      "name": "PMNS_sin2_theta12_diagnostic",
+      "domain": "diagnostic_PMNS",
+      "kind": "gaussian",
+      "central": 0.308,
+      "sigma_minus": 0.011,
+      "sigma_plus": 0.012,
+      "source": "NuFIT 6.0 IC24+SK NO",
+      "prediction": 0.31717171717171716,
+      "z": 0.7643097643097637,
+      "abs_z": 0.7643097643097637,
+      "status": "diagnostic_pass_3sigma"
+    },
+    {
+      "name": "PMNS_sin2_theta23_diagnostic",
+      "domain": "diagnostic_PMNS",
+      "kind": "gaussian",
+      "central": 0.47,
+      "sigma_minus": 0.013,
+      "sigma_plus": 0.017,
+      "source": "NuFIT 6.0 IC24+SK NO",
+      "prediction": 0.5512820512820513,
+      "z": 4.781297134238314,
+      "abs_z": 4.781297134238314,
+      "status": "diagnostic_fail_gt_3sigma"
+    },
+    {
+      "name": "PMNS_sin2_theta13_diagnostic",
+      "domain": "diagnostic_PMNS",
+      "kind": "gaussian",
+      "central": 0.02215,
+      "sigma_minus": 0.00058,
+      "sigma_plus": 0.00056,
+      "source": "NuFIT 6.0 IC24+SK NO",
+      "prediction": 0.02366863905325444,
+      "z": 2.7118554522400737,
+      "abs_z": 2.7118554522400737,
+      "status": "diagnostic_pass_3sigma"
+    },
+    {
+      "name": "Omega_c_h2_formula_diagnostic",
+      "domain": "diagnostic_LCDM",
+      "prediction": 0.11538461538461539,
+      "central": 0.12,
+      "sigma_minus": 0.001,
+      "sigma_plus": 0.001,
+      "z": -4.615384615384604,
+      "abs_z": 4.615384615384604,
+      "status": "diagnostic_fail_gt_3sigma",
+      "source": "Planck 2018 base LCDM; formula from earlier Cabibbo clock candidate"
+    }
+  ],
+  "external_tranche_definitions": [
+    {
+      "name": "CKM_abs_Vtd",
+      "domain": "CKM_external",
+      "kind": "gaussian",
+      "central": 0.00858,
+      "sigma_minus": 0.00017,
+      "sigma_plus": 0.00019,
+      "source": "PDG CKM matrix global fit 2025 Eq. 12.27"
+    },
+    {
+      "name": "CKM_abs_Vts",
+      "domain": "CKM_external",
+      "kind": "gaussian",
+      "central": 0.04111,
+      "sigma_minus": 0.00068,
+      "sigma_plus": 0.00077,
+      "source": "PDG CKM matrix global fit 2025 Eq. 12.27"
+    },
+    {
+      "name": "CKM_abs_Vtb",
+      "domain": "CKM_external",
+      "kind": "gaussian",
+      "central": 0.999118,
+      "sigma_minus": 3.4e-05,
+      "sigma_plus": 2.9e-05,
+      "source": "PDG CKM matrix global fit 2025 Eq. 12.27"
+    },
+    {
+      "name": "CKM_gamma_deg",
+      "domain": "CKM_external",
+      "kind": "gaussian",
+      "central": 65.7,
+      "sigma_minus": 3.0,
+      "sigma_plus": 3.0,
+      "source": "PDG CKM review 2025 gamma average"
+    },
+    {
+      "name": "CKM_sin2beta",
+      "domain": "CKM_external",
+      "kind": "gaussian",
+      "central": 0.709,
+      "sigma_minus": 0.011,
+      "sigma_plus": 0.011,
+      "source": "PDG CKM review 2025 sin2beta world average"
+    },
+    {
+      "name": "neutrino_sum_masses_eV",
+      "domain": "cosmology_bound",
+      "kind": "upper_bound",
+      "limit": 0.12,
+      "cl": "95%",
+      "source": "Planck 2018 + BAO bound"
+    },
+    {
+      "name": "beta_decay_mbeta_eV",
+      "domain": "direct_neutrino_mass_bound",
+      "kind": "upper_bound",
+      "limit": 0.45,
+      "cl": "90%",
+      "source": "KATRIN 259-day 2025 bound"
+    },
+    {
+      "name": "proton_p_to_e_pi0_lifetime_years",
+      "domain": "proton_decay_bound",
+      "kind": "lower_bound",
+      "limit": 2.4e+34,
+      "cl": "90%",
+      "source": "Super-K p->e+pi0 450 kton-year bound"
+    },
+    {
+      "name": "lightest_new_charged_threshold_GeV",
+      "domain": "threshold_spectrum",
+      "kind": "not_scoreable",
+      "reason": "No model-independent collider bound exists for an unspecified charged threshold representation/couplings/decays. Prediction is only decoupled-at-GUT-scale, not an externally resolved spectrum."
+    },
+    {
+      "name": "lightest_new_colored_threshold_GeV",
+      "domain": "threshold_spectrum",
+      "kind": "not_scoreable",
+      "reason": "No model-independent collider bound exists for an unspecified colored threshold representation/couplings/decays. Prediction is only decoupled-at-GUT-scale, not an externally resolved spectrum."
+    },
+    {
+      "name": "quark_ms_over_mb_external",
+      "domain": "quark_mass_ratio",
+      "kind": "not_scoreable",
+      "reason": "Frozen prediction does not specify common MSbar scale/RGE matching. PDG quotes m_s at 2 GeV and m_b at μ=m_b; direct ratio is scheme/scale inconsistent."
+    },
+    {
+      "name": "quark_mc_over_mt_external",
+      "domain": "quark_mass_ratio",
+      "kind": "not_scoreable",
+      "reason": "Frozen prediction does not specify common MSbar scale/RGE/top mass definition. PDG top mass has direct/pole/MS ambiguities."
+    }
+  ]
+}

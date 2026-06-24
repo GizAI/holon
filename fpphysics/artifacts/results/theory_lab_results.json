@@ -1,0 +1,1529 @@
+{
+  "config": {
+    "mode": "quick",
+    "top_k": 25,
+    "random_seed": 137,
+    "alpha_u_min": 35.0,
+    "alpha_u_max": 60.0,
+    "alpha_u_step": 0.5,
+    "max_clock": 8,
+    "planck_divisors": [
+      20,
+      24,
+      30,
+      32,
+      36,
+      40,
+      45,
+      48,
+      54,
+      60
+    ],
+    "beta_denominators": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "beta_abs_max": 16.0,
+    "instanton_n_min": 1,
+    "instanton_n_max": 180,
+    "instanton_power_min": -10,
+    "instanton_power_max": 10,
+    "symbolic_trials": 200,
+    "run_global_fits": true,
+    "de_maxiter": 25,
+    "de_popsize": 8
+  },
+  "hardware": {
+    "selected_backend": "numpy-cpu",
+    "cpu_count": 56,
+    "platform": "Linux-4.4.0-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "torch_available": true,
+    "torch_version": "2.10.0+cpu",
+    "cuda_available": false,
+    "cuda_device_count": 0,
+    "scipy_version": "1.17.0",
+    "numpy_version": "2.3.5"
+  },
+  "elapsed_seconds": 3.0278502600003776,
+  "targets": {
+    "alpha0_inv": {
+      "name": "alpha0_inv",
+      "value": 137.035999177,
+      "sigma": 2.1e-08,
+      "unit": "dimensionless",
+      "note": ""
+    },
+    "alpha_em_inv_mz": {
+      "name": "alpha_em_inv_mz",
+      "value": 127.93,
+      "sigma": 0.008,
+      "unit": "dimensionless",
+      "note": ""
+    },
+    "sin2theta_hat_mz": {
+      "name": "sin2theta_hat_mz",
+      "value": 0.23122,
+      "sigma": 6e-05,
+      "unit": "dimensionless",
+      "note": ""
+    },
+    "alpha1_inv_mz": {
+      "name": "alpha1_inv_mz",
+      "value": 59.01001524,
+      "sigma": 0.005901492080070598,
+      "unit": "dimensionless",
+      "note": ""
+    },
+    "alpha2_inv_mz": {
+      "name": "alpha2_inv_mz",
+      "value": 29.579974600000003,
+      "sigma": 0.007895537834599998,
+      "unit": "dimensionless",
+      "note": ""
+    },
+    "alpha3_mz": {
+      "name": "alpha3_mz",
+      "value": 0.1177,
+      "sigma": 0.0009,
+      "unit": "dimensionless",
+      "note": ""
+    },
+    "Lambda_m^-2": {
+      "name": "Lambda_m^-2",
+      "value": 1.0904327318149523e-52,
+      "sigma": 1.992242639789833e-54,
+      "unit": "m^-2",
+      "note": ""
+    },
+    "Lambda_lP^2": {
+      "name": "Lambda_lP^2",
+      "value": 2.848515946384373e-122,
+      "sigma": 5.204300142933652e-124,
+      "unit": "dimensionless",
+      "note": ""
+    },
+    "rhoLambda_planck4": {
+      "name": "rhoLambda_planck4",
+      "value": 1.1333884833579032e-123,
+      "sigma": 2.0707252327043704e-125,
+      "unit": "dimensionless",
+      "note": ""
+    }
+  },
+  "candidates": [
+    {
+      "family": "cosmological_instanton_scan",
+      "name": "rhoLambda=8π^-4 exp(-86π)",
+      "formula": "rhoLambda_planck4=(8π)^-4 exp(-86π)",
+      "predictions": {
+        "rhoLambda_planck4": 1.1552450886501768e-123
+      },
+      "target_values": {
+        "rhoLambda_planck4": 1.1333884833579032e-123
+      },
+      "residuals": {
+        "rhoLambda_planck4": 2.1856605292273561e-125
+      },
+      "z_scores": {
+        "rhoLambda_planck4": 1.0555048514924792
+      },
+      "chi2": 1.1140904915241605,
+      "max_abs_z": 1.0555048514924792,
+      "log10_error": 0.00829533550362415,
+      "complexity": 6.739999999999999,
+      "leakage_score": 0.18,
+      "provenance": "integer_instanton_ansatz_scan",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "N": 86,
+        "base": "8π",
+        "power": -4
+      },
+      "notes": "정밀 유도에는 prefactor/determinant의 독립 계산이 필요하다.",
+      "objective": 6.96209049152416
+    },
+    {
+      "family": "seeded_candidate",
+      "name": "ISDLC--TCPS one-loop gauge-coupling selection",
+      "formula": "ISDLC--TCPS one-loop gauge-coupling selection",
+      "predictions": {
+        "alpha_em_inv_mz": 127.9077332788044,
+        "sin2theta_hat_mz": 0.2312790123121689,
+        "alpha3_mz": 0.11804865399076522
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": -0.022266721195606465,
+        "sin2theta_hat_mz": 5.901231216889902e-05,
+        "alpha3_mz": 0.0003486539907652242
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": -2.783340149450808,
+        "sin2theta_hat_mz": 0.9835385361483169,
+        "alpha3_mz": 0.3873933230724713
+      },
+      "chi2": 8.864404026394753,
+      "max_abs_z": 2.783340149450808,
+      "log10_error": 0.0004903336980645437,
+      "complexity": 10.0,
+      "leakage_score": 0.08,
+      "provenance": "physically_audited_seed_ISDLC_TCPS_gauge",
+      "verdict": "tension",
+      "parameters": {
+        "free_parameters": []
+      },
+      "notes": "기존 엔진 후보를 자동 발견 랭킹에 seed로 보존했다.",
+      "objective": 12.864404026394753
+    },
+    {
+      "family": "cosmological_instanton_scan",
+      "name": "rhoLambda=2π^-7 exp(-86π)",
+      "formula": "rhoLambda_planck4=(2π)^-7 exp(-86π)",
+      "predictions": {
+        "rhoLambda_planck4": 1.1922696561723448e-123
+      },
+      "target_values": {
+        "rhoLambda_planck4": 1.1333884833579032e-123
+      },
+      "residuals": {
+        "rhoLambda_planck4": 5.88811728144416e-125
+      },
+      "z_scores": {
+        "rhoLambda_planck4": 2.843504868945973
+      },
+      "chi2": 8.085519939719456,
+      "max_abs_z": 2.843504868945973,
+      "log10_error": 0.021995695741128553,
+      "complexity": 7.94,
+      "leakage_score": 0.18,
+      "provenance": "integer_instanton_ansatz_scan",
+      "verdict": "tension",
+      "parameters": {
+        "N": 86,
+        "base": "2π",
+        "power": -7
+      },
+      "notes": "정밀 유도에는 prefactor/determinant의 독립 계산이 필요하다.",
+      "objective": 14.173519939719455
+    },
+    {
+      "family": "cosmological_instanton_scan",
+      "name": "rhoLambda=π^-3 exp(-89π)",
+      "formula": "rhoLambda_planck4=(π)^-3 exp(-89π)",
+      "predictions": {
+        "rhoLambda_planck4": 1.1996509161052991e-123
+      },
+      "target_values": {
+        "rhoLambda_planck4": 1.1333884833579032e-123
+      },
+      "residuals": {
+        "rhoLambda_planck4": 6.626243274739592e-125
+      },
+      "z_scores": {
+        "rhoLambda_planck4": 3.199962588028016
+      },
+      "chi2": 10.239760564778956,
+      "max_abs_z": 3.199962588028016,
+      "log10_error": 0.0246760946399977,
+      "complexity": 6.28,
+      "leakage_score": 0.18,
+      "provenance": "integer_instanton_ansatz_scan",
+      "verdict": "tension",
+      "parameters": {
+        "N": 89,
+        "base": "π",
+        "power": -3
+      },
+      "notes": "정밀 유도에는 prefactor/determinant의 독립 계산이 필요하다.",
+      "objective": 15.995760564778957
+    },
+    {
+      "family": "cosmological_instanton_scan",
+      "name": "rhoLambda=8π^-5 exp(-85π)",
+      "formula": "rhoLambda_planck4=(8π)^-5 exp(-85π)",
+      "predictions": {
+        "rhoLambda_planck4": 1.063679097663815e-123
+      },
+      "target_values": {
+        "rhoLambda_planck4": 1.1333884833579032e-123
+      },
+      "residuals": {
+        "rhoLambda_planck4": -6.970938569408825e-125
+      },
+      "z_scores": {
+        "rhoLambda_planck4": -3.3664237337296403
+      },
+      "chi2": 11.332808755018211,
+      "max_abs_z": 3.3664237337296403,
+      "log10_error": 0.027568170340616687,
+      "complexity": 7.16,
+      "leakage_score": 0.18,
+      "provenance": "integer_instanton_ansatz_scan",
+      "verdict": "tension",
+      "parameters": {
+        "N": 85,
+        "base": "8π",
+        "power": -5
+      },
+      "notes": "정밀 유도에는 prefactor/determinant의 독립 계산이 필요하다.",
+      "objective": 17.264808755018212
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=44.5, MbarPl/40, clock 1:7, B=(-22/3,1/5,-4)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.93244236392931,
+        "sin2theta_hat_mz": 0.2312369264150307,
+        "alpha3_mz": 0.11753164490949924
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.002442363929304747,
+        "sin2theta_hat_mz": 1.692641503070469e-05,
+        "alpha3_mz": -0.0001683550905007547
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.3052954911630934,
+        "sin2theta_hat_mz": 0.28210691717841146,
+        "alpha3_mz": -0.18706121166750522
+      },
+      "chi2": 0.20778154655493675,
+      "max_abs_z": 0.3052954911630934,
+      "log10_error": 0.00022057699697809667,
+      "complexity": 29.292757140919853,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 44.5,
+        "M_U_GeV": 6.0875e+16,
+        "planck_divisor": 40,
+        "clock": [
+          1,
+          7
+        ],
+        "B_high_fractional": [
+          "-22/3",
+          "1/5",
+          "-4"
+        ],
+        "required_continuous_B": [
+          -7.3330790536283486,
+          0.19597966415894902,
+          -4.017921281020583
+        ],
+        "alpha_inv_mz": [
+          59.00984256175573,
+          29.58270476100308,
+          8.508346843694834
+        ]
+      },
+      "notes": "",
+      "objective": 20.566332974738906
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=39, MbarPl/24, clock 1:7, B=(1/3,17/2,19/4)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.93230375996629,
+        "sin2theta_hat_mz": 0.23121795176593848,
+        "alpha3_mz": 0.11763775729880022
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.0023037599662814046,
+        "sin2theta_hat_mz": -2.0482340615246564e-06,
+        "alpha3_mz": -6.224270119978281e-05
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.28796999578517557,
+        "sin2theta_hat_mz": -0.03413723435874427,
+        "alpha3_mz": -0.06915855688864757
+      },
+      "chi2": 0.08887497523309817,
+      "max_abs_z": 0.28796999578517557,
+      "log10_error": 8.046479228998956e-05,
+      "complexity": 30.26881869049588,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 39.0,
+        "M_U_GeV": 1.0145833333333333e+17,
+        "planck_divisor": 24,
+        "clock": [
+          1,
+          7
+        ],
+        "B_high_fractional": [
+          "1/3",
+          "17/2",
+          "19/4"
+        ],
+        "required_continuous_B": [
+          0.3315634801349473,
+          8.49960734139933,
+          4.743477888209474
+        ],
+        "alpha_inv_mz": [
+          59.0112351119334,
+          29.580245240077275,
+          8.500672088298975
+        ]
+      },
+      "notes": "",
+      "objective": 20.642638713332275
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=43.5, MbarPl/60, clock 1:8, B=(-34/5,2,-8/3)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.9292679711315,
+        "sin2theta_hat_mz": 0.2312412254795532,
+        "alpha3_mz": 0.11754361189874869
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": -0.0007320288685122023,
+        "sin2theta_hat_mz": 2.1225479553188542e-05,
+        "alpha3_mz": -0.0001563881012513063
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": -0.09150360856402528,
+        "sin2theta_hat_mz": 0.3537579925531424,
+        "alpha3_mz": -0.1737645569458959
+      },
+      "chi2": 0.163711748926071,
+      "max_abs_z": 0.3537579925531424,
+      "log10_error": 0.00020659390320366218,
+      "complexity": 30.40689059560852,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 43.5,
+        "M_U_GeV": 4.0583333333333336e+16,
+        "planck_divisor": 60,
+        "clock": [
+          1,
+          8
+        ],
+        "B_high_fractional": [
+          "-34/5",
+          "2",
+          "-8/3"
+        ],
+        "required_continuous_B": [
+          -6.796702433822709,
+          1.9957313384982902,
+          -2.685618202613165
+        ],
+        "alpha_inv_mz": [
+          59.00804836247093,
+          29.582520700346603,
+          8.507480618014304
+        ]
+      },
+      "notes": "",
+      "objective": 20.745089868047774
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=39, MbarPl/54, clock 1:5, B=(9/5,16/3,1)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.93306326170145,
+        "sin2theta_hat_mz": 0.23118618116884532,
+        "alpha3_mz": 0.11785025566130183
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.0030632617014418884,
+        "sin2theta_hat_mz": -3.381883115469164e-05,
+        "alpha3_mz": 0.00015025566130183465
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.38290771268023605,
+        "sin2theta_hat_mz": -0.5636471859115274,
+        "alpha3_mz": 0.16695073477981628
+      },
+      "chi2": 0.4921890144595147,
+      "max_abs_z": 0.5636471859115274,
+      "log10_error": 0.00020933027306831511,
+      "complexity": 28.95378119121704,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 39.0,
+        "M_U_GeV": 4.509259259259259e+16,
+        "planck_divisor": 54,
+        "clock": [
+          1,
+          5
+        ],
+        "B_high_fractional": [
+          "9/5",
+          "16/3",
+          "1"
+        ],
+        "required_continuous_B": [
+          1.7955331946114457,
+          5.3373648655060775,
+          1.012069639423554
+        ],
+        "alpha_inv_mz": [
+          59.01402415259783,
+          29.57635634070506,
+          8.485344341330668
+        ]
+      },
+      "notes": "",
+      "objective": 20.782945252702923
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=39, MbarPl/54, clock 1:1, B=(10/3,-1/3,-13/3)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.93306326170145,
+        "sin2theta_hat_mz": 0.2311861811688453,
+        "alpha3_mz": 0.11785025566130188
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.0030632617014418884,
+        "sin2theta_hat_mz": -3.38188311547194e-05,
+        "alpha3_mz": 0.0001502556613018763
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.38290771268023605,
+        "sin2theta_hat_mz": -0.5636471859119899,
+        "alpha3_mz": 0.16695073477986255
+      },
+      "chi2": 0.4921890144600515,
+      "max_abs_z": 0.5636471859119899,
+      "log10_error": 0.0002093302730684115,
+      "complexity": 28.956745858195305,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 39.0,
+        "M_U_GeV": 4.509259259259259e+16,
+        "planck_divisor": 54,
+        "clock": [
+          1,
+          1
+        ],
+        "B_high_fractional": [
+          "10/3",
+          "-1/3",
+          "-13/3"
+        ],
+        "required_continuous_B": [
+          3.331844398203814,
+          -0.3319894892757522,
+          -4.329310120192147
+        ],
+        "alpha_inv_mz": [
+          59.01402415259783,
+          29.576356340705058,
+          8.485344341330665
+        ]
+      },
+      "notes": "",
+      "objective": 20.78353818609911
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=44, MbarPl/36, clock 1:7, B=(-20/3,1,-19/6)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.92952696406297,
+        "sin2theta_hat_mz": 0.23123362256143815,
+        "alpha3_mz": 0.1181347777200091
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": -0.000473035937034183,
+        "sin2theta_hat_mz": 1.3622561438136893e-05,
+        "alpha3_mz": 0.0004347777200091052
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": -0.059129492129272876,
+        "sin2theta_hat_mz": 0.22704269063561489,
+        "alpha3_mz": 0.4830863555656725
+      },
+      "chi2": 0.2884171071442486,
+      "max_abs_z": 0.4830863555656725,
+      "log10_error": 0.0005428325445248344,
+      "complexity": 30.030364719583407,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 44.0,
+        "M_U_GeV": 6.763888888888889e+16,
+        "planck_divisor": 36,
+        "clock": [
+          1,
+          7
+        ],
+        "B_high_fractional": [
+          "-20/3",
+          "1",
+          "-19/6"
+        ],
+        "required_continuous_B": [
+          -6.664811318809594,
+          0.9976021856529815,
+          -3.1207628612611797
+        ],
+        "alpha_inv_mz": [
+          59.00875140695491,
+          29.58160795247146,
+          8.46490778837454
+        ]
+      },
+      "notes": "",
+      "objective": 20.79449005106093
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=43.5, MbarPl/48, clock 3:7, B=(0,-6/5,-21/4)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.92413153625859,
+        "sin2theta_hat_mz": 0.23120348493792142,
+        "alpha3_mz": 0.11749307772830121
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": -0.005868463741421692,
+        "sin2theta_hat_mz": -1.6515062078586995e-05,
+        "alpha3_mz": -0.00020692227169878674
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": -0.7335579676777115,
+        "sin2theta_hat_mz": -0.27525103464311657,
+        "alpha3_mz": -0.22991363522087416
+      },
+      "chi2": 0.6667307036760379,
+      "max_abs_z": 0.7335579676777115,
+      "log10_error": 0.00027170869632492926,
+      "complexity": 28.76540221886225,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 43.5,
+        "M_U_GeV": 5.0729166666666664e+16,
+        "planck_divisor": 48,
+        "clock": [
+          3,
+          7
+        ],
+        "B_high_fractional": [
+          "0",
+          "-6/5",
+          "-21/4"
+        ],
+        "required_continuous_B": [
+          0.0008878691439536315,
+          -1.1978597437558458,
+          -5.259230117218455
+        ],
+        "alpha_inv_mz": [
+          59.00857591045113,
+          29.57650501884004,
+          8.511139714226113
+        ]
+      },
+      "notes": "",
+      "objective": 20.919811147448485
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=40, MbarPl/40, clock 2:5, B=(2,6/5,-14/5)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.9318159169688,
+        "sin2theta_hat_mz": 0.23117302957749603,
+        "alpha3_mz": 0.11778110351112038
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.0018159169687947951,
+        "sin2theta_hat_mz": -4.697042250398353e-05,
+        "alpha3_mz": 8.110351112038117e-05
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.2269896210993494,
+        "sin2theta_hat_mz": -0.7828403750663921,
+        "alpha3_mz": 0.09011501235597907
+      },
+      "chi2": 0.672484056372834,
+      "max_abs_z": 0.7828403750663921,
+      "log10_error": 0.00013118433852476257,
+      "complexity": 29.00689059560852,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 40.0,
+        "M_U_GeV": 6.0875e+16,
+        "planck_divisor": 40,
+        "clock": [
+          2,
+          5
+        ],
+        "B_high_fractional": [
+          "2",
+          "6/5",
+          "-14/5"
+        ],
+        "required_continuous_B": [
+          1.997137592241435,
+          1.2036007812733758,
+          -2.7962308822426696
+        ],
+        "alpha_inv_mz": [
+          59.014458271255556,
+          29.574385464876205,
+          8.490326293347934
+        ]
+      },
+      "notes": "",
+      "objective": 20.97386217549454
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=41.5, MbarPl/36, clock 1:7, B=(-3,14/3,1/2)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.9233248652835,
+        "sin2theta_hat_mz": 0.2312266523449043,
+        "alpha3_mz": 0.1181672449191716
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": -0.0066751347165023844,
+        "sin2theta_hat_mz": 6.6523449042954486e-06,
+        "alpha3_mz": 0.0004672449191716055
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": -0.834391839562798,
+        "sin2theta_hat_mz": 0.1108724150715908,
+        "alpha3_mz": 0.5191610213017839
+      },
+      "chi2": 0.9780306003919086,
+      "max_abs_z": 0.834391839562798,
+      "log10_error": 0.0005852677168413388,
+      "complexity": 27.651853096329674,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 41.5,
+        "M_U_GeV": 6.763888888888889e+16,
+        "planck_divisor": 36,
+        "clock": [
+          1,
+          7
+        ],
+        "B_high_fractional": [
+          "-3",
+          "14/3",
+          "1/2"
+        ],
+        "required_continuous_B": [
+          -2.9947303214117516,
+          4.667683183050824,
+          0.5493181361366626
+        ],
+        "alpha_inv_mz": [
+          59.006425619912605,
+          29.579282165429163,
+          8.462582001332239
+        ]
+      },
+      "notes": "",
+      "objective": 21.00840121965784
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=39.5, MbarPl/36, clock 5:8, B=(11/4,1/3,-18/5)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.9346650226149,
+        "sin2theta_hat_mz": 0.2312052652491831,
+        "alpha3_mz": 0.11792544263764602
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.004665022614886993,
+        "sin2theta_hat_mz": -1.4734750816897124e-05,
+        "alpha3_mz": 0.00022544263764602557
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.5831278268608742,
+        "sin2theta_hat_mz": -0.24557918028161874,
+        "alpha3_mz": 0.2504918196066951
+      },
+      "chi2": 0.4630933479371505,
+      "max_abs_z": 0.5831278268608742,
+      "log10_error": 0.00029152181474939684,
+      "complexity": 30.56689059560852,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 39.5,
+        "M_U_GeV": 6.763888888888889e+16,
+        "planck_divisor": 36,
+        "clock": [
+          5,
+          8
+        ],
+        "B_high_fractional": [
+          "11/4",
+          "1/3",
+          "-18/5"
+        ],
+        "required_continuous_B": [
+          2.7484337048646212,
+          0.33371809381495754,
+          -3.592250546432147
+        ],
+        "alpha_inv_mz": [
+          59.013298116897495,
+          29.579168161119064,
+          8.479934250259614
+        ]
+      },
+      "notes": "",
+      "objective": 21.07647146705885
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=42, MbarPl/32, clock 1:5, B=(-11/6,11/5,-7/4)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.92871290240195,
+        "sin2theta_hat_mz": 0.23118341211678764,
+        "alpha3_mz": 0.11754787151277733
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": -0.0012870975980519006,
+        "sin2theta_hat_mz": -3.6587883212368943e-05,
+        "alpha3_mz": -0.00015212848722266636
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": -0.16088719975648758,
+        "sin2theta_hat_mz": -0.6097980535394824,
+        "alpha3_mz": -0.1690316524696293
+      },
+      "chi2": 0.4263100566826389,
+      "max_abs_z": 0.6097980535394824,
+      "log10_error": 0.0002115967329561663,
+      "complexity": 30.76235034341381,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 42.0,
+        "M_U_GeV": 7.609375e+16,
+        "planck_divisor": 32,
+        "clock": [
+          1,
+          5
+        ],
+        "B_high_fractional": [
+          "-11/6",
+          "11/5",
+          "-7/4"
+        ],
+        "required_continuous_B": [
+          -1.8357633989057185,
+          2.2054623769284443,
+          -1.7620649310065144
+        ],
+        "alpha_inv_mz": [
+          59.012229927549456,
+          29.5749963564862,
+          8.507172330137012
+        ]
+      },
+      "notes": "",
+      "objective": 21.078780125365398
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=44.5, MbarPl/48, clock 1:6, B=(-29/5,-1/3,-14/3)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.93012664304365,
+        "sin2theta_hat_mz": 0.23118508111266833,
+        "alpha3_mz": 0.1179880661945413
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.000126643043643071,
+        "sin2theta_hat_mz": -3.491888733167525e-05,
+        "alpha3_mz": 0.0002880661945413032
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.015830380455383875,
+        "sin2theta_hat_mz": -0.5819814555279209,
+        "alpha3_mz": 0.3200735494903369
+      },
+      "chi2": 0.4414000926071028,
+      "max_abs_z": 0.5819814555279209,
+      "log10_error": 0.00037588081303628574,
+      "complexity": 30.80113611327464,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 44.5,
+        "M_U_GeV": 5.0729166666666664e+16,
+        "planck_divisor": 48,
+        "clock": [
+          1,
+          6
+        ],
+        "B_high_fractional": [
+          "-29/5",
+          "-1/3",
+          "-14/3"
+        ],
+        "required_continuous_B": [
+          -5.803547775450103,
+          -0.32758442920635034,
+          -4.639795546811165
+        ],
+        "alpha_inv_mz": [
+          59.0127539629906,
+          29.575536704725977,
+          8.475433425200631
+        ]
+      },
+      "notes": "",
+      "objective": 21.10162731526203
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=37.5, MbarPl/36, clock 1:4, B=(10/3,27/5,7/5)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.92551144281434,
+        "sin2theta_hat_mz": 0.2312291098029044,
+        "alpha3_mz": 0.1175251889865336
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": -0.004488557185666764,
+        "sin2theta_hat_mz": 9.109802904389008e-06,
+        "alpha3_mz": -0.00017481101346640548
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": -0.5610696482083455,
+        "sin2theta_hat_mz": 0.15183004840648348,
+        "alpha3_mz": -0.1942344594071172
+      },
+      "chi2": 0.37557853896092674,
+      "max_abs_z": 0.5610696482083455,
+      "log10_error": 0.0002259509745207414,
+      "complexity": 31.412188759557147,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 37.5,
+        "M_U_GeV": 6.763888888888889e+16,
+        "planck_divisor": 36,
+        "clock": [
+          1,
+          4
+        ],
+        "B_high_fractional": [
+          "10/3",
+          "27/5",
+          "7/5"
+        ],
+        "required_continuous_B": [
+          3.335874546515501,
+          5.3998829868046085,
+          1.3884048324832563
+        ],
+        "alpha_inv_mz": [
+          59.00724558648667,
+          29.58010213200322,
+          8.508814226323713
+        ]
+      },
+      "notes": "",
+      "objective": 21.158016290872354
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=47.5, MbarPl/24, clock 1:7, B=(-12,-23/6,-38/5)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.93029230519289,
+        "sin2theta_hat_mz": 0.23121569107316556,
+        "alpha3_mz": 0.11780741152305814
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.0002923051928860332,
+        "sin2theta_hat_mz": -4.3089268344509435e-06,
+        "alpha3_mz": 0.00010741152305814017
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.03653814911075415,
+        "sin2theta_hat_mz": -0.07181544724084905,
+        "alpha3_mz": 0.11934613673126686
+      },
+      "chi2": 0.020735995155521124,
+      "max_abs_z": 0.11934613673126686,
+      "log10_error": 0.00013507887280896398,
+      "complexity": 33.21367713630342,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 47.5,
+        "M_U_GeV": 1.0145833333333333e+17,
+        "planck_divisor": 24,
+        "clock": [
+          1,
+          7
+        ],
+        "B_high_fractional": [
+          "-12",
+          "-23/6",
+          "-38/5"
+        ],
+        "required_continuous_B": [
+          -12.00067548227511,
+          -3.8326316210107274,
+          -7.588761074200582
+        ],
+        "alpha_inv_mz": [
+          59.01048081639338,
+          29.57949094453725,
+          8.488430286954166
+        ]
+      },
+      "notes": "",
+      "objective": 21.1634714224162
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=41.5, MbarPl/60, clock 1:7, B=(-13/5,22/5,-1/5)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.9342820548795,
+        "sin2theta_hat_mz": 0.23119829451704293,
+        "alpha3_mz": 0.11784460950780255
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.0042820548794964,
+        "sin2theta_hat_mz": -2.1705482957073974e-05,
+        "alpha3_mz": 0.00014460950780255388
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.53525685993705,
+        "sin2theta_hat_mz": -0.36175804928456623,
+        "alpha3_mz": 0.16067723089172653
+      },
+      "chi2": 0.4431859648588786,
+      "max_abs_z": 0.53525685993705,
+      "log10_error": 0.00019618865527411996,
+      "complexity": 31.26263735755879,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 41.5,
+        "M_U_GeV": 4.0583333333333336e+16,
+        "planck_divisor": 60,
+        "clock": [
+          1,
+          7
+        ],
+        "B_high_fractional": [
+          "-13/5",
+          "22/5",
+          "-1/5"
+        ],
+        "required_continuous_B": [
+          -2.6054265043308815,
+          4.402662774769278,
+          -0.1844627432557199
+        ],
+        "alpha_inv_mz": [
+          59.01365654011742,
+          29.578187821350472,
+          8.485750889893605
+        ]
+      },
+      "notes": "",
+      "objective": 21.195713436370635
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=46.5, MbarPl/54, clock 1:6, B=(-25/3,-3,-37/5)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.9318603929938,
+        "sin2theta_hat_mz": 0.23118482897134063,
+        "alpha3_mz": 0.11767869986455079
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.001860392993791038,
+        "sin2theta_hat_mz": -3.517102865938093e-05,
+        "alpha3_mz": -2.130013544920928e-05
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.23254912422387974,
+        "sin2theta_hat_mz": -0.5861838109896822,
+        "alpha3_mz": -0.023666817165788088
+      },
+      "chi2": 0.39825067367843975,
+      "max_abs_z": 0.5861838109896822,
+      "log10_error": 5.032756420175896e-05,
+      "complexity": 31.846173844717036,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 46.5,
+        "M_U_GeV": 4.509259259259259e+16,
+        "planck_divisor": 54,
+        "clock": [
+          1,
+          6
+        ],
+        "B_high_fractional": [
+          "-25/3",
+          "-3",
+          "-37/5"
+        ],
+        "required_continuous_B": [
+          -8.337958243057578,
+          -2.994710182569394,
+          -7.401999057443443
+        ],
+        "alpha_inv_mz": [
+          59.013573076832465,
+          29.575905264939696,
+          8.497714549455498
+        ]
+      },
+      "notes": "",
+      "objective": 21.267485442621847
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=46.5, MbarPl/45, clock 1:8, B=(-12,-14/5,-43/6)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.93013146567498,
+        "sin2theta_hat_mz": 0.23119160692922128,
+        "alpha3_mz": 0.11761875742452743
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.00013146567496846728,
+        "sin2theta_hat_mz": -2.8393070778731655e-05,
+        "alpha3_mz": -8.124257547256764e-05
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.01643320937105841,
+        "sin2theta_hat_mz": -0.4732178463121942,
+        "alpha3_mz": -0.09026952830285292
+      },
+      "chi2": 0.23235376817860406,
+      "max_abs_z": 0.4732178463121942,
+      "log10_error": 0.00011788512082997229,
+      "complexity": 33.12313920671969,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 46.5,
+        "M_U_GeV": 5.411111111111111e+16,
+        "planck_divisor": 45,
+        "clock": [
+          1,
+          8
+        ],
+        "B_high_fractional": [
+          "-12",
+          "-14/5",
+          "-43/6"
+        ],
+        "required_continuous_B": [
+          -12.003723773152949,
+          -2.7940122560288856,
+          -7.176422365194959
+        ],
+        "alpha_inv_mz": [
+          59.01225527847543,
+          29.57637266821593,
+          8.502045268091454
+        ]
+      },
+      "notes": "",
+      "objective": 21.356981609522542
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=45, MbarPl/32, clock 1:7, B=(-41/5,-2/5,-22/5)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.92891430551859,
+        "sin2theta_hat_mz": 0.23118363853244342,
+        "alpha3_mz": 0.11765186025404728
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": -0.0010856944814179315,
+        "sin2theta_hat_mz": -3.636146755658931e-05,
+        "alpha3_mz": -4.813974595271886e-05
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": -0.13571181017724143,
+        "sin2theta_hat_mz": -0.6060244592764885,
+        "alpha3_mz": -0.053488606614132066
+      },
+      "chi2": 0.3885443717004653,
+      "max_abs_z": 0.6060244592764885,
+      "log10_error": 8.321743347131169e-05,
+      "complexity": 32.48194377373524,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 45.0,
+        "M_U_GeV": 7.609375e+16,
+        "planck_divisor": 32,
+        "clock": [
+          1,
+          7
+        ],
+        "B_high_fractional": [
+          "-41/5",
+          "-2/5",
+          "-22/5"
+        ],
+        "required_continuous_B": [
+          -8.203350582199189,
+          -0.39282732553141797,
+          -4.405085958333592
+        ],
+        "alpha_inv_mz": [
+          59.01230545371819,
+          29.57507188265494,
+          8.499653110802381
+        ]
+      },
+      "notes": "",
+      "objective": 21.384933126447514
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=40.5, MbarPl/20, clock 1:8, B=(-11/4,38/5,4)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.9240780313892,
+        "sin2theta_hat_mz": 0.23121681049462642,
+        "alpha3_mz": 0.11801274173031204
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": -0.005921968610806516,
+        "sin2theta_hat_mz": -3.189505373590862e-06,
+        "alpha3_mz": 0.00031274173031203834
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": -0.7402460763508145,
+        "sin2theta_hat_mz": -0.053158422893181026,
+        "alpha3_mz": 0.3474908114578204
+      },
+      "chi2": 0.6715399355248807,
+      "max_abs_z": 0.7402460763508145,
+      "log10_error": 0.00039284414870940655,
+      "complexity": 31.144394119358456,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 40.5,
+        "M_U_GeV": 1.2175e+17,
+        "planck_divisor": 20,
+        "clock": [
+          1,
+          8
+        ],
+        "B_high_fractional": [
+          "-11/4",
+          "38/5",
+          "4"
+        ],
+        "required_continuous_B": [
+          -2.74596226381826,
+          7.60288572449263,
+          4.036557502860681
+        ],
+        "alpha_inv_mz": [
+          59.0075284341034,
+          29.57819730788352,
+          8.473661278756191
+        ]
+      },
+      "notes": "",
+      "objective": 21.400418759396572
+    },
+    {
+      "family": "target_guided_rg_clock",
+      "name": "RG clock alphaU^-1=44, MbarPl/54, clock 1:7, B=(-32/5,3/4,-15/4)",
+      "formula": "alpha_i^-1(MZ)=alphaU^-1+bSM_i ln(MI/MZ)/(2π)+B_i ln(MU/MI)/(2π)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.93493245004015,
+        "sin2theta_hat_mz": 0.2312430886498681,
+        "alpha3_mz": 0.11774323528549317
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": 0.004932450040143976,
+        "sin2theta_hat_mz": 2.3088649868080457e-05,
+        "alpha3_mz": 4.323528549317335e-05
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": 0.616556255017997,
+        "sin2theta_hat_mz": 0.3848108311346743,
+        "alpha3_mz": 0.048039206103525946
+      },
+      "chi2": 0.5305287566834334,
+      "max_abs_z": 0.616556255017997,
+      "log10_error": 7.320367355243472e-05,
+      "complexity": 31.909855608330947,
+      "leakage_score": 0.58,
+      "provenance": "target_guided_beta_quantization_not_derivation",
+      "verdict": "passes_numeric_tests_needs_physics_audit",
+      "parameters": {
+        "alpha_u_inv": 44.0,
+        "M_U_GeV": 4.509259259259259e+16,
+        "planck_divisor": 54,
+        "clock": [
+          1,
+          7
+        ],
+        "B_high_fractional": [
+          "-32/5",
+          "3/4",
+          "-15/4"
+        ],
+        "required_continuous_B": [
+          -6.400747082819733,
+          0.7439173672620011,
+          -3.7453651564035764
+        ],
+        "alpha_inv_mz": [
+          59.010518114448374,
+          29.58406892595952,
+          8.493056926585126
+        ]
+      },
+      "notes": "",
+      "objective": 21.41249987834962
+    },
+    {
+      "family": "continuous_global_fit_audit",
+      "name": "DE fit of RG clock with fixed ISDLC effective beta",
+      "formula": "fit alphaU^-1, ln(MU/MZ), clock fraction; B=(-8/5,-3,-7)",
+      "predictions": {
+        "alpha_em_inv_mz": 127.92999994601811,
+        "sin2theta_hat_mz": 0.2312199906323604,
+        "alpha3_mz": 0.11769944584030403
+      },
+      "target_values": {
+        "alpha_em_inv_mz": 127.93,
+        "sin2theta_hat_mz": 0.23122,
+        "alpha3_mz": 0.1177
+      },
+      "residuals": {
+        "alpha_em_inv_mz": -5.398189273364551e-08,
+        "sin2theta_hat_mz": -9.367639608459655e-09,
+        "alpha3_mz": -5.541596959646178e-07
+      },
+      "z_scores": {
+        "alpha_em_inv_mz": -6.747736591705689e-06,
+        "sin2theta_hat_mz": -0.00015612732680766092,
+        "alpha3_mz": -0.0006157329955162419
+      },
+      "chi2": 4.035483958926216e-07,
+      "max_abs_z": 0.0006157329955162419,
+      "log10_error": 6.875150512916761e-07,
+      "complexity": 35.0,
+      "leakage_score": 0.94,
+      "provenance": "continuous_parameters_fitted_to_benchmark",
+      "verdict": "fit_or_posthoc_not_derivation",
+      "parameters": {
+        "alpha_u_inv": 46.47826974957012,
+        "ln_MU_MZ": 34.09261107357072,
+        "clock_fraction_high": 0.314110465886922,
+        "optimizer_fun": 4.035483958926216e-07,
+        "success": false
+      },
+      "notes": "연속 최적화가 수치를 맞추더라도 제1원리 유도가 아니다.",
+      "objective": 30.500000403548395
+    },
+    {
+      "family": "symbolic_alpha_numerology_audit",
+      "name": "alpha0^-1≈-24π+-34π²+548",
+      "formula": "alpha0_inv=-24*π+-34*π²+548",
+      "predictions": {
+        "alpha0_inv": 137.03522667680681
+      },
+      "target_values": {
+        "alpha0_inv": 137.035999177
+      },
+      "residuals": {
+        "alpha0_inv": -0.0007725001931930819
+      },
+      "z_scores": {
+        "alpha0_inv": -36785.72348538486
+      },
+      "chi2": 1353189452.343195,
+      "max_abs_z": 36785.72348538486,
+      "log10_error": 2.448214475132339e-06,
+      "complexity": 17.247927513443585,
+      "leakage_score": 0.88,
+      "provenance": "posthoc_symbolic_search",
+      "verdict": "fit_or_posthoc_not_derivation",
+      "parameters": {
+        "ia": -24,
+        "ib": -34,
+        "c": 548,
+        "atom_a": "π",
+        "atom_b": "π²"
+      },
+      "notes": "표적값을 사용한 절편 선택이므로 유도가 아니라 numerology 감시용이다.",
+      "objective": 1353189477.7927804
+    }
+  ],
+  "summary": {
+    "candidate_count": 203,
+    "reported_candidate_count": 27,
+    "family_counts": {
+      "cosmological_instanton_scan": 75,
+      "seeded_candidate": 2,
+      "target_guided_rg_clock": 100,
+      "continuous_global_fit_audit": 1,
+      "symbolic_alpha_numerology_audit": 25
+    },
+    "low_leakage_numeric_pass_count": 1,
+    "complete_first_principles_derivation_found": false,
+    "strict_conclusion": "automatic_generation_succeeded_but_no_complete_first_principles_derivation_certified"
+  }
+}

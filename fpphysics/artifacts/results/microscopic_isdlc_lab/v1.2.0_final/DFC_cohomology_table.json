@@ -1,0 +1,211 @@
+{
+  "Q01": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "Q12": [
+    [
+      0,
+      1
+    ]
+  ],
+  "Q_squared": [
+    [
+      0,
+      0
+    ]
+  ],
+  "Q_squared_zero": true,
+  "acyclic_pair_supertrace": [
+    {
+      "den": 1,
+      "float": 0.0,
+      "num": 0
+    },
+    {
+      "den": 1,
+      "float": 0.0,
+      "num": 0
+    },
+    {
+      "den": 1,
+      "float": 0.0,
+      "num": 0
+    }
+  ],
+  "basis": [
+    {
+      "K": 0,
+      "charges": [
+        {
+          "den": 8,
+          "float": 0.125,
+          "num": 1
+        },
+        {
+          "den": 48,
+          "float": -0.020833333333333332,
+          "num": -1
+        },
+        {
+          "den": 32,
+          "float": 0.03125,
+          "num": 1
+        }
+      ],
+      "degree": 0,
+      "grading": 1,
+      "name": "h0",
+      "protected": true,
+      "space": "C0"
+    },
+    {
+      "K": 1,
+      "charges": [
+        {
+          "den": 12,
+          "float": 0.4166666666666667,
+          "num": 5
+        },
+        {
+          "den": 12,
+          "float": -0.4166666666666667,
+          "num": -5
+        },
+        {
+          "den": 1,
+          "float": 0.0,
+          "num": 0
+        }
+      ],
+      "degree": 0,
+      "grading": 1,
+      "name": "a0",
+      "protected": false,
+      "space": "C0"
+    },
+    {
+      "K": 1,
+      "charges": [
+        {
+          "den": 12,
+          "float": 0.4166666666666667,
+          "num": 5
+        },
+        {
+          "den": 12,
+          "float": -0.4166666666666667,
+          "num": -5
+        },
+        {
+          "den": 1,
+          "float": 0.0,
+          "num": 0
+        }
+      ],
+      "degree": 1,
+      "grading": -1,
+      "name": "a1",
+      "protected": false,
+      "space": "C1"
+    },
+    {
+      "K": 2,
+      "charges": [
+        {
+          "den": 24,
+          "float": -0.2916666666666667,
+          "num": -7
+        },
+        {
+          "den": 24,
+          "float": 0.2916666666666667,
+          "num": 7
+        },
+        {
+          "den": 1,
+          "float": 0.0,
+          "num": 0
+        }
+      ],
+      "degree": 1,
+      "grading": -1,
+      "name": "c1",
+      "protected": false,
+      "space": "C1"
+    },
+    {
+      "K": 2,
+      "charges": [
+        {
+          "den": 24,
+          "float": -0.2916666666666667,
+          "num": -7
+        },
+        {
+          "den": 24,
+          "float": 0.2916666666666667,
+          "num": 7
+        },
+        {
+          "den": 1,
+          "float": 0.0,
+          "num": 0
+        }
+      ],
+      "degree": 2,
+      "grading": 1,
+      "name": "c2",
+      "protected": false,
+      "space": "C2"
+    }
+  ],
+  "cohomology_dimensions": {
+    "H0": 1,
+    "H1": 0,
+    "H2": 0
+  },
+  "gauge_insertions": [
+    "I_SU4",
+    "I_SU2L",
+    "I_SU2R"
+  ],
+  "mass_operator": "M=M_star*2^K",
+  "protected_supertrace": [
+    {
+      "component": 0,
+      "den": 8,
+      "float": 0.125,
+      "num": 1,
+      "supertrace_den": 8,
+      "supertrace_num": 1
+    },
+    {
+      "component": 1,
+      "den": 48,
+      "float": -0.020833333333333332,
+      "num": -1,
+      "supertrace_den": 48,
+      "supertrace_num": -1
+    },
+    {
+      "component": 2,
+      "den": 32,
+      "float": 0.03125,
+      "num": 1,
+      "supertrace_den": 32,
+      "supertrace_num": 1
+    }
+  ],
+  "spaces": {
+    "C0": 2,
+    "C1": 2,
+    "C2": 1
+  }
+}

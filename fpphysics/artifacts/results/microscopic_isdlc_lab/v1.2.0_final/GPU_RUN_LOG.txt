@@ -1,0 +1,85 @@
+{"event": "null_scan_progress", "seen": 128000000, "best_score": 0.20878012478351593}
+{"event": "null_scan_progress", "seen": 256000000, "best_score": 0.20878012478351593}
+{"event": "null_scan_progress", "seen": 384000000, "best_score": 0.20878012478351593}
+{"event": "null_scan_progress", "seen": 512000000, "best_score": 0.17481717467308044}
+{"event": "null_scan_progress", "seen": 640000000, "best_score": 0.16268599033355713}
+{"event": "null_scan_progress", "seen": 768000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 896000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 1024000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 1152000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 1280000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 1408000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 1536000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 1664000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 1792000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 1920000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 2048000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 2176000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 2304000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 2432000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 2560000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 2688000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 2816000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 2944000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 3072000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 3200000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 3328000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 3456000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 3584000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 3712000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 3840000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 3968000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 4096000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 4224000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 4352000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 4480000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 4608000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 4736000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 4864000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 4992000000, "best_score": 0.09928295016288757}
+{"event": "null_scan_progress", "seen": 5000000000, "best_score": 0.09928295016288757}
+{
+  "paths": {
+    "json": "/home/user/fpphysics-gpu-search/runs/20260624_microscopic_lab_v1_2_0_final_131344/microscopic_isdlc_lab_results.json",
+    "report": "/home/user/fpphysics-gpu-search/runs/20260624_microscopic_lab_v1_2_0_final_131344/MICROSCOPIC_ISDLC_LAB_REPORT_ko.md",
+    "target_leakage_audit": "/home/user/fpphysics-gpu-search/runs/20260624_microscopic_lab_v1_2_0_final_131344/target_leakage_audit.json",
+    "finite_hamiltonian_stiffness_table": "/home/user/fpphysics-gpu-search/runs/20260624_microscopic_lab_v1_2_0_final_131344/finite_hamiltonian_stiffness_table.json",
+    "LCI_regulator_table": "/home/user/fpphysics-gpu-search/runs/20260624_microscopic_lab_v1_2_0_final_131344/LCI_regulator_table.json",
+    "DFC_cohomology_table": "/home/user/fpphysics-gpu-search/runs/20260624_microscopic_lab_v1_2_0_final_131344/DFC_cohomology_table.json",
+    "failed_ordinary_messenger_control": "/home/user/fpphysics-gpu-search/runs/20260624_microscopic_lab_v1_2_0_final_131344/failed_ordinary_messenger_control.json",
+    "null_scan_manifest": "/home/user/fpphysics-gpu-search/runs/20260624_microscopic_lab_v1_2_0_final_131344/null_scan_manifest.json",
+    "exact_rational_provenance": "/home/user/fpphysics-gpu-search/runs/20260624_microscopic_lab_v1_2_0_final_131344/exact_rational_provenance.json"
+  },
+  "null_scan": {
+    "backend": "torch-cuda",
+    "candidate_count": 5000000000,
+    "elapsed_seconds": 6.8121106550097466,
+    "candidates_per_second": 733986902.6236254,
+    "target_score": 0.0,
+    "better_or_equal_count": 0,
+    "p_null_upper_rule_of_succession": 1.9999999996e-10,
+    "best_null_score": 0.09928295016288757,
+    "best_null_candidate": {
+      "alpha_u_inv": 46.5,
+      "clock": 0.48275861144065857,
+      "lci": [
+        3.6666667461395264,
+        0.0,
+        5.0
+      ],
+      "dfc": [
+        0.125,
+        -0.0416666679084301,
+        0.0416666679084301
+      ],
+      "root_n": 5
+    },
+    "ensemble_contract": {
+      "alpha_u_inv": "2*n*(n-1)+n+b2/2, n in [3,9], b2 in [0,7]",
+      "clock": "p/q, p in [1,20], q in [2,31]",
+      "lci": "components in Z/3 over [-4,8]",
+      "dfc": "components in Z/96 over [-1/4,1/4], includes 1/8, -1/48, and 1/32"
+    }
+  },
+  "status": "theorem_audit_lab_not_final_physics_proof"
+}

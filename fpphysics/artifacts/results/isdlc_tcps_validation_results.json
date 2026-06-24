@@ -1,0 +1,934 @@
+{
+  "audit": {
+    "minimal_sm_parameter_count_with_neutrinos_plus_gravity": {
+      "charged_lepton_masses": 3,
+      "ckm_cp_phase": 1,
+      "ckm_mixing_angles": 3,
+      "cosmological_constant": 1,
+      "gauge_couplings": 3,
+      "higgs_potential": 2,
+      "neutrino_masses_or_splittings": 3,
+      "newton_constant_or_planck_scale": 1,
+      "pmns_cp_phases_dirac_plus_majorana": 3,
+      "pmns_mixing_angles": 3,
+      "qcd_theta": 1,
+      "quark_masses": 6,
+      "total": 30
+    },
+    "minimal_sm_parameter_count_without_neutrinos_plus_gravity": {
+      "charged_lepton_masses": 3,
+      "ckm_cp_phase": 1,
+      "ckm_mixing_angles": 3,
+      "cosmological_constant": 1,
+      "gauge_couplings": 3,
+      "higgs_potential": 2,
+      "newton_constant_or_planck_scale": 1,
+      "qcd_theta": 1,
+      "quark_masses": 6,
+      "total": 21
+    },
+    "sm_parameter_statuses": [
+      {
+        "description": "low-energy fine-structure constant",
+        "reason": "Gauge symmetry permits a U(1)_Y kinetic coefficient; RG running plus thresholds relate alpha(0) to electroweak-scale boundary data but do not fix its numerical value.",
+        "status": "fit_or_boundary_condition",
+        "symbol": "alpha(0)"
+      },
+      {
+        "description": "Standard-Model gauge couplings",
+        "reason": "The group SU(3)xSU(2)xU(1) and matter representations fix beta-function coefficients; the integration constants are measured inputs unless a UV theory supplies boundary conditions.",
+        "status": "fit_or_boundary_condition",
+        "symbol": "g1, g2, g3 at M_Z"
+      },
+      {
+        "description": "fermion masses and mixings",
+        "reason": "Renormalizability allows independent Yukawa operators consistent with the gauge symmetries.",
+        "status": "fit_or_boundary_condition",
+        "symbol": "Yukawa matrices"
+      },
+      {
+        "description": "Higgs potential parameters",
+        "reason": "The Higgs mass and vacuum expectation value are not fixed by the SM gauge principle.",
+        "status": "fit_or_boundary_condition",
+        "symbol": "lambda_H, mu_H^2"
+      },
+      {
+        "description": "cosmological constant",
+        "reason": "In GR plus local QFT the vacuum-energy counterterm is an allowed relevant operator; its renormalized value is fixed observationally unless a UV principle cancels/selects it.",
+        "status": "fit_or_boundary_condition",
+        "symbol": "Lambda"
+      },
+      {
+        "description": "one-loop gauge beta-function coefficients",
+        "reason": "Given gauge group and particle content, b_i are calculable from representation theory.",
+        "status": "conditional_derivation",
+        "symbol": "b_i"
+      },
+      {
+        "description": "selected dimensional conversion constants",
+        "reason": "After the SI redefinition these are unit definitions, not dynamical predictions of a theory.",
+        "status": "fixed_by_definition",
+        "symbol": "c, h, e in SI"
+      }
+    ],
+    "targets": {
+      "Lambda_lP^2": {
+        "name": "Lambda_lP^2",
+        "note": "",
+        "sigma": 5.204300142933652e-124,
+        "unit": "dimensionless",
+        "value": 2.848515946384373e-122
+      },
+      "Lambda_m^-2": {
+        "name": "Lambda_m^-2",
+        "note": "",
+        "sigma": 1.992242639789833e-54,
+        "unit": "m^-2",
+        "value": 1.0904327318149523e-52
+      },
+      "alpha0_inv": {
+        "name": "alpha0_inv",
+        "note": "",
+        "sigma": 2.1e-08,
+        "unit": "dimensionless",
+        "value": 137.035999177
+      },
+      "alpha1_inv_mz": {
+        "name": "alpha1_inv_mz",
+        "note": "",
+        "sigma": 0.005901492080070598,
+        "unit": "dimensionless",
+        "value": 59.01001524
+      },
+      "alpha2_inv_mz": {
+        "name": "alpha2_inv_mz",
+        "note": "",
+        "sigma": 0.007895537834599998,
+        "unit": "dimensionless",
+        "value": 29.579974600000003
+      },
+      "alpha3_mz": {
+        "name": "alpha3_mz",
+        "note": "",
+        "sigma": 0.0009,
+        "unit": "dimensionless",
+        "value": 0.1177
+      },
+      "alpha_em_inv_mz": {
+        "name": "alpha_em_inv_mz",
+        "note": "",
+        "sigma": 0.008,
+        "unit": "dimensionless",
+        "value": 127.93
+      },
+      "rhoLambda_planck4": {
+        "name": "rhoLambda_planck4",
+        "note": "",
+        "sigma": 2.0707252327043704e-125,
+        "unit": "dimensionless",
+        "value": 1.1333884833579032e-123
+      },
+      "sin2theta_hat_mz": {
+        "name": "sin2theta_hat_mz",
+        "note": "",
+        "sigma": 6e-05,
+        "unit": "dimensionless",
+        "value": 0.23122
+      }
+    }
+  },
+  "results": [
+    {
+      "chi2_predictive": null,
+      "diagnostics": {
+        "cosmology": {
+          "H0_s^-1": 2.1842852410855023e-18,
+          "Lambda_lP^2": 2.848515946384373e-122,
+          "Lambda_m^-2": 1.0904327318149523e-52,
+          "Planck_naive_over_observed_Lambda_lP2": 3.5105999714317976e+121,
+          "rho_Lambda_energy_J_m^-3": 5.250928536627662e-10,
+          "rho_Lambda_mass_kg_m^-3": 5.842445930612312e-27,
+          "rho_critical_mass_kg_m^-3": 8.53285516373932e-27
+        },
+        "gauge_couplings_at_MZ": {
+          "alpha1": 0.016946275914908576,
+          "alpha1_inv": 59.01001524,
+          "alpha2": 0.033806655128094665,
+          "alpha2_inv": 29.579974600000003,
+          "alpha3": 0.1177,
+          "alpha3_inv": 8.496176720475786,
+          "g1": 0.4614685077878335,
+          "g2": 0.6517875095239734,
+          "g3": 1.2161668558672674,
+          "mu_gev": 91.188
+        }
+      },
+      "dof_predictive": 0,
+      "free_parameters": [
+        "alpha_hat^(5)(M_Z)",
+        "sin^2 theta_hat_W(M_Z)",
+        "alpha_s(M_Z)",
+        "Lambda or Omega_Lambda/H0"
+      ],
+      "max_abs_z_predictive": null,
+      "model_name": "SM+GR boundary-condition control",
+      "scores": {
+        "Lambda_lP^2": {
+          "counted_as_prediction": false,
+          "name": "Lambda_lP^2",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "Lambda_lP^2",
+            "note": "Dimensionless observed value in Planck units.",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 2.848515946384373e-122
+          },
+          "residual": 0.0,
+          "sigma_combined": 5.204300142933652e-124,
+          "target": {
+            "name": "Lambda_lP^2",
+            "note": "",
+            "sigma": 5.204300142933652e-124,
+            "unit": "dimensionless",
+            "value": 2.848515946384373e-122
+          },
+          "z": 0.0
+        },
+        "Lambda_m^-2": {
+          "counted_as_prediction": false,
+          "name": "Lambda_m^-2",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "Lambda_m^-2",
+            "note": "Inferred from H0 and Omega_Lambda in the benchmark cosmological model.",
+            "sigma_theory": null,
+            "unit": "m^-2",
+            "value": 1.0904327318149523e-52
+          },
+          "residual": 0.0,
+          "sigma_combined": 1.992242639789833e-54,
+          "target": {
+            "name": "Lambda_m^-2",
+            "note": "",
+            "sigma": 1.992242639789833e-54,
+            "unit": "m^-2",
+            "value": 1.0904327318149523e-52
+          },
+          "z": 0.0
+        },
+        "alpha0_inv": {
+          "counted_as_prediction": false,
+          "name": "alpha0_inv",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "alpha0_inv",
+            "note": "Control model uses the measured low-energy boundary condition.",
+            "sigma_theory": 2.1e-08,
+            "unit": "dimensionless",
+            "value": 137.035999177
+          },
+          "residual": 0.0,
+          "sigma_combined": 2.9698484809834994e-08,
+          "target": {
+            "name": "alpha0_inv",
+            "note": "",
+            "sigma": 2.1e-08,
+            "unit": "dimensionless",
+            "value": 137.035999177
+          },
+          "z": 0.0
+        },
+        "alpha1_inv_mz": {
+          "counted_as_prediction": false,
+          "name": "alpha1_inv_mz",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "alpha1_inv_mz",
+            "note": "",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 59.01001524
+          },
+          "residual": 0.0,
+          "sigma_combined": 0.005901492080070598,
+          "target": {
+            "name": "alpha1_inv_mz",
+            "note": "",
+            "sigma": 0.005901492080070598,
+            "unit": "dimensionless",
+            "value": 59.01001524
+          },
+          "z": 0.0
+        },
+        "alpha2_inv_mz": {
+          "counted_as_prediction": false,
+          "name": "alpha2_inv_mz",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "alpha2_inv_mz",
+            "note": "",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 29.579974600000003
+          },
+          "residual": 0.0,
+          "sigma_combined": 0.007895537834599998,
+          "target": {
+            "name": "alpha2_inv_mz",
+            "note": "",
+            "sigma": 0.007895537834599998,
+            "unit": "dimensionless",
+            "value": 29.579974600000003
+          },
+          "z": 0.0
+        },
+        "alpha3_mz": {
+          "counted_as_prediction": false,
+          "name": "alpha3_mz",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "alpha3_mz",
+            "note": "",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 0.1177
+          },
+          "residual": 0.0,
+          "sigma_combined": 0.0009,
+          "target": {
+            "name": "alpha3_mz",
+            "note": "",
+            "sigma": 0.0009,
+            "unit": "dimensionless",
+            "value": 0.1177
+          },
+          "z": 0.0
+        }
+      },
+      "verdict": "control_or_no_genuine_predictions"
+    },
+    {
+      "chi2_predictive": 8.864404026394753,
+      "diagnostics": {
+        "alpha0_status": {
+          "not_predicted_by_pure_TCPS": true,
+          "reason": "alpha(0) needs charged-lepton thresholds, hadronic vacuum polarization, and electroweak/scheme matching, which are not fixed by the one-loop TCPS gauge clock alone.",
+          "required_inverse_coupling_IR_shift_alpha0_minus_alphaMZ": 9.128265898195608
+        },
+        "beta_audit_exact": {
+          "B1_PS_effective": "-8/5",
+          "B2_PS_effective": "-3",
+          "B3_PS_effective": "-7",
+          "b2L": "-3",
+          "b2R": "2",
+          "b4": "-7",
+          "hypercharge_matching": "alpha1^{-1}=(3/5) alpha2R^{-1}+(2/5) alpha4^{-1}",
+          "spectrum": "3[(4,2,1)+(4bar,1,2)]_Weyl + (1,2,2)_complex + 2(6,1,3)_real + 4(15,1,1)_real + 3(1,1,3)_real"
+        },
+        "exact_counts": {
+          "D5_rank": 5,
+          "D5_root_count": 40,
+          "alpha_U_inv_exact": "93/2",
+          "b2_T3": 3
+        },
+        "logical_status": "conditional on the ISDLC no-modulus/self-dual-line-code axioms and the TCPS discrete clock data; not an established consequence of known QFT or quantum gravity",
+        "transition_clock": {
+          "M_I_GeV": 1267702994577.6792,
+          "M_U_GeV": 6.0875e+16,
+          "M_U_formula": "reduced M_Pl / |Delta(D5)| = Mplbar/40",
+          "clock_ratio_ln_MU_MI_to_ln_MI_MZ": "6:13",
+          "ln_MI_MZ": 23.35530440362586,
+          "ln_MU_MI": 10.779371263211933
+        },
+        "unscored_internal_couplings": {
+          "alpha1_inv_mz": 58.99521543539651,
+          "alpha2_inv_mz": 29.58237421981022,
+          "alpha3_inv_mz": 8.47108345748888,
+          "e_mz": 0.3134415243104451,
+          "g1_mz": 0.4615263871889041,
+          "g2_mz": 0.651761073614418,
+          "g3_mz": 1.2179668043810576,
+          "gY_mz": 0.3574968022835804
+        }
+      },
+      "dof_predictive": 3,
+      "free_parameters": [],
+      "max_abs_z_predictive": 2.783340149450808,
+      "model_name": "ISDLC--TCPS one-loop gauge-coupling selection",
+      "scores": {
+        "alpha3_mz": {
+          "counted_as_prediction": true,
+          "name": "alpha3_mz",
+          "prediction": {
+            "derived": true,
+            "fitted": false,
+            "name": "alpha3_mz",
+            "note": "TCPS one-loop prediction for alpha_s(M_Z).",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 0.11804865399076522
+          },
+          "residual": 0.0003486539907652242,
+          "sigma_combined": 0.0009,
+          "target": {
+            "name": "alpha3_mz",
+            "note": "",
+            "sigma": 0.0009,
+            "unit": "dimensionless",
+            "value": 0.1177
+          },
+          "z": 0.3873933230724713
+        },
+        "alpha_em_inv_mz": {
+          "counted_as_prediction": true,
+          "name": "alpha_em_inv_mz",
+          "prediction": {
+            "derived": true,
+            "fitted": false,
+            "name": "alpha_em_inv_mz",
+            "note": "TCPS one-loop prediction for the MSbar electromagnetic coupling at M_Z.",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 127.9077332788044
+          },
+          "residual": -0.022266721195606465,
+          "sigma_combined": 0.008,
+          "target": {
+            "name": "alpha_em_inv_mz",
+            "note": "",
+            "sigma": 0.008,
+            "unit": "dimensionless",
+            "value": 127.93
+          },
+          "z": -2.783340149450808
+        },
+        "sin2theta_hat_mz": {
+          "counted_as_prediction": true,
+          "name": "sin2theta_hat_mz",
+          "prediction": {
+            "derived": true,
+            "fitted": false,
+            "name": "sin2theta_hat_mz",
+            "note": "TCPS one-loop prediction from alpha2^{-1}/alpha_em^{-1}.",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 0.2312790123121689
+          },
+          "residual": 5.901231216889902e-05,
+          "sigma_combined": 6e-05,
+          "target": {
+            "name": "sin2theta_hat_mz",
+            "note": "",
+            "sigma": 6e-05,
+            "unit": "dimensionless",
+            "value": 0.23122
+          },
+          "z": 0.9835385361483169
+        }
+      },
+      "verdict": "tension"
+    },
+    {
+      "chi2_predictive": 10297.929364372694,
+      "diagnostics": {
+        "caveat": "order-of-magnitude interesting, but not a precision derivation until the zero-mode determinant and normalization are derived.",
+        "observed_Lambda_lP2": 2.848515946384373e-122,
+        "observed_rhoLambda_planck4_using_Lambda_lP2_over_8pi": 1.1333884833579032e-123,
+        "predicted_rhoLambda_planck4": 3.234733816845406e-123,
+        "prediction_formula": "rho_Lambda/M_Pl^4 = (4*pi)^4 exp(-93*pi)",
+        "ratio_predicted_to_observed_rho": 2.854038014628332
+      },
+      "dof_predictive": 1,
+      "free_parameters": [
+        "normalization convention / zero-mode determinant"
+      ],
+      "max_abs_z_predictive": 101.47871384863278,
+      "model_name": "ISDLC--TCPS torsion-instanton vacuum-energy ansatz",
+      "scores": {
+        "rhoLambda_planck4": {
+          "counted_as_prediction": true,
+          "name": "rhoLambda_planck4",
+          "prediction": {
+            "derived": true,
+            "fitted": false,
+            "name": "rhoLambda_planck4",
+            "note": "Stress test of (4*pi)^4 exp(-93*pi); determinant/prefactor is not derived from a specified microscopic Hamiltonian here.",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 3.234733816845406e-123
+          },
+          "residual": 2.1013453334875033e-123,
+          "sigma_combined": 2.0707252327043704e-125,
+          "target": {
+            "name": "rhoLambda_planck4",
+            "note": "",
+            "sigma": 2.0707252327043704e-125,
+            "unit": "dimensionless",
+            "value": 1.1333884833579032e-123
+          },
+          "z": 101.47871384863278
+        }
+      },
+      "verdict": "fails_current_scored_tests"
+    },
+    {
+      "chi2_predictive": 2675.2693748188267,
+      "diagnostics": {
+        "alpha_u": 0.023582129025926393,
+        "alpha_u_inv": 42.40499231009174,
+        "b_high": null,
+        "b_low": [
+          4.1,
+          -3.1666666666666665,
+          -7.0
+        ],
+        "fit_pair": [
+          0,
+          1
+        ],
+        "input_alpha_inv_mz": [
+          59.01001524,
+          29.579974600000003,
+          8.496176720475786
+        ],
+        "least_squares_meeting_scale": {
+          "alpha_inv_at_scale_1": 40.62035943739206,
+          "alpha_inv_at_scale_2": 43.78336729307118,
+          "alpha_inv_at_scale_3": 39.893150042001544,
+          "log_mu_over_mz": 28.18185735196001,
+          "mean_alpha_inv": 41.43229225748826,
+          "mu_gev": 158184100144515.66,
+          "std_alpha_inv": 1.6887616258453957
+        },
+        "m_u_gev": 10266003728703.414,
+        "model_name": "minimal non-SUSY SU(5) one-loop gauge unification",
+        "predicted_alpha_inv_mz": [
+          59.01001524,
+          29.5799746,
+          14.054953161467882
+        ],
+        "predicted_alphas_mz": [
+          0.016946275914908576,
+          0.033806655128094665,
+          0.07114929438125293
+        ],
+        "residual_alpha_inv": [
+          0.0,
+          -3.552713678800501e-15,
+          5.558776440992096
+        ],
+        "threshold_gev": null
+      },
+      "dof_predictive": 1,
+      "free_parameters": [
+        "alpha_U",
+        "M_U"
+      ],
+      "max_abs_z_predictive": 51.723006243052296,
+      "model_name": "minimal non-SUSY SU(5) one-loop gauge unification",
+      "scores": {
+        "alpha1_inv_mz": {
+          "counted_as_prediction": false,
+          "name": "alpha1_inv_mz",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "alpha1_inv_mz",
+            "note": "Used to fit alpha_U and M_U.",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 59.01001524
+          },
+          "residual": 0.0,
+          "sigma_combined": 0.005901492080070598,
+          "target": {
+            "name": "alpha1_inv_mz",
+            "note": "",
+            "sigma": 0.005901492080070598,
+            "unit": "dimensionless",
+            "value": 59.01001524
+          },
+          "z": 0.0
+        },
+        "alpha2_inv_mz": {
+          "counted_as_prediction": false,
+          "name": "alpha2_inv_mz",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "alpha2_inv_mz",
+            "note": "Used to fit alpha_U and M_U.",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 29.5799746
+          },
+          "residual": -3.552713678800501e-15,
+          "sigma_combined": 0.007895537834599998,
+          "target": {
+            "name": "alpha2_inv_mz",
+            "note": "",
+            "sigma": 0.007895537834599998,
+            "unit": "dimensionless",
+            "value": 29.579974600000003
+          },
+          "z": -4.4996474631933516e-13
+        },
+        "alpha3_mz": {
+          "counted_as_prediction": true,
+          "name": "alpha3_mz",
+          "prediction": {
+            "derived": true,
+            "fitted": false,
+            "name": "alpha3_mz",
+            "note": "Prediction after fitting alpha_U and M_U to alpha_1 and alpha_2.",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 0.07114929438125293
+          },
+          "residual": -0.046550705618747065,
+          "sigma_combined": 0.0009,
+          "target": {
+            "name": "alpha3_mz",
+            "note": "",
+            "sigma": 0.0009,
+            "unit": "dimensionless",
+            "value": 0.1177
+          },
+          "z": -51.723006243052296
+        }
+      },
+      "verdict": "fails_current_scored_tests"
+    },
+    {
+      "chi2_predictive": 69.755305372787,
+      "diagnostics": {
+        "alpha_u": 0.03842286469618593,
+        "alpha_u_inv": 26.026169779560078,
+        "b_high": [
+          6.6,
+          1.0,
+          -3.0
+        ],
+        "b_low": [
+          4.1,
+          -3.1666666666666665,
+          -7.0
+        ],
+        "fit_pair": [
+          0,
+          1
+        ],
+        "input_alpha_inv_mz": [
+          59.01001524,
+          29.579974600000003,
+          8.496176720475786
+        ],
+        "m_u_gev": 9794565455942904.0,
+        "model_name": "MSSM one-loop gauge unification with sharp threshold M_SUSY=1000 GeV",
+        "predicted_alpha_inv_mz": [
+          59.01001524,
+          29.579974600000003,
+          9.075791112186264
+        ],
+        "predicted_alphas_mz": [
+          0.016946275914908576,
+          0.033806655128094665,
+          0.11018323225369059
+        ],
+        "residual_alpha_inv": [
+          0.0,
+          0.0,
+          0.5796143917104786
+        ],
+        "threshold_gev": 1000.0
+      },
+      "dof_predictive": 1,
+      "free_parameters": [
+        "M_SUSY",
+        "alpha_U",
+        "M_U"
+      ],
+      "max_abs_z_predictive": 8.351964162566013,
+      "model_name": "MSSM one-loop gauge unification with sharp threshold M_SUSY=1000 GeV",
+      "scores": {
+        "alpha1_inv_mz": {
+          "counted_as_prediction": false,
+          "name": "alpha1_inv_mz",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "alpha1_inv_mz",
+            "note": "",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 59.01001524
+          },
+          "residual": 0.0,
+          "sigma_combined": 0.005901492080070598,
+          "target": {
+            "name": "alpha1_inv_mz",
+            "note": "",
+            "sigma": 0.005901492080070598,
+            "unit": "dimensionless",
+            "value": 59.01001524
+          },
+          "z": 0.0
+        },
+        "alpha2_inv_mz": {
+          "counted_as_prediction": false,
+          "name": "alpha2_inv_mz",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "alpha2_inv_mz",
+            "note": "",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 29.579974600000003
+          },
+          "residual": 0.0,
+          "sigma_combined": 0.007895537834599998,
+          "target": {
+            "name": "alpha2_inv_mz",
+            "note": "",
+            "sigma": 0.007895537834599998,
+            "unit": "dimensionless",
+            "value": 29.579974600000003
+          },
+          "z": 0.0
+        },
+        "alpha3_mz": {
+          "counted_as_prediction": true,
+          "name": "alpha3_mz",
+          "prediction": {
+            "derived": true,
+            "fitted": false,
+            "name": "alpha3_mz",
+            "note": "Prediction after choosing M_SUSY and fitting alpha_U, M_U to alpha_1 and alpha_2.",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 0.11018323225369059
+          },
+          "residual": -0.007516767746309411,
+          "sigma_combined": 0.0009,
+          "target": {
+            "name": "alpha3_mz",
+            "note": "",
+            "sigma": 0.0009,
+            "unit": "dimensionless",
+            "value": 0.1177
+          },
+          "z": -8.351964162566013
+        }
+      },
+      "verdict": "fails_current_scored_tests"
+    },
+    {
+      "chi2_predictive": 216.4517343876218,
+      "diagnostics": {
+        "alpha_u": 0.036150431972371076,
+        "alpha_u_inv": 27.662186741344517,
+        "b_high": [
+          6.6,
+          1.0,
+          -3.0
+        ],
+        "b_low": [
+          4.1,
+          -3.1666666666666665,
+          -7.0
+        ],
+        "fit_pair": [
+          0,
+          1
+        ],
+        "input_alpha_inv_mz": [
+          59.01001524,
+          29.579974600000003,
+          8.496176720475786
+        ],
+        "m_u_gev": 4935897418673911.0,
+        "model_name": "MSSM one-loop gauge unification with sharp threshold M_SUSY=10000 GeV",
+        "predicted_alpha_inv_mz": [
+          59.01001524,
+          29.579974600000003,
+          9.573140268568736
+        ],
+        "predicted_alphas_mz": [
+          0.016946275914908576,
+          0.033806655128094665,
+          0.10445893112872025
+        ],
+        "residual_alpha_inv": [
+          0.0,
+          0.0,
+          1.0769635480929498
+        ],
+        "threshold_gev": 10000.0
+      },
+      "dof_predictive": 1,
+      "free_parameters": [
+        "M_SUSY",
+        "alpha_U",
+        "M_U"
+      ],
+      "max_abs_z_predictive": 14.712298745866391,
+      "model_name": "MSSM one-loop gauge unification with sharp threshold M_SUSY=10000 GeV",
+      "scores": {
+        "alpha1_inv_mz": {
+          "counted_as_prediction": false,
+          "name": "alpha1_inv_mz",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "alpha1_inv_mz",
+            "note": "",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 59.01001524
+          },
+          "residual": 0.0,
+          "sigma_combined": 0.005901492080070598,
+          "target": {
+            "name": "alpha1_inv_mz",
+            "note": "",
+            "sigma": 0.005901492080070598,
+            "unit": "dimensionless",
+            "value": 59.01001524
+          },
+          "z": 0.0
+        },
+        "alpha2_inv_mz": {
+          "counted_as_prediction": false,
+          "name": "alpha2_inv_mz",
+          "prediction": {
+            "derived": false,
+            "fitted": true,
+            "name": "alpha2_inv_mz",
+            "note": "",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 29.579974600000003
+          },
+          "residual": 0.0,
+          "sigma_combined": 0.007895537834599998,
+          "target": {
+            "name": "alpha2_inv_mz",
+            "note": "",
+            "sigma": 0.007895537834599998,
+            "unit": "dimensionless",
+            "value": 29.579974600000003
+          },
+          "z": 0.0
+        },
+        "alpha3_mz": {
+          "counted_as_prediction": true,
+          "name": "alpha3_mz",
+          "prediction": {
+            "derived": true,
+            "fitted": false,
+            "name": "alpha3_mz",
+            "note": "Prediction after choosing M_SUSY and fitting alpha_U, M_U to alpha_1 and alpha_2.",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 0.10445893112872025
+          },
+          "residual": -0.013241068871279751,
+          "sigma_combined": 0.0009,
+          "target": {
+            "name": "alpha3_mz",
+            "note": "",
+            "sigma": 0.0009,
+            "unit": "dimensionless",
+            "value": 0.1177
+          },
+          "z": -14.712298745866391
+        }
+      },
+      "verdict": "fails_current_scored_tests"
+    },
+    {
+      "chi2_predictive": 3.692115932521018e+246,
+      "diagnostics": {
+        "observed_Lambda_lP^2": 2.848515946384373e-122,
+        "predicted_Lambda_lP^2": 1.0,
+        "ratio_predicted_to_observed": 3.5105999714317976e+121
+      },
+      "dof_predictive": 1,
+      "free_parameters": [],
+      "max_abs_z_predictive": 1.921487947534675e+123,
+      "model_name": "naive Planck-cutoff vacuum energy",
+      "scores": {
+        "Lambda_lP^2": {
+          "counted_as_prediction": true,
+          "name": "Lambda_lP^2",
+          "prediction": {
+            "derived": true,
+            "fitted": false,
+            "name": "Lambda_lP^2",
+            "note": "Order-one Planck-unit estimate; included to quantify the hierarchy failure.",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 1.0
+          },
+          "residual": 1.0,
+          "sigma_combined": 5.204300142933652e-124,
+          "target": {
+            "name": "Lambda_lP^2",
+            "note": "",
+            "sigma": 5.204300142933652e-124,
+            "unit": "dimensionless",
+            "value": 2.848515946384373e-122
+          },
+          "z": 1.921487947534675e+123
+        }
+      },
+      "verdict": "fails_current_scored_tests"
+    },
+    {
+      "chi2_predictive": 3081220016267.0776,
+      "diagnostics": {
+        "absolute_error": -0.03686214897660989,
+        "relative_error": -0.00026899609736123114,
+        "warning": "Toy/numerological formula; not accepted as a first-principles derivation."
+      },
+      "dof_predictive": 1,
+      "free_parameters": [],
+      "max_abs_z_predictive": 1755340.4274576136,
+      "model_name": "toy geometric alpha inverse formula",
+      "scores": {
+        "alpha0_inv": {
+          "counted_as_prediction": true,
+          "name": "alpha0_inv",
+          "prediction": {
+            "derived": true,
+            "fitted": false,
+            "name": "alpha0_inv",
+            "note": "Toy closed form; no accepted physical axioms. Included to test numerology filters.",
+            "sigma_theory": null,
+            "unit": "dimensionless",
+            "value": 136.9991370280234
+          },
+          "residual": -0.03686214897660989,
+          "sigma_combined": 2.1e-08,
+          "target": {
+            "name": "alpha0_inv",
+            "note": "",
+            "sigma": 2.1e-08,
+            "unit": "dimensionless",
+            "value": 137.035999177
+          },
+          "z": -1755340.4274576136
+        }
+      },
+      "verdict": "fails_current_scored_tests"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "tranche_name": "external_holdout_tranche_2026-06-24_PDGPub_NuFIT6_Planck2018_SK2020",
+  "reveal_protocol": "No model parameter was reoptimized in this script. The packet was copied from a pre-existing frozen file and scored against all externally declared quantities for which the packet already contains predictions.",
+  "primary_policy": "Use the most comprehensive/latest externally cited global-fit branch when a source gives alternatives; for NuFIT this is IC24 with SK atmospheric data and normal ordering best-fit, because the frozen packet predicts normal ordering.",
+  "sources": [
+    {
+      "id": "PDG_CKM_2025",
+      "description": "PDG 2025 CKM review, global SM fit table; Vus,Vcb,Vub,J."
+    },
+    {
+      "id": "NuFIT_6_0_2024",
+      "description": "NuFIT 6.0 global oscillation analysis, IC24 with SK atmospheric data, normal ordering branch."
+    },
+    {
+      "id": "Planck_2018_VI",
+      "description": "Planck 2018 cosmological parameters abstract; Omega_c h^2 and N_eff with BAO."
+    },
+    {
+      "id": "SuperK_p_decay_2020",
+      "description": "Super-K p -> e+ pi0 partial lifetime lower bound."
+    }
+  ],
+  "observations": {
+    "Vus": {
+      "central": 0.22501,
+      "sigma_minus": 0.00068,
+      "sigma_plus": 0.00068,
+      "domain": "CKM",
+      "source": "PDG_CKM_2025"
+    },
+    "Vcb": {
+      "central": 0.04183,
+      "sigma_minus": 0.00069,
+      "sigma_plus": 0.00079,
+      "domain": "CKM",
+      "source": "PDG_CKM_2025"
+    },
+    "Vub": {
+      "central": 0.003732,
+      "sigma_minus": 8.5e-05,
+      "sigma_plus": 9e-05,
+      "domain": "CKM",
+      "source": "PDG_CKM_2025"
+    },
+    "Jarlskog_CKM": {
+      "central": 3.12e-05,
+      "sigma_minus": 1.2e-06,
+      "sigma_plus": 1.3e-06,
+      "domain": "CKM",
+      "source": "PDG_CKM_2025"
+    },
+    "pmns_sin2_theta12": {
+      "central": 0.308,
+      "sigma_minus": 0.011,
+      "sigma_plus": 0.012,
+      "domain": "PMNS",
+      "source": "NuFIT_6_0_2024"
+    },
+    "pmns_sin2_theta23": {
+      "central": 0.47,
+      "sigma_minus": 0.013,
+      "sigma_plus": 0.017,
+      "domain": "PMNS",
+      "source": "NuFIT_6_0_2024"
+    },
+    "pmns_sin2_theta13": {
+      "central": 0.02215,
+      "sigma_minus": 0.00058,
+      "sigma_plus": 0.00056,
+      "domain": "PMNS",
+      "source": "NuFIT_6_0_2024"
+    },
+    "delta_m21_sq_ev2": {
+      "central": 7.49e-05,
+      "sigma_minus": 1.9e-06,
+      "sigma_plus": 1.9e-06,
+      "domain": "neutrino_mass_splittings",
+      "source": "NuFIT_6_0_2024"
+    },
+    "abs_delta_m3l_sq_ev2": {
+      "central": 0.002513,
+      "sigma_minus": 1.9e-05,
+      "sigma_plus": 2.1e-05,
+      "domain": "neutrino_mass_splittings",
+      "source": "NuFIT_6_0_2024"
+    },
+    "neutrino_ordering": {
+      "categorical": "normal",
+      "domain": "neutrino_mass_ordering",
+      "source": "NuFIT_6_0_2024",
+      "note": "NuFIT IC24+SK: NO best fit, IO Delta chi^2=6.1."
+    },
+    "Omega_c_h2": {
+      "central": 0.12,
+      "sigma_minus": 0.001,
+      "sigma_plus": 0.001,
+      "domain": "cosmology_dark_relic",
+      "source": "Planck_2018_VI"
+    },
+    "N_eff": {
+      "central": 2.99,
+      "sigma_minus": 0.17,
+      "sigma_plus": 0.17,
+      "domain": "cosmology_radiation",
+      "source": "Planck_2018_VI"
+    },
+    "tau_p_to_e_pi0_years": {
+      "lower_bound": 2.4e+34,
+      "domain": "proton_decay",
+      "source": "SuperK_p_decay_2020",
+      "confidence": "90% CL"
+    },
+    "alpha0_inv": {
+      "central": 137.035999177,
+      "sigma_minus": 2.1e-08,
+      "sigma_plus": 2.1e-08,
+      "domain": "alpha0",
+      "source": "CODATA_NIST",
+      "required": true,
+      "note": "The frozen packet has no alpha(0) prediction; scored as missing, not as a numerical residual."
+    },
+    "charged_lepton_mass_ratios": {
+      "domain": "fermion_masses",
+      "required": true,
+      "note": "The frozen packet has no me/mmu, mmu/mtau, me/mtau predictions; scored as missing."
+    },
+    "threshold_spectrum_resolved": {
+      "domain": "threshold_spectrum",
+      "required": true,
+      "note": "The packet only predicts a common high threshold scale, not a resolved representation-by-representation spectrum; scored as incomplete."
+    }
+  }
+}

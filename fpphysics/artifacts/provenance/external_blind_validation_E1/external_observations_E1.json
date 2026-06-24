@@ -1,0 +1,171 @@
+{
+  "Vus": {
+    "pred_key": "Vus",
+    "kind": "point",
+    "value": 0.22501,
+    "sigma": 0.00068,
+    "unit": "dimensionless",
+    "source_key": "PDG_CKM_Wolfenstein_2024_2025"
+  },
+  "Vcb": {
+    "pred_key": "Vcb",
+    "kind": "point",
+    "value": 0.0418199670826,
+    "sigma": 0.000824460561969,
+    "unit": "dimensionless",
+    "source_key": "PDG_CKM_Wolfenstein_derived"
+  },
+  "Vub": {
+    "pred_key": "Vub",
+    "kind": "point",
+    "value": 0.00363748862161,
+    "sigma": 0.000104330038509,
+    "unit": "dimensionless",
+    "source_key": "PDG_CKM_Wolfenstein_derived"
+  },
+  "J_CKM": {
+    "pred_key": "J_CKM",
+    "kind": "point",
+    "value": 3.11949041666e-05,
+    "sigma": 1.44812430997e-06,
+    "unit": "dimensionless",
+    "source_key": "PDG_CKM_Wolfenstein_derived"
+  },
+  "pmns_sin2_theta12": {
+    "pred_key": "pmns_sin2_theta12",
+    "kind": "point",
+    "value": 0.308,
+    "sigma": 0.0115,
+    "unit": "dimensionless",
+    "source_key": "NuFIT6_IC24_SK_NO"
+  },
+  "pmns_sin2_theta13": {
+    "pred_key": "pmns_sin2_theta13",
+    "kind": "point",
+    "value": 0.02215,
+    "sigma": 0.00057,
+    "unit": "dimensionless",
+    "source_key": "NuFIT6_IC24_SK_NO"
+  },
+  "pmns_sin2_theta23_IC24_SK_NO_local": {
+    "pred_key": "pmns_sin2_theta23",
+    "kind": "point_with_3sigma_interval",
+    "value": 0.47,
+    "sigma": 0.015,
+    "lo3": 0.435,
+    "hi3": 0.585,
+    "unit": "dimensionless",
+    "source_key": "NuFIT6_IC24_SK_NO_theta23_multimodal"
+  },
+  "delta_m21_sq_ev2": {
+    "pred_key": "delta_m21_sq_ev2",
+    "kind": "point",
+    "value": 7.49e-05,
+    "sigma": 1.9e-06,
+    "unit": "eV^2",
+    "source_key": "NuFIT6_IC24_SK_NO"
+  },
+  "abs_delta_m3l_sq_ev2": {
+    "pred_key": "abs_delta_m3l_sq_ev2",
+    "kind": "point",
+    "value": 0.002513,
+    "sigma": 2e-05,
+    "unit": "eV^2",
+    "source_key": "NuFIT6_IC24_SK_NO"
+  },
+  "neutrino_ordering": {
+    "pred_key": "neutrino_ordering",
+    "kind": "category",
+    "value": "normal",
+    "unit": "",
+    "source_key": "NuFIT6_IC24_SK_mild_preference"
+  },
+  "ms_over_mb_PDG2025_mixed_scale_diagnostic": {
+    "pred_key": "ms_over_mb",
+    "kind": "scheme_diagnostic_point",
+    "value": 0.022352378675591682,
+    "sigma": 0.00019487390356995294,
+    "unit": "dimensionless",
+    "source_key": "PDG2025_quark_summary_mixed_scales",
+    "scheme_note": "m_s(2GeV)/m_b(m_b); packet did not predeclare this scheme"
+  },
+  "mc_over_mt_direct_PDG2025_diagnostic": {
+    "pred_key": "mc_over_mt",
+    "kind": "scheme_diagnostic_point",
+    "value": 0.007377144181733889,
+    "sigma": 2.977003798655495e-05,
+    "unit": "dimensionless",
+    "source_key": "PDG2025_quark_summary_direct_top",
+    "scheme_note": "m_c(m_c)/m_t(direct); packet did not predeclare this scheme"
+  },
+  "mc_over_mt_crosssection_MSbar_like_diagnostic": {
+    "pred_key": "mc_over_mt",
+    "kind": "scheme_diagnostic_point",
+    "value": 0.007833846153846153,
+    "sigma": 9.127546584350423e-05,
+    "unit": "dimensionless",
+    "source_key": "PDG2025_quark_summary_cross_section_top",
+    "scheme_note": "m_c(m_c)/m_t(cross-section mass proxy); packet did not predeclare this scheme"
+  },
+  "N_eff": {
+    "pred_key": "N_eff",
+    "kind": "point",
+    "value": 2.99,
+    "sigma": 0.17,
+    "unit": "dimensionless",
+    "source_key": "Planck2018_BAO"
+  },
+  "Delta_N_eff": {
+    "pred_key": "Delta_N_eff",
+    "kind": "point",
+    "value": -0.055999999999999606,
+    "sigma": 0.17,
+    "unit": "dimensionless",
+    "source_key": "Planck2018_BAO_vs_SM"
+  },
+  "omega_cdm_h2": {
+    "pred_key": "omega_cdm_h2",
+    "kind": "point",
+    "value": 0.12,
+    "sigma": 0.001,
+    "unit": "dimensionless",
+    "source_key": "Planck2018_base_LCDM"
+  },
+  "tau_p_to_e_pi0_years": {
+    "pred_key": "tau_p_to_e_pi0_years",
+    "kind": "lower_bound",
+    "value": 2.4e+34,
+    "unit": "yr",
+    "source_key": "SuperK_p_to_epi0"
+  },
+  "M_intermediate_lightest_GeV": {
+    "pred_key": "M_intermediate_lightest_GeV",
+    "kind": "lower_bound",
+    "value": 2600.0,
+    "unit": "GeV",
+    "source_key": "LHC_direct_new_fermion_vectorlike_limits_proxy"
+  },
+  "collider_lightest_new_state_GeV": {
+    "pred_key": "collider_lightest_new_state_GeV",
+    "kind": "lower_bound",
+    "value": 2600.0,
+    "unit": "GeV",
+    "source_key": "LHC_direct_new_fermion_vectorlike_limits_proxy"
+  },
+  "S_new": {
+    "pred_key": "S_new",
+    "kind": "point",
+    "value": 0.0,
+    "sigma": 0.08,
+    "unit": "dimensionless",
+    "source_key": "EWPD_new_physics_oblique_proxy"
+  },
+  "T_new": {
+    "pred_key": "T_new",
+    "kind": "point",
+    "value": 0.0,
+    "sigma": 0.07,
+    "unit": "dimensionless",
+    "source_key": "EWPD_new_physics_oblique_proxy"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "generated_utc": "2026-06-24T02:28:47.665173+00:00",
+  "engine_version": "1.0.0",
+  "scientific_verdict": "no complete first-principles derivation certified",
+  "mece_sections": [
+    "baseline_scoring",
+    "isdlc_tcps_validation",
+    "automatic_discovery",
+    "blind_protocol",
+    "internal_blind_candidate",
+    "external_holdout_audit",
+    "academic_external_holdout_audit",
+    "open_physics_gaps"
+  ],
+  "core_findings": {
+    "baseline": "SM+GR control reproduces measured inputs only; it is not a derivation.",
+    "isdlc_tcps_gauge": "one-loop gauge sector has partial success/tension: alpha_em(MZ) about -2.8 sigma, sin^2thetaW about +1 sigma, alpha_s about +0.4 sigma.",
+    "vacuum_ansatz": "order-of-magnitude near rho_Lambda but precision determinant/prefactor derivation missing.",
+    "autodiscovery": "can generate compact post-selected hypotheses; quarantined until microscopic spectrum and blind predictions exist.",
+    "blind_protocol": "implemented leakage/holdout controls; train-only candidates fail blind certification.",
+    "internal_cabibbo_packet": "passed internal registry but is not final because it had not been independently externally replicated.",
+    "external_holdout": "failed external tranche; PMNS theta23/Omega_c h2 or sin2beta failures depending on tranche.",
+    "complete_SM_LCDM": "failed: alpha(0), full Yukawa sector, Higgs sector, resolved thresholds, dark sector, and all LCDM parameters remain open."
+  },
+  "key_hashes": {},
+  "source_files_included": [],
+  "summaries": {
+    "autodiscovery": {
+      "claim_status": "candidate_generation_only_not_a_completed_first_principles_derivation",
+      "gauge_best_under_2sigma": true,
+      "best_vacuum_factor": 0.9997563277687807,
+      "alpha0_closed_from_microscopic_thresholds": false,
+      "reason": "The engine can discover compact RGE/vacuum/symbolic hypotheses, but every generated result is post-selected from benchmark constants.  A completed first-principles theory would need an independently specified microscopic spectrum, threshold calculation, and new predictions not used in the search."
+    },
+    "theory_lab": {
+      "candidate_count": 203,
+      "reported_candidate_count": 27,
+      "family_counts": {
+        "cosmological_instanton_scan": 75,
+        "seeded_candidate": 2,
+        "target_guided_rg_clock": 100,
+        "continuous_global_fit_audit": 1,
+        "symbolic_alpha_numerology_audit": 25
+      },
+      "low_leakage_numeric_pass_count": 1,
+      "complete_first_principles_derivation_found": false,
+      "strict_conclusion": "automatic_generation_succeeded_but_no_complete_first_principles_derivation_certified"
+    },
+    "blind_protocol": {
+      "created_unix": 1782264833.0232885,
+      "python": "3.13.5",
+      "platform": "Linux-4.4.0-x86_64-with-glibc2.41",
+      "cpu_count": 56,
+      "catalog_hash": "de4fb0f16718e439bf0da91564f9f031fb404ce6f704c6a38abc1ea19c53b616",
+      "holdout_seal": {
+        "created_unix": 1782264830.337946,
+        "catalog_hash": "de4fb0f16718e439bf0da91564f9f031fb404ce6f704c6a38abc1ea19c53b616",
+        "hidden_observations_sha256": null,
+        "target_names": [
+          "me_over_mmu",
+          "mmu_over_mtau",
+          "mu_over_mc_2gev_or_msbar",
+          "mc_over_mt_msbar",
+          "md_over_ms_2gev",
+          "ms_over_mb_msbar",
+          "Vus",
+          "Vcb",
+          "Vub",
+          "J_CKM",
+          "delta_CKM",
+          "sin2theta12_PMNS",
+          "sin2theta13_PMNS",
+          "sin2theta23_PMNS",
+          "delta_CP_PMNS",
+          "dm21_eV2",
+          "abs_dm31_eV2",
+          "neutrino_ordering",
+          "sum_mnu_eV",
+          "m_beta_beta_eV",
+          "mW_GeV",
+          "GammaZ_GeV",
+          "sigma0_had_nb",
+          "R_l_Z",
+          "A_FB_0_b",
+          "S_parameter",
+          "T_parameter",
+          "tau_p_to_e_pi0_years",
+          "tau_p_to_K_nu_years",
+          "M_X_GeV",
+          "M_intermediate_lightest_GeV",
+          "N_eff",
+          "Delta_N_eff",
+          "omega_cdm_h2",
+          "sigma_SI_cm2",
+          "m_DM_GeV",
+          "collider_lightest_new_state_GeV",
+          "Higgs_quartic_lambda_mt",
+          "top_yukawa_yt_mt"
+        ],
+        "note": "Values must not be used during candidate generation."
+      },
+      "hidden_observations_template": "/mnt/data/fpp_blind_run_final/hidden_observations_template.json",
+      "candidate_count": 14,
+      "blind_certified_count": 0,
+      "frozen_waiting_count": 0,
+      "not_blind_predictive_count": 14,
+      "strict_conclusion": "현재 엔진 후보들은 gauge/cosmology training targets 위주라서 blind prediction 인증을 통과하지 못했다."
+    },
+    "internal_cabibbo": {
+      "model_name": "ISDLC-TCPS-Fνχ Cabibbo-clock frozen extension",
+      "packet_sha256": "e0855d9ba75a7b58a66cadf60dcbcdedae18bf8e3bdd9eff63b8afe73af8aaaa",
+      "default_strict_verdict": "blind_pass_needs_independent_replication",
+      "publication_tier_verdict": "blind_pass_needs_independent_replication",
+      "default_strict_pass": true,
+      "publication_tier_pass": true,
+      "blind_predicted_required": 17,
+      "blind_total_required": 21,
+      "blind_coverage": 0.8095238095238095,
+      "blind_reduced_chi2": 1.3355284030556502,
+      "blind_max_abs_z": 2.6942585361489426,
+      "missing_required": [
+        "me_over_mmu",
+        "mmu_over_mtau",
+        "me_over_mtau",
+        "mW_gev"
+      ],
+      "complete_first_principles_derivation": false
+    },
+    "external_v06": {
+      "numeric_count": 11,
+      "chi2": 63.745989097470975,
+      "reduced_chi2_independent_diag_approx": 5.795089917951906,
+      "pass_count_including_bounds_and_categorical": 11,
+      "fail_count": 2,
+      "missing_count": 3,
+      "incomplete_count": 0,
+      "external_tranche_pass": false,
+      "complete_SM_LambdaCDM_first_principles_derivation_success": false,
+      "reason": "External tranche has >3σ failures in PMNS theta23 and Omega_c h^2, and required alpha(0), charged-lepton mass ratios, resolved threshold spectrum, and many SM/LambdaCDM parameters remain unpredicted."
+    },
+    "academic_v07": {
+      "audit_name": "academic_external_holdout_audit_v0_7",
+      "generated_utc": "2026-06-24T02:09:52.679340+00:00",
+      "packet_path": "/mnt/data/strict_freeze_external_holdout/external_holdout_frozen_packet.json",
+      "packet_embedded_sha256": "74e16bedd02799dab4fb3322516dc3a4648233df5742f20b9ad4056cf06e32ad",
+      "packet_raw_file_sha256": "08cb6fcc767d547e9b5b7d8e19fcd6e499f9cce8e6d8766b911ba2b4e376b60f",
+      "packet_canonical_without_embedded_sha256": "74e16bedd02799dab4fb3322516dc3a4648233df5742f20b9ad4056cf06e32ad",
+      "source_packet_sha256": "e0855d9ba75a7b58a66cadf60dcbcdedae18bf8e3bdd9eff63b8afe73af8aaaa",
+      "external_precision_numeric_count": 5,
+      "external_precision_chi2": 11.782925279492321,
+      "external_precision_reduced_chi2": 2.3565850558984645,
+      "external_precision_max_abs_z": 3.2996923898934316,
+      "external_precision_failures": [
+        {
+          "quantity": "CKM_sin2beta",
+          "domain": "CKM_external",
+          "prediction": 0.7452966162888277,
+          "central": 0.709,
+          "sigma_minus": 0.011,
+          "sigma_plus": 0.011,
+          "z": 3.2996923898934316,
+          "abs_z": 3.2996923898934316,
+          "status": "fail_gt_3sigma",
+          "source": "PDG CKM review 2025 sin2beta world average",
+          "note": ""
+        }
+      ],
+      "bound_pass_count": 3,
+      "not_scoreable_count": 4,
+      "strict_academic_external_tranche_verdict": "FAIL",
+      "partial_positive_result": "CKM Vtd/Vts/Vtb/gamma pass; neutrino-sum, beta-decay, proton bound pass; sin2beta fails >3σ; thresholds and quark ratios are not publication-grade scoreable as frozen.",
+      "complete_SM_LCDM_first_principles_derivation_success": false,
+      "why_not_complete": [
+        "alpha(0), charged-lepton Yukawa ratios, full quark/lepton Yukawa matrices, Higgs-sector parameters, neutrino CP phase/absolute scale likelihood, and all six ΛCDM parameters are not derived from a microscopic action.",
+        "The packet has a >3σ failure in sin2β in the new CKM external tranche.",
+        "Threshold spectrum is not resolved into representations/couplings/decays, so collider comparison is not well-defined.",
+        "Quark mass ratios lack a common renormalization scheme and matching scale."
+      ]
+    }
+  }
+}

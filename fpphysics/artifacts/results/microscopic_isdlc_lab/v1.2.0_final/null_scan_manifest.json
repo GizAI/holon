@@ -1,0 +1,59 @@
+{
+  "allowed_constants": [
+    "integer root-system size n in [3,9]",
+    "rank n",
+    "b2 in [0,7]",
+    "clock p/q with p in [1,20], q in [2,31]",
+    "LCI components in Z/3 over [-4,8]",
+    "DFC components in Z/96 over [-1/4,1/4]"
+  ],
+  "config": {
+    "chunk_size": 128000000,
+    "device": "cuda",
+    "null_candidates": 5000000000,
+    "progress_every": 1,
+    "seed": 1200
+  },
+  "forbidden_target_derived_constants": [
+    "No measured Standard Model or cosmological constants.",
+    "No CKM/PMNS/mass inputs.",
+    "No post-hoc denominator narrowing after seeing ISDLC.",
+    "No changing score weights after scan."
+  ],
+  "frozen_before_scoring": true,
+  "normalization": {
+    "alpha_u_inv": 10.0,
+    "clock": 0.1,
+    "dfc_component": 0.1,
+    "lci_component": 2.0
+  },
+  "null_distribution_summary": {
+    "best_null_candidate": {
+      "alpha_u_inv": 46.5,
+      "clock": 0.48275861144065857,
+      "dfc": [
+        0.125,
+        -0.0416666679084301,
+        0.0416666679084301
+      ],
+      "lci": [
+        3.6666667461395264,
+        0.0,
+        5.0
+      ],
+      "root_n": 5
+    },
+    "best_null_score": 0.09928295016288757,
+    "better_or_equal_count": 0,
+    "candidate_count": 5000000000,
+    "p_null_upper_rule_of_succession": 1.9999999996e-10
+  },
+  "scan_family": {
+    "alpha_u_inv": "2*n*(n-1)+n+b2/2, n in [3,9], b2 in [0,7]",
+    "clock": "p/q, p in [1,20], q in [2,31]",
+    "dfc": "components in Z/96 over [-1/4,1/4], includes 1/8, -1/48, and 1/32",
+    "lci": "components in Z/3 over [-4,8]"
+  },
+  "score_function": "sum normalized squared distances to (93/2, 6/13, (11/3,0,5), (1/8,-1/48,1/32)); exact ISDLC score is 0.",
+  "version": "v1.2.0"
+}

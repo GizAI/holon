@@ -1,0 +1,56 @@
+{
+  "ordinary_scalar_control": {
+    "has_local_kinetic_operator": true,
+    "local_propagator_poles": [
+      -1.0,
+      -4.0,
+      -16.0
+    ],
+    "rows": [
+      {
+        "p2": 0.0,
+        "propagator_trace": 1.3125
+      },
+      {
+        "p2": 0.1,
+        "propagator_trace": 1.2151051493575353
+      },
+      {
+        "p2": 1.0,
+        "propagator_trace": 0.7588235294117647
+      },
+      {
+        "p2": 10.0,
+        "propagator_trace": 0.2007992007992008
+      }
+    ],
+    "verdict": "fail_generates_ordinary_threshold_and_two_loop_messenger_interpretation"
+  },
+  "topological_DFC": {
+    "has_local_kinetic_operator": false,
+    "local_propagator_poles": [],
+    "rows": [
+      {
+        "local_pole_count": 0,
+        "p2": 0.0,
+        "propagator_trace": 0.0
+      },
+      {
+        "local_pole_count": 0,
+        "p2": 0.1,
+        "propagator_trace": 0.0
+      },
+      {
+        "local_pole_count": 0,
+        "p2": 1.0,
+        "propagator_trace": 0.0
+      },
+      {
+        "local_pole_count": 0,
+        "p2": 10.0,
+        "propagator_trace": 0.0
+      }
+    ],
+    "verdict": "pass_no_local_propagator_pole_inside_model"
+  }
+}

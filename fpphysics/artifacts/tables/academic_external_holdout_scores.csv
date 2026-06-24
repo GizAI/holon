@@ -1,0 +1,17 @@
+quantity,domain,prediction,central,sigma_minus,sigma_plus,z,abs_z,status,source,note,limit,cl,ratio_to_limit,name,kind
+CKM_abs_Vtd,CKM_external,0.008710690688894424,0.00858,0.00017,0.00019,0.6878457310232812,0.6878457310232812,pass_3sigma,PDG CKM matrix global fit 2025 Eq. 12.27,,,,,,
+CKM_abs_Vts,CKM_external,0.041532912940577975,0.04111,0.00068,0.00077,0.5492375851662002,0.5492375851662002,pass_3sigma,PDG CKM matrix global fit 2025 Eq. 12.27,,,,,,
+CKM_abs_Vtb,CKM_external,0.9991155001220742,0.999118,3.4e-05,2.9e-05,-0.07352582134637566,0.07352582134637566,pass_3sigma,PDG CKM matrix global fit 2025 Eq. 12.27,,,,,,
+CKM_gamma_deg,CKM_external,66.71626827889489,65.7,3.0,3.0,0.3387560929649614,0.3387560929649614,pass_3sigma,PDG CKM review 2025 gamma average,,,,,,
+CKM_sin2beta,CKM_external,0.7452966162888277,0.709,0.011,0.011,3.2996923898934316,3.2996923898934316,fail_gt_3sigma,PDG CKM review 2025 sin2beta world average,,,,,,
+neutrino_sum_masses_eV,cosmology_bound,0.058574929257125444,,,,,,pass_upper_bound,Planck 2018 + BAO bound,bound only; not a precision hit,0.12,95%,0.4881244104760454,,
+beta_decay_mbeta_eV,direct_neutrino_mass_bound,0.009052130160788001,,,,,,pass_upper_bound,KATRIN 259-day 2025 bound,bound only; not a precision hit,0.45,90%,0.020115844801751114,,
+proton_p_to_e_pi0_lifetime_years,proton_decay_bound,8.516862452184991e+37,,,,,,pass_lower_bound,Super-K p->e+pi0 450 kton-year bound,bound only; not a precision hit,2.4e+34,90%,3548.692688410413,,
+lightest_new_charged_threshold_GeV,threshold_spectrum,6.0875e+16,,,,,,not_scoreable_academic,,"No model-independent collider bound exists for an unspecified charged threshold representation/couplings/decays. Prediction is only decoupled-at-GUT-scale, not an externally resolved spectrum.",,,,,
+lightest_new_colored_threshold_GeV,threshold_spectrum,6.0875e+16,,,,,,not_scoreable_academic,,"No model-independent collider bound exists for an unspecified colored threshold representation/couplings/decays. Prediction is only decoupled-at-GUT-scale, not an externally resolved spectrum.",,,,,
+quark_ms_over_mb_external,quark_mass_ratio,0.02564102564102564,,,,,,not_scoreable_academic,,Frozen prediction does not specify common MSbar scale/RGE matching. PDG quotes m_s at 2 GeV and m_b at μ=m_b; direct ratio is scheme/scale inconsistent.,,,,,
+quark_mc_over_mt_external,quark_mass_ratio,0.007889546351084813,,,,,,not_scoreable_academic,,Frozen prediction does not specify common MSbar scale/RGE/top mass definition. PDG top mass has direct/pole/MS ambiguities.,,,,,
+,diagnostic_PMNS,0.31717171717171716,0.308,0.011,0.012,0.7643097643097637,0.7643097643097637,diagnostic_pass_3sigma,NuFIT 6.0 IC24+SK NO,,,,,PMNS_sin2_theta12_diagnostic,gaussian
+,diagnostic_PMNS,0.5512820512820513,0.47,0.013,0.017,4.781297134238314,4.781297134238314,diagnostic_fail_gt_3sigma,NuFIT 6.0 IC24+SK NO,,,,,PMNS_sin2_theta23_diagnostic,gaussian
+,diagnostic_PMNS,0.02366863905325444,0.02215,0.00058,0.00056,2.7118554522400737,2.7118554522400737,diagnostic_pass_3sigma,NuFIT 6.0 IC24+SK NO,,,,,PMNS_sin2_theta13_diagnostic,gaussian
+,diagnostic_LCDM,0.11538461538461539,0.12,0.001,0.001,-4.615384615384604,4.615384615384604,diagnostic_fail_gt_3sigma,Planck 2018 base LCDM; formula from earlier Cabibbo clock candidate,,,,,Omega_c_h2_formula_diagnostic,

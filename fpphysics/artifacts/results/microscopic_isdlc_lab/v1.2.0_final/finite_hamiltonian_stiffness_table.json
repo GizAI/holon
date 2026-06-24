@@ -1,0 +1,94 @@
+{
+  "comparison_target": {
+    "den": 2,
+    "float": 46.5,
+    "num": 93
+  },
+  "constructed_stiffness": {
+    "den": 2,
+    "float": 46.5,
+    "num": 93
+  },
+  "hamiltonian": "H(phi)=non-diagonal coupled sector Laplacian + 1/2 phi^2 W(D5_roots,D5_rank,T3_b2)",
+  "method": "dense exact diagonalization",
+  "rows": [
+    {
+      "E0_minus": 2.3250003346186876e-09,
+      "E0_plus": 2.3250003346186876e-09,
+      "E0_zero": -6.314393452555578e-16,
+      "abs_error": 1.9321160650065394e-05,
+      "curvature": 46.50001932116065,
+      "hilbert_dimension": 12,
+      "offdiag_norm": 4.898979485566356,
+      "phi": 1e-05,
+      "size": 4,
+      "target": 46.5
+    },
+    {
+      "E0_minus": 2.3249993180707307e-09,
+      "E0_plus": 2.3249993180707307e-09,
+      "E0_zero": -6.735063895479954e-16,
+      "abs_error": 1.6845760342221183e-07,
+      "curvature": 46.4999998315424,
+      "hilbert_dimension": 24,
+      "offdiag_norm": 6.928203230275509,
+      "phi": 1e-05,
+      "size": 8,
+      "target": 46.5
+    },
+    {
+      "E0_minus": 2.3249993527652e-09,
+      "E0_plus": 2.3249993527652e-09,
+      "E0_zero": -7.736840676602327e-16,
+      "abs_error": 2.52898534824908e-06,
+      "curvature": 46.50000252898535,
+      "hilbert_dimension": 48,
+      "offdiag_norm": 9.797958971132712,
+      "phi": 1e-05,
+      "size": 16,
+      "target": 46.5
+    },
+    {
+      "E0_minus": 2.324997989272548e-09,
+      "E0_plus": 2.324997989272548e-09,
+      "E0_zero": -8.361002574075769e-16,
+      "abs_error": 2.3492543895997642e-05,
+      "curvature": 46.499976507456104,
+      "hilbert_dimension": 96,
+      "offdiag_norm": 13.856406460551018,
+      "phi": 1e-05,
+      "size": 32,
+      "target": 46.5
+    },
+    {
+      "E0_minus": 2.3249944216930634e-09,
+      "E0_plus": 2.3249944216930634e-09,
+      "E0_zero": -1.1105222850418307e-15,
+      "abs_error": 8.935569304213686e-05,
+      "curvature": 46.49991064430696,
+      "hilbert_dimension": 192,
+      "offdiag_norm": 19.595917942265423,
+      "phi": 1e-05,
+      "size": 64,
+      "target": 46.5
+    }
+  ],
+  "sector_stiffness": {
+    "D5_cartan_sector": {
+      "den": 1,
+      "float": 5.0,
+      "num": 5
+    },
+    "D5_root_sector": {
+      "den": 1,
+      "float": 40.0,
+      "num": 40
+    },
+    "T3_torsion_sector": {
+      "den": 2,
+      "float": 1.5,
+      "num": 3
+    }
+  },
+  "verdict": "non_diagonal_response_matches_sector_constructed_stiffness_with_finite_difference_error"
+}

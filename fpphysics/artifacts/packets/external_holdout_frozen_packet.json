@@ -1,0 +1,70 @@
+{
+  "protocol": "STRICT_FREEZE_BEFORE_REVEAL_EXTERNAL_HOLDOUT_v1",
+  "freeze_time_utc": "2026-06-24T02:15:00Z",
+  "model_name": "ISDLC-TCPS-Fnu-chi Cabibbo-clock frozen extension, external-holdout packet",
+  "source_packet_sha256": "e0855d9ba75a7b58a66cadf60dcbcdedae18bf8e3bdd9eff63b8afe73af8aaaa",
+  "allowed_inputs": [
+    "r=6/13",
+    "alpha_U_inv=93/2",
+    "M_U=Mbar_Pl/40",
+    "rank_two_normal_neutrino_extension_m1=0",
+    "leading_order_CKM_unitarity_convention"
+  ],
+  "trained_on_declared": [
+    "alpha_em_inv_mz",
+    "sin2theta_hat_mz",
+    "alpha3_mz",
+    "rhoLambda_planck4"
+  ],
+  "new_external_holdout_targets_declared_before_reveal": [
+    "CKM_abs_Vtd",
+    "CKM_abs_Vts",
+    "CKM_abs_Vtb",
+    "CKM_gamma_deg",
+    "CKM_sin2beta",
+    "neutrino_sum_masses_eV",
+    "beta_decay_mbeta_eV_bound",
+    "proton_p_to_e_pi0_lifetime_bound_years",
+    "lightest_new_charged_threshold_GeV_bound",
+    "lightest_new_colored_threshold_GeV_bound",
+    "quark_ms_over_mb_external",
+    "quark_mc_over_mt_external"
+  ],
+  "predictions": {
+    "CKM_abs_Vus_diagnostic": 0.22645540682891915,
+    "CKM_abs_Vcb_diagnostic": 0.041871619534755176,
+    "CKM_abs_Vub_diagnostic": 0.0038710325953661396,
+    "CKM_J_diagnostic": 3.3716010047370996e-05,
+    "CKM_wolfenstein_A": 0.816496580927726,
+    "CKM_wolfenstein_rho_LO": 0.16137430609197567,
+    "CKM_wolfenstein_eta_LO": 0.375,
+    "CKM_abs_Vtd": 0.008710690688894424,
+    "CKM_abs_Vts": 0.041532912940577975,
+    "CKM_abs_Vtb": 0.9991155001220742,
+    "CKM_gamma_deg": 66.71626827889489,
+    "CKM_beta_deg": 24.09229117440546,
+    "CKM_sin2beta": 0.7452966162888277,
+    "PMNS_sin2_theta12_diagnostic": 0.31717171717171716,
+    "PMNS_sin2_theta23_diagnostic": 0.5512820512820513,
+    "PMNS_sin2_theta13_diagnostic": 0.02366863905325444,
+    "neutrino_m1_eV": 0.0,
+    "neutrino_m2_eV": 0.008574929257125443,
+    "neutrino_m3_eV": 0.05,
+    "neutrino_sum_masses_eV": 0.058574929257125444,
+    "beta_decay_mbeta_eV": 0.009052130160788001,
+    "proton_p_to_e_pi0_lifetime_years": 8.516862452184991e+37,
+    "lightest_new_charged_threshold_GeV": 6.0875e+16,
+    "lightest_new_colored_threshold_GeV": 6.0875e+16,
+    "quark_ms_over_mb_external": 0.02564102564102564,
+    "quark_mc_over_mt_external": 0.007889546351084813
+  },
+  "anti_abuse_rules": [
+    "No formula coefficients may be changed after this packet hash.",
+    "If target lacks prediction it counts as no-prediction, not success.",
+    "Bounds are scored only as pass/fail and do not count as precision hits.",
+    "Candidate selection after reveal is forbidden; this is a single frozen candidate test.",
+    "Passing this tranche is not equivalent to complete first-principles derivation."
+  ],
+  "claim_ceiling": "external replication attempt for a frozen candidate; not complete SM+LCDM first-principles derivation",
+  "sha256": "74e16bedd02799dab4fb3322516dc3a4648233df5742f20b9ad4056cf06e32ad"
+}

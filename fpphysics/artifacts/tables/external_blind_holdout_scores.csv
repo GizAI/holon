@@ -1,0 +1,17 @@
+quantity,domain,source,prediction,central,sigma_minus,sigma_plus,z,abs_z,status,note
+Vus,CKM,PDG_CKM_2025,0.22645540682891915,0.22501,0.00068,0.00068,2.1255982778223026,2.1255982778223026,pass_3sigma,
+Vcb,CKM,PDG_CKM_2025,0.041871619534755176,0.04183,0.00069,0.00079,0.052682955386300405,0.052682955386300405,pass_3sigma,
+Vub,CKM,PDG_CKM_2025,0.0038710325953661396,0.003732,8.5e-05,9e-05,1.5448066151793278,1.5448066151793278,pass_3sigma,
+Jarlskog_CKM,CKM,PDG_CKM_2025,3.3716010047370996e-05,3.12e-05,1.2e-06,1.3e-06,1.935392344131536,1.935392344131536,pass_3sigma,
+pmns_sin2_theta12,PMNS,NuFIT_6_0_2024,0.31717171717171716,0.308,0.011,0.012,0.7643097643097637,0.7643097643097637,pass_3sigma,
+pmns_sin2_theta23,PMNS,NuFIT_6_0_2024,0.5512820512820513,0.47,0.013,0.017,4.781297134238314,4.781297134238314,fail_gt_3sigma,
+pmns_sin2_theta13,PMNS,NuFIT_6_0_2024,0.023668639053254437,0.02215,0.00058,0.00056,2.7118554522400675,2.7118554522400675,pass_3sigma,
+delta_m21_sq_ev2,neutrino_mass_splittings,NuFIT_6_0_2024,7.35294117647059e-05,7.49e-05,1.9e-06,1.9e-06,-0.7213622291021587,0.7213622291021587,pass_3sigma,
+abs_delta_m3l_sq_ev2,neutrino_mass_splittings,NuFIT_6_0_2024,0.0025000000000000005,0.002513,1.9e-05,2.1e-05,-0.6842105263157662,0.6842105263157662,pass_3sigma,
+neutrino_ordering,neutrino_mass_ordering,NuFIT_6_0_2024,normal,,,,,,categorical_pass,"NuFIT IC24+SK: NO best fit, IO Delta chi^2=6.1."
+Omega_c_h2,cosmology_dark_relic,Planck_2018_VI,0.11538461538461539,0.12,0.001,0.001,-4.615384615384604,4.615384615384604,fail_gt_3sigma,
+N_eff,cosmology_radiation,Planck_2018_VI,3.0,2.99,0.17,0.17,0.05882352941176345,0.05882352941176345,pass_3sigma,
+tau_p_to_e_pi0_years,proton_decay,SuperK_p_decay_2020,8.516862452184991e+37,2.4e+34,,,,,one_sided_bound_pass,
+alpha0_inv,alpha0,CODATA_NIST,,137.035999177,2.1e-08,2.1e-08,,,missing_prediction,"The frozen packet has no alpha(0) prediction; scored as missing, not as a numerical residual."
+charged_lepton_mass_ratios,fermion_masses,,,,,,,,incomplete_target_definition_or_missing_prediction,"The frozen packet has no me/mmu, mmu/mtau, me/mtau predictions; scored as missing."
+threshold_spectrum_resolved,threshold_spectrum,,,,,,,,incomplete_target_definition_or_missing_prediction,"The packet only predicts a common high threshold scale, not a resolved representation-by-representation spectrum; scored as incomplete."

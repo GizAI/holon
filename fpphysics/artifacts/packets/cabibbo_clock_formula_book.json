@@ -1,0 +1,6 @@
+{
+  "clock_ratio": 0.46153846153846156,
+  "planck_divisor": 40,
+  "lambda_c": 0.22645540682891915,
+  "provenance": "r=6/13 and M_U=Mbar_Pl/40 fixed before holdout scoring"
+}

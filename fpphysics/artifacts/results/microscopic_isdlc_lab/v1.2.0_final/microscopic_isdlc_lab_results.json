@@ -1,0 +1,1216 @@
+{
+  "audits": [
+    {
+      "blockers": [
+        "Needs a non-tautological microscopic ISDLC Hamiltonian whose primitive sectors force these weights.",
+        "Needs finite-size flow or tensor-network evidence that the same stiffness survives non-diagonal perturbations."
+      ],
+      "diagnostics": {
+        "finite_difference_epsilon": "1/10000",
+        "ground_energy": "E0(phi)=1/2*(|Delta(D5)|+rank(D5)+b2(T3)/2)*phi^2",
+        "sector_stiffness": {
+          "D5_rank": {
+            "den": 1,
+            "float": 5.0,
+            "num": 5
+          },
+          "D5_roots": {
+            "den": 1,
+            "float": 40.0,
+            "num": 40
+          },
+          "T3_second_betti_half": {
+            "den": 2,
+            "float": 1.5,
+            "num": 3
+          }
+        }
+      },
+      "name": "finite_holonomy_stiffness",
+      "observed": {
+        "den": 2,
+        "float": 46.5,
+        "num": 93
+      },
+      "passed": true,
+      "status": "conditional_theorem",
+      "target": {
+        "den": 2,
+        "float": 46.5,
+        "num": 93
+      },
+      "theorem_scope": "Exact for the constructed sector stiffness operator; non-diagonal response is checked separately."
+    },
+    {
+      "blockers": [
+        "Needs construction of the clock as a spectrum of the same Hamiltonian, not an external discrete input."
+      ],
+      "diagnostics": {
+        "clock_ratio": "ln(MU/MI):ln(MI/MZ)=6:13",
+        "intervals": {
+          "UV_to_intermediate": 6,
+          "intermediate_to_MZ": 13
+        }
+      },
+      "name": "tcps_clock_ratio",
+      "observed": {
+        "den": 13,
+        "float": 0.46153846153846156,
+        "num": 6
+      },
+      "passed": true,
+      "status": "conditional_theorem",
+      "target": {
+        "den": 13,
+        "float": 0.46153846153846156,
+        "num": 6
+      },
+      "theorem_scope": "Exact for the finite two-interval torsion clock data."
+    },
+    {
+      "blockers": [
+        "Needs a concrete blocking operator K_A and heat-kernel regulator on the same finite Hilbert space.",
+        "Needs gauge covariance tests for non-constant background links.",
+        "Needs proof that these modes are Jacobian index modes, not propagating messenger matter."
+      ],
+      "diagnostics": {
+        "blocks": {
+          "SU2L": [
+            "1",
+            "-1"
+          ],
+          "SU2R": [
+            "6",
+            "-1"
+          ],
+          "SU4": [
+            "4",
+            "-1/3"
+          ]
+        },
+        "no_propagating_modes_audit": "pass_inside_finite_index_model_only"
+      },
+      "name": "lci_jacobian_supertrace",
+      "observed": [
+        {
+          "den": 3,
+          "float": 3.6666666666666665,
+          "num": 11
+        },
+        {
+          "den": 1,
+          "float": 0.0,
+          "num": 0
+        },
+        {
+          "den": 1,
+          "float": 5.0,
+          "num": 5
+        }
+      ],
+      "passed": true,
+      "status": "conditional_theorem",
+      "target": [
+        {
+          "den": 3,
+          "float": 3.6666666666666665,
+          "num": 11
+        },
+        {
+          "den": 1,
+          "float": 0.0,
+          "num": 0
+        },
+        {
+          "den": 1,
+          "float": 5.0,
+          "num": 5
+        }
+      ],
+      "theorem_scope": "Exact for the finite LCI block complex and its assigned supertrace weights."
+    },
+    {
+      "blockers": [
+        "Needs derivation of the protected charges from the ISDLC differential Q rather than assigning them.",
+        "Needs a locality/no-propagator audit against ordinary threshold matter."
+      ],
+      "diagnostics": {
+        "Q_squared_zero": true,
+        "cohomology_dimensions": {
+          "H0": 1,
+          "H1": 0,
+          "H2": 0
+        },
+        "dyadic_matching_delta": [
+          "ln(2)/(2*pi)*(1/8)",
+          "ln(2)/(2*pi)*(-1/48)",
+          "ln(2)/(2*pi)*(1/32)"
+        ],
+        "nonprotected_pair_supertrace": [
+          {
+            "den": 1,
+            "float": 0.0,
+            "num": 0
+          },
+          {
+            "den": 1,
+            "float": 0.0,
+            "num": 0
+          },
+          {
+            "den": 1,
+            "float": 0.0,
+            "num": 0
+          }
+        ],
+        "protected_cohomology": [
+          {
+            "component": 0,
+            "den": 8,
+            "float": 0.125,
+            "num": 1,
+            "supertrace_den": 8,
+            "supertrace_num": 1
+          },
+          {
+            "component": 1,
+            "den": 48,
+            "float": -0.020833333333333332,
+            "num": -1,
+            "supertrace_den": 48,
+            "supertrace_num": -1
+          },
+          {
+            "component": 2,
+            "den": 32,
+            "float": 0.03125,
+            "num": 1,
+            "supertrace_den": 32,
+            "supertrace_num": 1
+          }
+        ]
+      },
+      "name": "dfc_chain_supertrace",
+      "observed": [
+        {
+          "den": 8,
+          "float": 0.125,
+          "num": 1
+        },
+        {
+          "den": 48,
+          "float": -0.020833333333333332,
+          "num": -1
+        },
+        {
+          "den": 32,
+          "float": 0.03125,
+          "num": 1
+        }
+      ],
+      "passed": true,
+      "status": "conditional_theorem",
+      "target": [
+        {
+          "den": 8,
+          "float": 0.125,
+          "num": 1
+        },
+        {
+          "den": 48,
+          "float": -0.020833333333333332,
+          "num": -1
+        },
+        {
+          "den": 32,
+          "float": 0.03125,
+          "num": 1
+        }
+      ],
+      "theorem_scope": "Exact for the finite protected DFC cohomology plus cancelling acyclic pairs."
+    }
+  ],
+  "classification": {
+    "grade": "B_plus",
+    "not_D_reason": "No two-loop/scheme-complete physical prediction layer is included in this package.",
+    "reason": "finite complex audits pass and a constructed non-diagonal Hamiltonian response reproduces the sector stiffness; still not C because the microscopic Hamiltonian is engineered rather than uniquely derived."
+  },
+  "classification_ladder": {
+    "A": "literal-count audit only",
+    "B": "finite complex theorem",
+    "C": "non-diagonal Hamiltonian theorem",
+    "D": "scheme-complete physical prediction"
+  },
+  "config": {
+    "chunk_size": 128000000,
+    "device": "cuda",
+    "null_candidates": 5000000000,
+    "progress_every": 1,
+    "seed": 1200
+  },
+  "dependency_graph": {
+    "edges": [
+      [
+        "D5_root_count",
+        "alpha_u_inv_observed"
+      ],
+      [
+        "D5_rank",
+        "alpha_u_inv_observed"
+      ],
+      [
+        "T3_b2",
+        "alpha_u_inv_observed"
+      ],
+      [
+        "alpha_u_inv_target",
+        "alpha_u_inv_observed",
+        "comparison_only_for_pass_fail"
+      ],
+      [
+        "tcps_clock_intervals",
+        "tcps_clock_observed"
+      ],
+      [
+        "tcps_clock_target",
+        "tcps_clock_observed",
+        "comparison_only_for_pass_fail"
+      ],
+      [
+        "lci_block_complex",
+        "lci_observed"
+      ],
+      [
+        "lci_target",
+        "lci_observed",
+        "comparison_only_for_pass_fail"
+      ],
+      [
+        "dfc_protected_integer_labels",
+        "dfc_observed"
+      ],
+      [
+        "dfc_target",
+        "dfc_observed",
+        "comparison_only_for_pass_fail"
+      ]
+    ],
+    "findings": [
+      "alpha_u_inv is construction-derived from D5/T3 counts, but D5 and T3 are still chosen inputs.",
+      "TCPS 6:13 is still a clock input, not yet an eigenvalue theorem.",
+      "LCI block entries are explicit finite-complex inputs; regulator trace validates cancellation but not origin.",
+      "DFC protected labels reproduce the target exactly; this remains the highest leakage risk until Q derives them."
+    ],
+    "nodes": [
+      {
+        "formula": "2*n*(n-1), n=5",
+        "id": "D5_root_count",
+        "kind": "computed_integer",
+        "target_leakage": "low",
+        "value": 40
+      },
+      {
+        "id": "D5_rank",
+        "kind": "group_input",
+        "target_leakage": "medium",
+        "value": 5
+      },
+      {
+        "id": "T3_b2",
+        "kind": "topology_input",
+        "target_leakage": "medium",
+        "value": 3
+      },
+      {
+        "formula": "|Delta(D5)| + rank(D5) + b2(T3)/2",
+        "id": "alpha_u_inv_observed",
+        "kind": "construction_result",
+        "target_leakage": "medium",
+        "value": {
+          "den": 2,
+          "float": 46.5,
+          "num": 93
+        }
+      },
+      {
+        "id": "alpha_u_inv_target",
+        "kind": "literal_comparison_target",
+        "target_leakage": "high_if_used_for_construction",
+        "value": {
+          "den": 2,
+          "float": 46.5,
+          "num": 93
+        }
+      },
+      {
+        "id": "tcps_clock_intervals",
+        "kind": "finite_clock_input",
+        "target_leakage": "medium",
+        "value": {
+          "high": 6,
+          "low": 13
+        }
+      },
+      {
+        "formula": "high/low",
+        "id": "tcps_clock_observed",
+        "kind": "construction_result",
+        "target_leakage": "medium",
+        "value": {
+          "den": 13,
+          "float": 0.46153846153846156,
+          "num": 6
+        }
+      },
+      {
+        "id": "tcps_clock_target",
+        "kind": "literal_comparison_target",
+        "target_leakage": "high_if_used_for_construction",
+        "value": {
+          "den": 13,
+          "float": 0.46153846153846156,
+          "num": 6
+        }
+      },
+      {
+        "id": "lci_block_complex",
+        "kind": "finite_complex_input",
+        "target_leakage": "medium_high",
+        "value": {
+          "SU2L": [
+            "1",
+            "-1"
+          ],
+          "SU2R": [
+            "6",
+            "-1"
+          ],
+          "SU4": [
+            "4",
+            "-1/3"
+          ]
+        }
+      },
+      {
+        "formula": "graded block supertrace",
+        "id": "lci_observed",
+        "kind": "construction_result",
+        "target_leakage": "medium_high",
+        "value": [
+          {
+            "den": 3,
+            "float": 3.6666666666666665,
+            "num": 11
+          },
+          {
+            "den": 1,
+            "float": 0.0,
+            "num": 0
+          },
+          {
+            "den": 1,
+            "float": 5.0,
+            "num": 5
+          }
+        ]
+      },
+      {
+        "id": "lci_target",
+        "kind": "literal_comparison_target",
+        "target_leakage": "high_if_used_for_construction",
+        "value": [
+          {
+            "den": 3,
+            "float": 3.6666666666666665,
+            "num": 11
+          },
+          {
+            "den": 1,
+            "float": 0.0,
+            "num": 0
+          },
+          {
+            "den": 1,
+            "float": 5.0,
+            "num": 5
+          }
+        ]
+      },
+      {
+        "formula": "dyadic_labels/96",
+        "id": "dfc_protected_integer_labels",
+        "kind": "finite_complex_input",
+        "target_leakage": "high_until_Q_derivation_exists",
+        "value": [
+          12,
+          -2,
+          3
+        ]
+      },
+      {
+        "formula": "protected cohomology labels / 96 after acyclic-pair cancellation",
+        "id": "dfc_observed",
+        "kind": "construction_result",
+        "target_leakage": "high_until_Q_derivation_exists",
+        "value": [
+          {
+            "den": 8,
+            "float": 0.125,
+            "num": 1
+          },
+          {
+            "den": 48,
+            "float": -0.020833333333333332,
+            "num": -1
+          },
+          {
+            "den": 32,
+            "float": 0.03125,
+            "num": 1
+          }
+        ]
+      },
+      {
+        "id": "dfc_target",
+        "kind": "literal_comparison_target",
+        "target_leakage": "high_if_used_for_construction",
+        "value": [
+          {
+            "den": 8,
+            "float": 0.125,
+            "num": 1
+          },
+          {
+            "den": 48,
+            "float": -0.020833333333333332,
+            "num": -1
+          },
+          {
+            "den": 32,
+            "float": 0.03125,
+            "num": 1
+          }
+        ]
+      }
+    ]
+  },
+  "dfc_cohomology_table": {
+    "Q01": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "Q12": [
+      [
+        0,
+        1
+      ]
+    ],
+    "Q_squared": [
+      [
+        0,
+        0
+      ]
+    ],
+    "Q_squared_zero": true,
+    "acyclic_pair_supertrace": [
+      {
+        "den": 1,
+        "float": 0.0,
+        "num": 0
+      },
+      {
+        "den": 1,
+        "float": 0.0,
+        "num": 0
+      },
+      {
+        "den": 1,
+        "float": 0.0,
+        "num": 0
+      }
+    ],
+    "basis": [
+      {
+        "K": 0,
+        "charges": [
+          {
+            "den": 8,
+            "float": 0.125,
+            "num": 1
+          },
+          {
+            "den": 48,
+            "float": -0.020833333333333332,
+            "num": -1
+          },
+          {
+            "den": 32,
+            "float": 0.03125,
+            "num": 1
+          }
+        ],
+        "degree": 0,
+        "grading": 1,
+        "name": "h0",
+        "protected": true,
+        "space": "C0"
+      },
+      {
+        "K": 1,
+        "charges": [
+          {
+            "den": 12,
+            "float": 0.4166666666666667,
+            "num": 5
+          },
+          {
+            "den": 12,
+            "float": -0.4166666666666667,
+            "num": -5
+          },
+          {
+            "den": 1,
+            "float": 0.0,
+            "num": 0
+          }
+        ],
+        "degree": 0,
+        "grading": 1,
+        "name": "a0",
+        "protected": false,
+        "space": "C0"
+      },
+      {
+        "K": 1,
+        "charges": [
+          {
+            "den": 12,
+            "float": 0.4166666666666667,
+            "num": 5
+          },
+          {
+            "den": 12,
+            "float": -0.4166666666666667,
+            "num": -5
+          },
+          {
+            "den": 1,
+            "float": 0.0,
+            "num": 0
+          }
+        ],
+        "degree": 1,
+        "grading": -1,
+        "name": "a1",
+        "protected": false,
+        "space": "C1"
+      },
+      {
+        "K": 2,
+        "charges": [
+          {
+            "den": 24,
+            "float": -0.2916666666666667,
+            "num": -7
+          },
+          {
+            "den": 24,
+            "float": 0.2916666666666667,
+            "num": 7
+          },
+          {
+            "den": 1,
+            "float": 0.0,
+            "num": 0
+          }
+        ],
+        "degree": 1,
+        "grading": -1,
+        "name": "c1",
+        "protected": false,
+        "space": "C1"
+      },
+      {
+        "K": 2,
+        "charges": [
+          {
+            "den": 24,
+            "float": -0.2916666666666667,
+            "num": -7
+          },
+          {
+            "den": 24,
+            "float": 0.2916666666666667,
+            "num": 7
+          },
+          {
+            "den": 1,
+            "float": 0.0,
+            "num": 0
+          }
+        ],
+        "degree": 2,
+        "grading": 1,
+        "name": "c2",
+        "protected": false,
+        "space": "C2"
+      }
+    ],
+    "cohomology_dimensions": {
+      "H0": 1,
+      "H1": 0,
+      "H2": 0
+    },
+    "gauge_insertions": [
+      "I_SU4",
+      "I_SU2L",
+      "I_SU2R"
+    ],
+    "mass_operator": "M=M_star*2^K",
+    "protected_supertrace": [
+      {
+        "component": 0,
+        "den": 8,
+        "float": 0.125,
+        "num": 1,
+        "supertrace_den": 8,
+        "supertrace_num": 1
+      },
+      {
+        "component": 1,
+        "den": 48,
+        "float": -0.020833333333333332,
+        "num": -1,
+        "supertrace_den": 48,
+        "supertrace_num": -1
+      },
+      {
+        "component": 2,
+        "den": 32,
+        "float": 0.03125,
+        "num": 1,
+        "supertrace_den": 32,
+        "supertrace_num": 1
+      }
+    ],
+    "spaces": {
+      "C0": 2,
+      "C1": 2,
+      "C2": 1
+    }
+  },
+  "finite_hamiltonian_stiffness_table": {
+    "comparison_target": {
+      "den": 2,
+      "float": 46.5,
+      "num": 93
+    },
+    "constructed_stiffness": {
+      "den": 2,
+      "float": 46.5,
+      "num": 93
+    },
+    "hamiltonian": "H(phi)=non-diagonal coupled sector Laplacian + 1/2 phi^2 W(D5_roots,D5_rank,T3_b2)",
+    "method": "dense exact diagonalization",
+    "rows": [
+      {
+        "E0_minus": 2.3250003346186876e-09,
+        "E0_plus": 2.3250003346186876e-09,
+        "E0_zero": -6.314393452555578e-16,
+        "abs_error": 1.9321160650065394e-05,
+        "curvature": 46.50001932116065,
+        "hilbert_dimension": 12,
+        "offdiag_norm": 4.898979485566356,
+        "phi": 1e-05,
+        "size": 4,
+        "target": 46.5
+      },
+      {
+        "E0_minus": 2.3249993180707307e-09,
+        "E0_plus": 2.3249993180707307e-09,
+        "E0_zero": -6.735063895479954e-16,
+        "abs_error": 1.6845760342221183e-07,
+        "curvature": 46.4999998315424,
+        "hilbert_dimension": 24,
+        "offdiag_norm": 6.928203230275509,
+        "phi": 1e-05,
+        "size": 8,
+        "target": 46.5
+      },
+      {
+        "E0_minus": 2.3249993527652e-09,
+        "E0_plus": 2.3249993527652e-09,
+        "E0_zero": -7.736840676602327e-16,
+        "abs_error": 2.52898534824908e-06,
+        "curvature": 46.50000252898535,
+        "hilbert_dimension": 48,
+        "offdiag_norm": 9.797958971132712,
+        "phi": 1e-05,
+        "size": 16,
+        "target": 46.5
+      },
+      {
+        "E0_minus": 2.324997989272548e-09,
+        "E0_plus": 2.324997989272548e-09,
+        "E0_zero": -8.361002574075769e-16,
+        "abs_error": 2.3492543895997642e-05,
+        "curvature": 46.499976507456104,
+        "hilbert_dimension": 96,
+        "offdiag_norm": 13.856406460551018,
+        "phi": 1e-05,
+        "size": 32,
+        "target": 46.5
+      },
+      {
+        "E0_minus": 2.3249944216930634e-09,
+        "E0_plus": 2.3249944216930634e-09,
+        "E0_zero": -1.1105222850418307e-15,
+        "abs_error": 8.935569304213686e-05,
+        "curvature": 46.49991064430696,
+        "hilbert_dimension": 192,
+        "offdiag_norm": 19.595917942265423,
+        "phi": 1e-05,
+        "size": 64,
+        "target": 46.5
+      }
+    ],
+    "sector_stiffness": {
+      "D5_cartan_sector": {
+        "den": 1,
+        "float": 5.0,
+        "num": 5
+      },
+      "D5_root_sector": {
+        "den": 1,
+        "float": 40.0,
+        "num": 40
+      },
+      "T3_torsion_sector": {
+        "den": 2,
+        "float": 1.5,
+        "num": 3
+      }
+    },
+    "verdict": "non_diagonal_response_matches_sector_constructed_stiffness_with_finite_difference_error"
+  },
+  "frozen_flavor_extension": {
+    "candidate_origin": "13/(16+13), with 16 as Spin(10) spinor dimension and 13 as PS closed clock.",
+    "clock_den": 29,
+    "clock_divisor": 3,
+    "clock_num": 13,
+    "lambda_formula": "sqrt(13/29)/3",
+    "packet_sha256": "63d9ed215a92d9aa24cbfd91d54f948c65fe0a592dd32408408856bc5bb8292d",
+    "rule": "Do not tune this packet inside the gauge-sector microscopic lab.",
+    "status": "frozen_for_later_origin_search"
+  },
+  "lab_name": "Microscopic ISDLC Laboratory",
+  "lci_regulator_table": {
+    "operator": "STr(Omega_i exp(-K_A/Lambda^2))",
+    "paired_nonzero_modes": [
+      {
+        "grading": 1,
+        "lambda": 1.0,
+        "omega": [
+          {
+            "den": 1,
+            "float": 2.0,
+            "num": 2
+          },
+          {
+            "den": 1,
+            "float": 1.0,
+            "num": 1
+          },
+          {
+            "den": 1,
+            "float": -1.0,
+            "num": -1
+          }
+        ]
+      },
+      {
+        "grading": -1,
+        "lambda": 1.0,
+        "omega": [
+          {
+            "den": 1,
+            "float": 2.0,
+            "num": 2
+          },
+          {
+            "den": 1,
+            "float": 1.0,
+            "num": 1
+          },
+          {
+            "den": 1,
+            "float": -1.0,
+            "num": -1
+          }
+        ]
+      },
+      {
+        "grading": 1,
+        "lambda": 4.0,
+        "omega": [
+          {
+            "den": 3,
+            "float": -0.3333333333333333,
+            "num": -1
+          },
+          {
+            "den": 1,
+            "float": 2.0,
+            "num": 2
+          },
+          {
+            "den": 1,
+            "float": 3.0,
+            "num": 3
+          }
+        ]
+      },
+      {
+        "grading": -1,
+        "lambda": 4.0,
+        "omega": [
+          {
+            "den": 3,
+            "float": -0.3333333333333333,
+            "num": -1
+          },
+          {
+            "den": 1,
+            "float": 2.0,
+            "num": 2
+          },
+          {
+            "den": 1,
+            "float": 3.0,
+            "num": 3
+          }
+        ]
+      }
+    ],
+    "protected_zero_modes": [
+      {
+        "den": 3,
+        "float": 3.6666666666666665,
+        "num": 11
+      },
+      {
+        "den": 1,
+        "float": 0.0,
+        "num": 0
+      },
+      {
+        "den": 1,
+        "float": 5.0,
+        "num": 5
+      }
+    ],
+    "rows": [
+      {
+        "cutoff": 0.5,
+        "max_abs_error": 0.0,
+        "ordinary_control_passes": false,
+        "ordinary_ungraded_control": [
+          3.7399291471981537,
+          0.03663172791816724,
+          4.9633693974335795
+        ],
+        "target": [
+          3.6666666666666665,
+          0.0,
+          5.0
+        ],
+        "topological_supertrace": [
+          3.6666666666666665,
+          0.0,
+          5.0
+        ]
+      },
+      {
+        "cutoff": 1.0,
+        "max_abs_error": 4.440892098500626e-16,
+        "ordinary_control_passes": false,
+        "ordinary_ungraded_control": [
+          5.125974005426614,
+          0.8090214378978213,
+          4.37413495098952
+        ],
+        "target": [
+          3.6666666666666665,
+          0.0,
+          5.0
+        ],
+        "topological_supertrace": [
+          3.666666666666667,
+          0.0,
+          5.0
+        ]
+      },
+      {
+        "cutoff": 2.0,
+        "max_abs_error": 4.440892098500626e-16,
+        "ordinary_control_passes": false,
+        "ordinary_ungraded_control": [
+          6.536616838171325,
+          3.0291193308285793,
+          5.649675080885844
+        ],
+        "target": [
+          3.6666666666666665,
+          0.0,
+          5.0
+        ],
+        "topological_supertrace": [
+          3.666666666666666,
+          0.0,
+          5.0
+        ]
+      },
+      {
+        "cutoff": 4.0,
+        "max_abs_error": 4.440892098500626e-16,
+        "ordinary_control_passes": false,
+        "ordinary_ungraded_control": [
+          6.905118395872967,
+          4.994029257912572,
+          7.793978572801478
+        ],
+        "target": [
+          3.6666666666666665,
+          0.0,
+          5.0
+        ],
+        "topological_supertrace": [
+          3.666666666666667,
+          0.0,
+          5.0
+        ]
+      },
+      {
+        "cutoff": 8.0,
+        "max_abs_error": 4.440892098500626e-16,
+        "ordinary_control_passes": false,
+        "ordinary_ungraded_control": [
+          6.978377039479317,
+          5.72664512526472,
+          8.667485502870038
+        ],
+        "target": [
+          3.6666666666666665,
+          0.0,
+          5.0
+        ],
+        "topological_supertrace": [
+          3.666666666666667,
+          0.0,
+          5.0
+        ]
+      },
+      {
+        "cutoff": 16.0,
+        "max_abs_error": 4.440892098500626e-16,
+        "ordinary_control_passes": false,
+        "ordinary_ungraded_control": [
+          6.994741186543531,
+          5.930188486961868,
+          8.914775883092215
+        ],
+        "target": [
+          3.6666666666666665,
+          0.0,
+          5.0
+        ],
+        "topological_supertrace": [
+          3.666666666666667,
+          0.0,
+          5.0
+        ]
+      },
+      {
+        "cutoff": 64.0,
+        "max_abs_error": 4.440892098500626e-16,
+        "ordinary_control_passes": false,
+        "ordinary_ungraded_control": [
+          6.9996742805782715,
+          5.995607435077697,
+          8.994631706742059
+        ],
+        "target": [
+          3.6666666666666665,
+          0.0,
+          5.0
+        ],
+        "topological_supertrace": [
+          3.666666666666667,
+          0.0,
+          5.0
+        ]
+      }
+    ],
+    "verdict": "topological_regulator_trace_passes; ordinary_ungraded_control_fails"
+  },
+  "next_required_work": [
+    "Replace the diagonal stiffness toy Hamiltonian with a non-diagonal finite line-code Hamiltonian.",
+    "Build explicit LCI blocking operator K_A and gauge covariance tests.",
+    "Derive DFC protected charges from Q instead of assigning them.",
+    "Add two-loop and scheme/covariance gauge matching only after the finite theorem layer passes."
+  ],
+  "nonrenormalization_audit": {
+    "ordinary_scalar_control": {
+      "has_local_kinetic_operator": true,
+      "local_propagator_poles": [
+        -1.0,
+        -4.0,
+        -16.0
+      ],
+      "rows": [
+        {
+          "p2": 0.0,
+          "propagator_trace": 1.3125
+        },
+        {
+          "p2": 0.1,
+          "propagator_trace": 1.2151051493575353
+        },
+        {
+          "p2": 1.0,
+          "propagator_trace": 0.7588235294117647
+        },
+        {
+          "p2": 10.0,
+          "propagator_trace": 0.2007992007992008
+        }
+      ],
+      "verdict": "fail_generates_ordinary_threshold_and_two_loop_messenger_interpretation"
+    },
+    "topological_DFC": {
+      "has_local_kinetic_operator": false,
+      "local_propagator_poles": [],
+      "rows": [
+        {
+          "local_pole_count": 0,
+          "p2": 0.0,
+          "propagator_trace": 0.0
+        },
+        {
+          "local_pole_count": 0,
+          "p2": 0.1,
+          "propagator_trace": 0.0
+        },
+        {
+          "local_pole_count": 0,
+          "p2": 1.0,
+          "propagator_trace": 0.0
+        },
+        {
+          "local_pole_count": 0,
+          "p2": 10.0,
+          "propagator_trace": 0.0
+        }
+      ],
+      "verdict": "pass_no_local_propagator_pole_inside_model"
+    }
+  },
+  "null_scan": {
+    "backend": "torch-cuda",
+    "best_null_candidate": {
+      "alpha_u_inv": 46.5,
+      "clock": 0.48275861144065857,
+      "dfc": [
+        0.125,
+        -0.0416666679084301,
+        0.0416666679084301
+      ],
+      "lci": [
+        3.6666667461395264,
+        0.0,
+        5.0
+      ],
+      "root_n": 5
+    },
+    "best_null_score": 0.09928295016288757,
+    "better_or_equal_count": 0,
+    "candidate_count": 5000000000,
+    "candidates_per_second": 733986902.6236254,
+    "elapsed_seconds": 6.8121106550097466,
+    "ensemble_contract": {
+      "alpha_u_inv": "2*n*(n-1)+n+b2/2, n in [3,9], b2 in [0,7]",
+      "clock": "p/q, p in [1,20], q in [2,31]",
+      "dfc": "components in Z/96 over [-1/4,1/4], includes 1/8, -1/48, and 1/32",
+      "lci": "components in Z/3 over [-4,8]"
+    },
+    "p_null_upper_rule_of_succession": 1.9999999996e-10,
+    "target_score": 0.0
+  },
+  "null_scan_manifest": {
+    "allowed_constants": [
+      "integer root-system size n in [3,9]",
+      "rank n",
+      "b2 in [0,7]",
+      "clock p/q with p in [1,20], q in [2,31]",
+      "LCI components in Z/3 over [-4,8]",
+      "DFC components in Z/96 over [-1/4,1/4]"
+    ],
+    "config": {
+      "chunk_size": 128000000,
+      "device": "cuda",
+      "null_candidates": 5000000000,
+      "progress_every": 1,
+      "seed": 1200
+    },
+    "forbidden_target_derived_constants": [
+      "No measured Standard Model or cosmological constants.",
+      "No CKM/PMNS/mass inputs.",
+      "No post-hoc denominator narrowing after seeing ISDLC.",
+      "No changing score weights after scan."
+    ],
+    "frozen_before_scoring": true,
+    "normalization": {
+      "alpha_u_inv": 10.0,
+      "clock": 0.1,
+      "dfc_component": 0.1,
+      "lci_component": 2.0
+    },
+    "null_distribution_summary": {
+      "best_null_candidate": {
+        "alpha_u_inv": 46.5,
+        "clock": 0.48275861144065857,
+        "dfc": [
+          0.125,
+          -0.0416666679084301,
+          0.0416666679084301
+        ],
+        "lci": [
+          3.6666667461395264,
+          0.0,
+          5.0
+        ],
+        "root_n": 5
+      },
+      "best_null_score": 0.09928295016288757,
+      "better_or_equal_count": 0,
+      "candidate_count": 5000000000,
+      "p_null_upper_rule_of_succession": 1.9999999996e-10
+    },
+    "scan_family": {
+      "alpha_u_inv": "2*n*(n-1)+n+b2/2, n in [3,9], b2 in [0,7]",
+      "clock": "p/q, p in [1,20], q in [2,31]",
+      "dfc": "components in Z/96 over [-1/4,1/4], includes 1/8, -1/48, and 1/32",
+      "lci": "components in Z/3 over [-4,8]"
+    },
+    "score_function": "sum normalized squared distances to (93/2, 6/13, (11/3,0,5), (1/8,-1/48,1/32)); exact ISDLC score is 0.",
+    "version": "v1.2.0"
+  },
+  "package_version": "v1.2.0",
+  "status": "theorem_audit_lab_not_final_physics_proof"
+}

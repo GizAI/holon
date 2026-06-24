@@ -1,0 +1,249 @@
+{
+  "operator": "STr(Omega_i exp(-K_A/Lambda^2))",
+  "paired_nonzero_modes": [
+    {
+      "grading": 1,
+      "lambda": 1.0,
+      "omega": [
+        {
+          "den": 1,
+          "float": 2.0,
+          "num": 2
+        },
+        {
+          "den": 1,
+          "float": 1.0,
+          "num": 1
+        },
+        {
+          "den": 1,
+          "float": -1.0,
+          "num": -1
+        }
+      ]
+    },
+    {
+      "grading": -1,
+      "lambda": 1.0,
+      "omega": [
+        {
+          "den": 1,
+          "float": 2.0,
+          "num": 2
+        },
+        {
+          "den": 1,
+          "float": 1.0,
+          "num": 1
+        },
+        {
+          "den": 1,
+          "float": -1.0,
+          "num": -1
+        }
+      ]
+    },
+    {
+      "grading": 1,
+      "lambda": 4.0,
+      "omega": [
+        {
+          "den": 3,
+          "float": -0.3333333333333333,
+          "num": -1
+        },
+        {
+          "den": 1,
+          "float": 2.0,
+          "num": 2
+        },
+        {
+          "den": 1,
+          "float": 3.0,
+          "num": 3
+        }
+      ]
+    },
+    {
+      "grading": -1,
+      "lambda": 4.0,
+      "omega": [
+        {
+          "den": 3,
+          "float": -0.3333333333333333,
+          "num": -1
+        },
+        {
+          "den": 1,
+          "float": 2.0,
+          "num": 2
+        },
+        {
+          "den": 1,
+          "float": 3.0,
+          "num": 3
+        }
+      ]
+    }
+  ],
+  "protected_zero_modes": [
+    {
+      "den": 3,
+      "float": 3.6666666666666665,
+      "num": 11
+    },
+    {
+      "den": 1,
+      "float": 0.0,
+      "num": 0
+    },
+    {
+      "den": 1,
+      "float": 5.0,
+      "num": 5
+    }
+  ],
+  "rows": [
+    {
+      "cutoff": 0.5,
+      "max_abs_error": 0.0,
+      "ordinary_control_passes": false,
+      "ordinary_ungraded_control": [
+        3.7399291471981537,
+        0.03663172791816724,
+        4.9633693974335795
+      ],
+      "target": [
+        3.6666666666666665,
+        0.0,
+        5.0
+      ],
+      "topological_supertrace": [
+        3.6666666666666665,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "cutoff": 1.0,
+      "max_abs_error": 4.440892098500626e-16,
+      "ordinary_control_passes": false,
+      "ordinary_ungraded_control": [
+        5.125974005426614,
+        0.8090214378978213,
+        4.37413495098952
+      ],
+      "target": [
+        3.6666666666666665,
+        0.0,
+        5.0
+      ],
+      "topological_supertrace": [
+        3.666666666666667,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "cutoff": 2.0,
+      "max_abs_error": 4.440892098500626e-16,
+      "ordinary_control_passes": false,
+      "ordinary_ungraded_control": [
+        6.536616838171325,
+        3.0291193308285793,
+        5.649675080885844
+      ],
+      "target": [
+        3.6666666666666665,
+        0.0,
+        5.0
+      ],
+      "topological_supertrace": [
+        3.666666666666666,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "cutoff": 4.0,
+      "max_abs_error": 4.440892098500626e-16,
+      "ordinary_control_passes": false,
+      "ordinary_ungraded_control": [
+        6.905118395872967,
+        4.994029257912572,
+        7.793978572801478
+      ],
+      "target": [
+        3.6666666666666665,
+        0.0,
+        5.0
+      ],
+      "topological_supertrace": [
+        3.666666666666667,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "max_abs_error": 4.440892098500626e-16,
+      "ordinary_control_passes": false,
+      "ordinary_ungraded_control": [
+        6.978377039479317,
+        5.72664512526472,
+        8.667485502870038
+      ],
+      "target": [
+        3.6666666666666665,
+        0.0,
+        5.0
+      ],
+      "topological_supertrace": [
+        3.666666666666667,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "cutoff": 16.0,
+      "max_abs_error": 4.440892098500626e-16,
+      "ordinary_control_passes": false,
+      "ordinary_ungraded_control": [
+        6.994741186543531,
+        5.930188486961868,
+        8.914775883092215
+      ],
+      "target": [
+        3.6666666666666665,
+        0.0,
+        5.0
+      ],
+      "topological_supertrace": [
+        3.666666666666667,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "cutoff": 64.0,
+      "max_abs_error": 4.440892098500626e-16,
+      "ordinary_control_passes": false,
+      "ordinary_ungraded_control": [
+        6.9996742805782715,
+        5.995607435077697,
+        8.994631706742059
+      ],
+      "target": [
+        3.6666666666666665,
+        0.0,
+        5.0
+      ],
+      "topological_supertrace": [
+        3.666666666666667,
+        0.0,
+        5.0
+      ]
+    }
+  ],
+  "verdict": "topological_regulator_trace_passes; ordinary_ungraded_control_fails"
+}

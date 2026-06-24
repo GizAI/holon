@@ -1,0 +1,357 @@
+{
+  "format": "fpphysics_hidden_observations_v1",
+  "instructions": "Fill value/sigma/source only after predictions have been frozen. Keep this file out of the search process.",
+  "observations": [
+    {
+      "name": "me_over_mmu",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "charged lepton mass ratio in a fixed low-energy convention"
+    },
+    {
+      "name": "mmu_over_mtau",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "charged lepton mass ratio in a fixed low-energy convention"
+    },
+    {
+      "name": "mu_over_mc_2gev_or_msbar",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "requires scheme and scale lock"
+    },
+    {
+      "name": "mc_over_mt_msbar",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "requires scheme and scale lock"
+    },
+    {
+      "name": "md_over_ms_2gev",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "requires lattice/QCD scheme lock"
+    },
+    {
+      "name": "ms_over_mb_msbar",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "requires scheme and scale lock"
+    },
+    {
+      "name": "Vus",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "CKM matrix element or Wolfenstein lambda"
+    },
+    {
+      "name": "Vcb",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "Vub",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "J_CKM",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "Jarlskog invariant"
+    },
+    {
+      "name": "delta_CKM",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "CKM CP phase in a fixed convention"
+    },
+    {
+      "name": "sin2theta12_PMNS",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "sin2theta13_PMNS",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "sin2theta23_PMNS",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "delta_CP_PMNS",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "current precision may be weak; use hidden interval or likelihood"
+    },
+    {
+      "name": "dm21_eV2",
+      "kind": "point",
+      "unit": "eV^2",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "abs_dm31_eV2",
+      "kind": "point",
+      "unit": "eV^2",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "neutrino_ordering",
+      "kind": "categorical",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "sum_mnu_eV",
+      "kind": "upper_bound",
+      "unit": "eV",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "cosmology-model dependent"
+    },
+    {
+      "name": "m_beta_beta_eV",
+      "kind": "upper_bound",
+      "unit": "eV",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "nuclear matrix element dependent"
+    },
+    {
+      "name": "mW_GeV",
+      "kind": "point",
+      "unit": "GeV",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "GammaZ_GeV",
+      "kind": "point",
+      "unit": "GeV",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "sigma0_had_nb",
+      "kind": "point",
+      "unit": "nb",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "R_l_Z",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "A_FB_0_b",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "S_parameter",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "T_parameter",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "tau_p_to_e_pi0_years",
+      "kind": "lower_bound",
+      "unit": "years",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "or actual predicted lifetime/range"
+    },
+    {
+      "name": "tau_p_to_K_nu_years",
+      "kind": "lower_bound",
+      "unit": "years",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "M_X_GeV",
+      "kind": "point",
+      "unit": "GeV",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "gauge-boson or heavy-threshold scale"
+    },
+    {
+      "name": "M_intermediate_lightest_GeV",
+      "kind": "point",
+      "unit": "GeV",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "collider/intermediate state if present"
+    },
+    {
+      "name": "N_eff",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "Delta_N_eff",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "omega_cdm_h2",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "cold dark matter relic density parameter"
+    },
+    {
+      "name": "sigma_SI_cm2",
+      "kind": "upper_bound",
+      "unit": "cm^2",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "mass-dependent bound in real use"
+    },
+    {
+      "name": "m_DM_GeV",
+      "kind": "point",
+      "unit": "GeV",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "collider_lightest_new_state_GeV",
+      "kind": "lower_bound",
+      "unit": "GeV",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": ""
+    },
+    {
+      "name": "Higgs_quartic_lambda_mt",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "Higgs quartic at top scale in a fixed scheme"
+    },
+    {
+      "name": "top_yukawa_yt_mt",
+      "kind": "point",
+      "unit": "dimensionless",
+      "value": null,
+      "sigma": null,
+      "source": "",
+      "notes": "top Yukawa at top scale in a fixed scheme"
+    }
+  ]
+}

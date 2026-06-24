@@ -1,0 +1,22 @@
+name,pred_key,prediction,observed,sigma,z,status,kind,source_key,observed_lower_bound,lo3,hi3,scheme_note
+Vus,Vus,0.22645540682891915,0.22501,0.00068,2.1255982778223026,pass_3sigma,point,PDG_CKM_Wolfenstein_2024_2025,,,,
+Vcb,Vcb,0.041871619534755176,0.0418199670826,0.000824460561969,0.06264999751087647,pass_3sigma,point,PDG_CKM_Wolfenstein_derived,,,,
+Vub,Vub,0.0038710325953661396,0.00363748862161,0.000104330038509,2.2385113347388734,pass_3sigma,point,PDG_CKM_Wolfenstein_derived,,,,
+J_CKM,J_CKM,3.3716010047370996e-05,3.11949041666e-05,1.44812430997e-06,1.7409457623311508,pass_3sigma,point,PDG_CKM_Wolfenstein_derived,,,,
+pmns_sin2_theta12,pmns_sin2_theta12,0.31717171717171716,0.308,0.0115,0.7975406236275795,pass_3sigma,point,NuFIT6_IC24_SK_NO,,,,
+pmns_sin2_theta13,pmns_sin2_theta13,0.02366863905325444,0.02215,0.00057,2.6642790407972656,pass_3sigma,point,NuFIT6_IC24_SK_NO,,,,
+pmns_sin2_theta23_IC24_SK_NO_local,pmns_sin2_theta23,0.5512820512820513,0.47,0.015,5.4188034188034235,inside_3sigma_interval_but_fails_local_bestfit_z,point_with_3sigma_interval,NuFIT6_IC24_SK_NO_theta23_multimodal,,0.435,0.585,
+delta_m21_sq_ev2,delta_m21_sq_ev2,7.35294117647059e-05,7.49e-05,1.9e-06,-0.7213622291021587,pass_3sigma,point,NuFIT6_IC24_SK_NO,,,,
+abs_delta_m3l_sq_ev2,abs_delta_m3l_sq_ev2,0.0025000000000000005,0.002513,2e-05,-0.6499999999999778,pass_3sigma,point,NuFIT6_IC24_SK_NO,,,,
+neutrino_ordering,neutrino_ordering,normal,normal,,,pass_category,category,NuFIT6_IC24_SK_mild_preference,,,,
+ms_over_mb_PDG2025_mixed_scale_diagnostic,ms_over_mb,0.02564102564102564,0.022352378675591682,0.00019487390356995294,16.8757689212781,diagnostic_fail_scheme_or_value,scheme_diagnostic_point,PDG2025_quark_summary_mixed_scales,,,,m_s(2GeV)/m_b(m_b); packet did not predeclare this scheme
+mc_over_mt_direct_PDG2025_diagnostic,mc_over_mt,0.007889546351084813,0.007377144181733889,2.977003798655495e-05,17.212009255155824,diagnostic_fail_scheme_or_value,scheme_diagnostic_point,PDG2025_quark_summary_direct_top,,,,m_c(m_c)/m_t(direct); packet did not predeclare this scheme
+mc_over_mt_crosssection_MSbar_like_diagnostic,mc_over_mt,0.007889546351084813,0.007833846153846153,9.127546584350423e-05,0.6102428152397534,diagnostic_pass_but_not_certified,scheme_diagnostic_point,PDG2025_quark_summary_cross_section_top,,,,m_c(m_c)/m_t(cross-section mass proxy); packet did not predeclare this scheme
+N_eff,N_eff,3.0,2.99,0.17,0.05882352941176345,pass_3sigma,point,Planck2018_BAO,,,,
+Delta_N_eff,Delta_N_eff,0.0,-0.055999999999999606,0.17,0.32941176470588,pass_3sigma,point,Planck2018_BAO_vs_SM,,,,
+omega_cdm_h2,omega_cdm_h2,0.11538461538461539,0.12,0.001,-4.615384615384604,fail_gt_3sigma,point,Planck2018_base_LCDM,,,,
+tau_p_to_e_pi0_years,tau_p_to_e_pi0_years,4.7509645001766504e+38,,,,pass_lower_bound,lower_bound,SuperK_p_to_epi0,2.4e+34,,,
+M_intermediate_lightest_GeV,M_intermediate_lightest_GeV,633890408.2898637,,,,pass_lower_bound,lower_bound,LHC_direct_new_fermion_vectorlike_limits_proxy,2600.0,,,
+collider_lightest_new_state_GeV,collider_lightest_new_state_GeV,633890408.2898637,,,,pass_lower_bound,lower_bound,LHC_direct_new_fermion_vectorlike_limits_proxy,2600.0,,,
+S_new,S_new,0.0,0.0,0.08,0.0,pass_3sigma,point,EWPD_new_physics_oblique_proxy,,,,
+T_new,T_new,0.0,0.0,0.07,0.0,pass_3sigma,point,EWPD_new_physics_oblique_proxy,,,,

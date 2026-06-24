@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "first-principles-physics-engine"
+version = "1.1.0"
+description = "Consolidated first-principles-constants research engine with strict scoring, auto-discovery, blind prediction protocol, and external holdout audits."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "FPP Engine research session"}]
+license = {text = "MIT"}
+dependencies = ["numpy>=1.22", "sympy>=1.10"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+accelerated = ["scipy>=1.10", "torch", "jax", "numba"]
+
+[project.scripts]
+fpp-engine = "fpphysics.cli:main"
+fpp-discover = "fpphysics.discover_cli:main"
+fpp-theory-lab = "fpphysics.theory_lab_cli:main"
+fpp-blind = "fpphysics.blind_cli:main"
+fpp-blind-success = "fpphysics.blind_success_cli:main"
+fpp-frozen-blind = "fpphysics.frozen_blind_candidate_cli:main"
+fpp-cabibbo-clock = "fpphysics.blind_cabibbo_cli:main"
+fpp-final = "fpphysics.final_cli:main"
+fpp-gpu-holdout-search = "fpphysics.gpu_holdout_search:main"
+fpp-microscopic-lab = "fpphysics.microscopic_lab:main"
+
+[tool.setuptools]
+packages = ["fpphysics", "fpphysics.discovery"]

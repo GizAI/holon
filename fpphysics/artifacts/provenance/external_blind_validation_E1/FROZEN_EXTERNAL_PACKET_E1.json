@@ -1,0 +1,76 @@
+{
+  "format": "fpphysics_external_freeze_packet_v1",
+  "model_name": "ISDLC-TCPS-Fnu-chi Cabibbo-clock external-holdout packet E1",
+  "freeze_event": {
+    "created_utc": "2026-06-24T00:00:00Z",
+    "created_in_session_before_external_holdout_reveal": true,
+    "no_external_holdout_values_used_in_this_freeze_step": true,
+    "warning": "This is a reproducible freeze in the current ChatGPT session, not a cryptographic third-party timestamp. Academic use requires OSF/arXiv/Git tag notarization before future or third-party reveal."
+  },
+  "discrete_inputs": {
+    "clock_ratio_r": "6/13",
+    "alpha_U_inv": "93/2",
+    "M_U_formula": "Mbar_Pl/40",
+    "Mbar_Pl_GeV": 2.435e+18
+  },
+  "formula_book": {
+    "lambda_C": "sqrt(6/13)/3",
+    "Vus": "lambda_C",
+    "Vcb": "sqrt(2/3)*lambda_C^2",
+    "Vub": "lambda_C^3/3",
+    "J_CKM": "lambda_C^6/4",
+    "pmns_sin2_theta13": "(6/13)^2/9",
+    "pmns_sin2_theta12": "(1-3*s13)/(3*(1-s13))",
+    "pmns_sin2_theta23": "1/2 + lambda_C^2",
+    "abs_delta_m3l_sq_ev2": "(0.05 eV)^2",
+    "delta_m21_sq_ev2": "abs_delta_m3l_sq_ev2/(40-6)",
+    "neutrino_ordering": "normal",
+    "ms_over_mb": "1/39",
+    "mc_over_mt": "lambda_C^2/(13/2)",
+    "N_eff": "3.0",
+    "Delta_N_eff": "0.0",
+    "omega_cdm_h2": "(6/13)/4",
+    "M_U_GeV": "Mbar_Pl/40",
+    "M_intermediate_lightest_GeV": "MZ*(M_U/MZ)^(6/13)",
+    "collider_lightest_new_state_GeV": "M_intermediate_lightest_GeV",
+    "tau_p_to_e_pi0_years": "1e35*(M_U/1e16)^4*(0.04/alpha_U)^2",
+    "S_new": "0",
+    "T_new": "0"
+  },
+  "predictions": {
+    "Vus": 0.22645540682891915,
+    "Vcb": 0.041871619534755176,
+    "Vub": 0.0038710325953661396,
+    "J_CKM": 3.3716010047370996e-05,
+    "pmns_sin2_theta13": 0.02366863905325444,
+    "pmns_sin2_theta12": 0.31717171717171716,
+    "pmns_sin2_theta23": 0.5512820512820513,
+    "delta_m21_sq_ev2": 7.35294117647059e-05,
+    "abs_delta_m3l_sq_ev2": 0.0025000000000000005,
+    "neutrino_ordering": "normal",
+    "ms_over_mb": 0.02564102564102564,
+    "mc_over_mt": 0.007889546351084813,
+    "N_eff": 3.0,
+    "Delta_N_eff": 0.0,
+    "omega_cdm_h2": 0.11538461538461539,
+    "M_U_GeV": 6.0875e+16,
+    "M_intermediate_lightest_GeV": 633890408.2898637,
+    "collider_lightest_new_state_GeV": 633890408.2898637,
+    "tau_p_to_e_pi0_years": 4.7509645001766504e+38,
+    "S_new": 0.0,
+    "T_new": 0.0
+  },
+  "not_predicted": [
+    "alpha0_inv independent microscopic threshold closure",
+    "charged lepton mass ratios",
+    "all Yukawa eigenvalues",
+    "full LCDM six-parameter vector from a microscopic action",
+    "dark matter particle mass and annihilation cross section"
+  ],
+  "trained_on_declared": [
+    "ISDLC-TCPS gauge seed alpha_U_inv=93/2, M_U=Mbar_Pl/40, clock=6/13"
+  ],
+  "claims_complete_first_principles_derivation": false,
+  "free_continuous_parameters_fit_to_holdout": 0,
+  "packet_sha256": "590c1a3a3b3c4fe8287dee99200e689f831cbbd6da015d44baccb3820c5540a9"
+}

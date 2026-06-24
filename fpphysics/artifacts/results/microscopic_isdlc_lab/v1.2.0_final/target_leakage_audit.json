@@ -1,0 +1,246 @@
+{
+  "edges": [
+    [
+      "D5_root_count",
+      "alpha_u_inv_observed"
+    ],
+    [
+      "D5_rank",
+      "alpha_u_inv_observed"
+    ],
+    [
+      "T3_b2",
+      "alpha_u_inv_observed"
+    ],
+    [
+      "alpha_u_inv_target",
+      "alpha_u_inv_observed",
+      "comparison_only_for_pass_fail"
+    ],
+    [
+      "tcps_clock_intervals",
+      "tcps_clock_observed"
+    ],
+    [
+      "tcps_clock_target",
+      "tcps_clock_observed",
+      "comparison_only_for_pass_fail"
+    ],
+    [
+      "lci_block_complex",
+      "lci_observed"
+    ],
+    [
+      "lci_target",
+      "lci_observed",
+      "comparison_only_for_pass_fail"
+    ],
+    [
+      "dfc_protected_integer_labels",
+      "dfc_observed"
+    ],
+    [
+      "dfc_target",
+      "dfc_observed",
+      "comparison_only_for_pass_fail"
+    ]
+  ],
+  "findings": [
+    "alpha_u_inv is construction-derived from D5/T3 counts, but D5 and T3 are still chosen inputs.",
+    "TCPS 6:13 is still a clock input, not yet an eigenvalue theorem.",
+    "LCI block entries are explicit finite-complex inputs; regulator trace validates cancellation but not origin.",
+    "DFC protected labels reproduce the target exactly; this remains the highest leakage risk until Q derives them."
+  ],
+  "nodes": [
+    {
+      "formula": "2*n*(n-1), n=5",
+      "id": "D5_root_count",
+      "kind": "computed_integer",
+      "target_leakage": "low",
+      "value": 40
+    },
+    {
+      "id": "D5_rank",
+      "kind": "group_input",
+      "target_leakage": "medium",
+      "value": 5
+    },
+    {
+      "id": "T3_b2",
+      "kind": "topology_input",
+      "target_leakage": "medium",
+      "value": 3
+    },
+    {
+      "formula": "|Delta(D5)| + rank(D5) + b2(T3)/2",
+      "id": "alpha_u_inv_observed",
+      "kind": "construction_result",
+      "target_leakage": "medium",
+      "value": {
+        "den": 2,
+        "float": 46.5,
+        "num": 93
+      }
+    },
+    {
+      "id": "alpha_u_inv_target",
+      "kind": "literal_comparison_target",
+      "target_leakage": "high_if_used_for_construction",
+      "value": {
+        "den": 2,
+        "float": 46.5,
+        "num": 93
+      }
+    },
+    {
+      "id": "tcps_clock_intervals",
+      "kind": "finite_clock_input",
+      "target_leakage": "medium",
+      "value": {
+        "high": 6,
+        "low": 13
+      }
+    },
+    {
+      "formula": "high/low",
+      "id": "tcps_clock_observed",
+      "kind": "construction_result",
+      "target_leakage": "medium",
+      "value": {
+        "den": 13,
+        "float": 0.46153846153846156,
+        "num": 6
+      }
+    },
+    {
+      "id": "tcps_clock_target",
+      "kind": "literal_comparison_target",
+      "target_leakage": "high_if_used_for_construction",
+      "value": {
+        "den": 13,
+        "float": 0.46153846153846156,
+        "num": 6
+      }
+    },
+    {
+      "id": "lci_block_complex",
+      "kind": "finite_complex_input",
+      "target_leakage": "medium_high",
+      "value": {
+        "SU2L": [
+          "1",
+          "-1"
+        ],
+        "SU2R": [
+          "6",
+          "-1"
+        ],
+        "SU4": [
+          "4",
+          "-1/3"
+        ]
+      }
+    },
+    {
+      "formula": "graded block supertrace",
+      "id": "lci_observed",
+      "kind": "construction_result",
+      "target_leakage": "medium_high",
+      "value": [
+        {
+          "den": 3,
+          "float": 3.6666666666666665,
+          "num": 11
+        },
+        {
+          "den": 1,
+          "float": 0.0,
+          "num": 0
+        },
+        {
+          "den": 1,
+          "float": 5.0,
+          "num": 5
+        }
+      ]
+    },
+    {
+      "id": "lci_target",
+      "kind": "literal_comparison_target",
+      "target_leakage": "high_if_used_for_construction",
+      "value": [
+        {
+          "den": 3,
+          "float": 3.6666666666666665,
+          "num": 11
+        },
+        {
+          "den": 1,
+          "float": 0.0,
+          "num": 0
+        },
+        {
+          "den": 1,
+          "float": 5.0,
+          "num": 5
+        }
+      ]
+    },
+    {
+      "formula": "dyadic_labels/96",
+      "id": "dfc_protected_integer_labels",
+      "kind": "finite_complex_input",
+      "target_leakage": "high_until_Q_derivation_exists",
+      "value": [
+        12,
+        -2,
+        3
+      ]
+    },
+    {
+      "formula": "protected cohomology labels / 96 after acyclic-pair cancellation",
+      "id": "dfc_observed",
+      "kind": "construction_result",
+      "target_leakage": "high_until_Q_derivation_exists",
+      "value": [
+        {
+          "den": 8,
+          "float": 0.125,
+          "num": 1
+        },
+        {
+          "den": 48,
+          "float": -0.020833333333333332,
+          "num": -1
+        },
+        {
+          "den": 32,
+          "float": 0.03125,
+          "num": 1
+        }
+      ]
+    },
+    {
+      "id": "dfc_target",
+      "kind": "literal_comparison_target",
+      "target_leakage": "high_if_used_for_construction",
+      "value": [
+        {
+          "den": 8,
+          "float": 0.125,
+          "num": 1
+        },
+        {
+          "den": 48,
+          "float": -0.020833333333333332,
+          "num": -1
+        },
+        {
+          "den": 32,
+          "float": 0.03125,
+          "num": 1
+        }
+      ]
+    }
+  ]
+}
