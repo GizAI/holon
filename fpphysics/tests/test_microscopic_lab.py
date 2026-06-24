@@ -8,8 +8,18 @@ from fpphysics.microscopic_lab import (
     audit_dfc_chain_complex,
     audit_finite_holonomy_hamiltonian,
     audit_lci_supertrace,
+    local_incidence_stiffness_components,
     run_lab,
 )
+
+
+def test_local_incidence_rule_forces_stiffness_components():
+    components = local_incidence_stiffness_components()
+    assert components["root_count"] == 40
+    assert components["rank"] == 5
+    assert components["betti_2"] == 3
+    assert components["stiffness"] == ALPHA_U_INV
+    assert components["constraint_algebra"]["norm_constraint"] == "v^T C v = 2"
 
 
 def test_finite_holonomy_stiffness_is_exact_for_constructed_operator():
@@ -36,6 +46,7 @@ def test_microscopic_lab_tiny_cpu_run():
     assert run["null_scan"]["candidate_count"] == 128
     assert run["frozen_flavor_extension"]["packet_sha256"].startswith("63d9ed215a92")
     assert run["dependency_graph"]["findings"]
+    assert run["finite_hamiltonian_stiffness_table"]["incidence_provenance"]["root_count"] == 40
     assert run["finite_hamiltonian_stiffness_table"]["rows"][-1]["abs_error"] < 1e-4
     assert run["dfc_cohomology_table"]["cohomology_dimensions"] == {"H0": 1, "H1": 0, "H2": 0}
     assert run["nonrenormalization_audit"]["ordinary_scalar_control"]["verdict"].startswith("fail_")

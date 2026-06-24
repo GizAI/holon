@@ -37,4 +37,6 @@ artifacts/provenance/      # source hashes, legacy map, selected evidence
 
 - [11. 가장 놀라운 후보 이론 해설](11_SURPRISING_CANDIDATES_EXPLAINED_ko.md) — ISDLC–TCPS core, Cabibbo-clock, vacuum exponential, D7 자동 후보의 의미와 한계.
 
+- [2026-06-24 Microscopic ISDLC 세션 기록](20260624_MICROSCOPIC_ISDLC_SESSION_ko.md) — hard-coded count를 local incidence, Cartan root enumeration, torus cohomology 경로로 낮춘 작업 기록.
+
 선별 provenance는 `artifacts/provenance/`에 둔다. full dump 전체가 아니라 pre-reveal manifest, external audit sweep, standalone scorer처럼 재현성과 증거성에 필요한 파일만 보존한다.

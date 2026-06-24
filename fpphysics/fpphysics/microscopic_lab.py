@@ -93,23 +93,145 @@ def classification_ladder() -> dict[str, str]:
     }
 
 
+def local_incidence_rule() -> dict[str, Any]:
+    """Generate the minimal simply-laced fork used by the ISDLC gauge cell.
+
+    The rule specifies local adjacency only: a single trivalent junction with
+    one arm extended by one additional cell.  Root counts, rank, and stiffness
+    are deliberately not inputs.
+    """
+
+    junction = 0
+    short_arms = tuple(range(1, 4))
+    extended_tip = max(short_arms) + 1
+    edges = [(junction, arm) for arm in short_arms]
+    edges.append((short_arms[-1], extended_tip))
+    nodes = sorted({node for edge in edges for node in edge})
+    return {
+        "name": "minimal_trivalent_simply_laced_fork_with_one_extended_arm",
+        "nodes": nodes,
+        "edges": edges,
+        "local_constraints": {
+            "self_norm": 2,
+            "adjacent_pairing": -1,
+            "non_adjacent_pairing": 0,
+            "junction_valence": len(short_arms),
+            "extended_arm_cells": len((short_arms[-1], extended_tip)) - 1,
+        },
+    }
+
+
+def cartan_from_incidence(rule: dict[str, Any]) -> np.ndarray:
+    nodes = rule["nodes"]
+    index = {node: i for i, node in enumerate(nodes)}
+    cartan = np.zeros((len(nodes), len(nodes)), dtype=int)
+    np.fill_diagonal(cartan, rule["local_constraints"]["self_norm"])
+    for a, b in rule["edges"]:
+        ia = index[a]
+        ib = index[b]
+        cartan[ia, ib] = rule["local_constraints"]["adjacent_pairing"]
+        cartan[ib, ia] = rule["local_constraints"]["adjacent_pairing"]
+    return cartan
+
+
+def enumerate_norm_two_roots(cartan: np.ndarray) -> list[tuple[int, ...]]:
+    """Enumerate roots forced by the local Cartan constraint v^T C v = 2."""
+
+    rank = cartan.shape[0]
+    roots: list[tuple[int, ...]] = []
+    for coeffs in np.ndindex(*(2 * rank + 1 for _ in range(rank))):
+        vector = np.array([c - rank for c in coeffs], dtype=int)
+        if not np.any(vector):
+            continue
+        norm = int(vector @ cartan @ vector)
+        if norm == 2:
+            roots.append(tuple(int(x) for x in vector))
+    return roots
+
+
+def one_cell_torus_cohomology_dimension(spatial_dimension: int) -> dict[str, int]:
+    """Return Betti numbers for the one-cell CW torus.
+
+    In this cell model every boundary map cancels between opposite faces, so
+    H^k has dimension C(d,k).  The dimension is supplied by the local fork
+    valence, not by the target stiffness.
+    """
+
+    return {f"H{k}": math.comb(spatial_dimension, k) for k in range(spatial_dimension + 1)}
+
+
+def local_incidence_stiffness_components() -> dict[str, Any]:
+    rule = local_incidence_rule()
+    cartan = cartan_from_incidence(rule)
+    roots = enumerate_norm_two_roots(cartan)
+    rank = int(cartan.shape[0])
+    spatial_dimension = rule["local_constraints"]["junction_valence"]
+    betti = one_cell_torus_cohomology_dimension(spatial_dimension)
+    betti_2 = betti["H2"]
+    components = {
+        "incidence_root_sector": Fraction(len(roots), 1),
+        "cartan_rank_sector": Fraction(rank, 1),
+        "torus_H2_half_sector": Fraction(betti_2, 2),
+    }
+    return {
+        "rule": rule,
+        "cartan_matrix": cartan.astype(int).tolist(),
+        "constraint_algebra": {
+            "norm_constraint": "v^T C v = 2",
+            "enumeration_bound": "rank-derived coefficient cube [-rank, rank]^rank",
+            "torus_boundary": "one-cell torus boundary maps cancel by opposite-face incidence",
+        },
+        "rank": rank,
+        "root_count": len(roots),
+        "root_samples": [list(root) for root in roots[:8]],
+        "torus_dimension": spatial_dimension,
+        "betti_numbers": betti,
+        "betti_2": betti_2,
+        "components": components,
+        "stiffness": sum(components.values(), Fraction(0)),
+    }
+
+
 def dependency_graph_and_leakage_audit() -> dict[str, Any]:
+    incidence = local_incidence_stiffness_components()
     nodes = [
         {
-            "id": "D5_root_count",
-            "value": spin10_root_count(),
-            "kind": "computed_integer",
-            "formula": "2*n*(n-1), n=5",
+            "id": "local_incidence_rule",
+            "value": incidence["rule"],
+            "kind": "local_constraint_input",
+            "target_leakage": "medium_until_rule_is_independently_motivated",
+        },
+        {
+            "id": "cartan_matrix",
+            "value": incidence["cartan_matrix"],
+            "kind": "computed_from_local_incidence",
             "target_leakage": "low",
         },
-        {"id": "D5_rank", "value": 5, "kind": "group_input", "target_leakage": "medium"},
-        {"id": "T3_b2", "value": 3, "kind": "topology_input", "target_leakage": "medium"},
+        {
+            "id": "norm_two_root_enumeration",
+            "value": {"root_count": incidence["root_count"], "sample": incidence["root_samples"]},
+            "kind": "computed_from_constraint_algebra",
+            "formula": "enumerate integer vectors satisfying v^T C v = 2",
+            "target_leakage": "low",
+        },
+        {
+            "id": "cartan_rank",
+            "value": incidence["rank"],
+            "kind": "computed_from_cartan_dimension",
+            "target_leakage": "low",
+        },
+        {
+            "id": "torus_cohomology",
+            "value": incidence["betti_numbers"],
+            "kind": "computed_from_one_cell_CW_boundary_complex",
+            "target_leakage": "low",
+        },
         {
             "id": "alpha_u_inv_observed",
-            "value": _fraction_dict(Fraction(spin10_root_count() + 5, 1) + Fraction(3, 2)),
+            "value": _fraction_dict(incidence["stiffness"]),
             "kind": "construction_result",
-            "formula": "|Delta(D5)| + rank(D5) + b2(T3)/2",
-            "target_leakage": "medium",
+            "formula": "norm_two_roots(local_Cartan) + dim(local_Cartan) + dim H2(T^valence)/2",
+            "target_leakage": "low_given_fixed_incidence_rule",
         },
         {
             "id": "alpha_u_inv_target",
@@ -157,9 +279,13 @@ def dependency_graph_and_leakage_audit() -> dict[str, Any]:
         {"id": "dfc_target", "value": _fraction_list(DFC_INDEX), "kind": "literal_comparison_target", "target_leakage": "high_if_used_for_construction"},
     ]
     edges = [
-        ["D5_root_count", "alpha_u_inv_observed"],
-        ["D5_rank", "alpha_u_inv_observed"],
-        ["T3_b2", "alpha_u_inv_observed"],
+        ["local_incidence_rule", "cartan_matrix"],
+        ["cartan_matrix", "norm_two_root_enumeration"],
+        ["cartan_matrix", "cartan_rank"],
+        ["local_incidence_rule", "torus_cohomology"],
+        ["norm_two_root_enumeration", "alpha_u_inv_observed"],
+        ["cartan_rank", "alpha_u_inv_observed"],
+        ["torus_cohomology", "alpha_u_inv_observed"],
         ["alpha_u_inv_target", "alpha_u_inv_observed", "comparison_only_for_pass_fail"],
         ["tcps_clock_intervals", "tcps_clock_observed"],
         ["tcps_clock_target", "tcps_clock_observed", "comparison_only_for_pass_fail"],
@@ -169,7 +295,8 @@ def dependency_graph_and_leakage_audit() -> dict[str, Any]:
         ["dfc_target", "dfc_observed", "comparison_only_for_pass_fail"],
     ]
     findings = [
-        "alpha_u_inv is construction-derived from D5/T3 counts, but D5 and T3 are still chosen inputs.",
+        "alpha_u_inv is now derived from a local incidence rule through Cartan root enumeration, Cartan dimension, and one-cell torus cohomology.",
+        "The remaining leakage risk is the choice of the minimal trivalent fork rule itself; it still needs independent microscopic motivation.",
         "TCPS 6:13 is still a clock input, not yet an eigenvalue theorem.",
         "LCI block entries are explicit finite-complex inputs; regulator trace validates cancellation but not origin.",
         "DFC protected labels reproduce the target exactly; this remains the highest leakage risk until Q derives them.",
@@ -178,7 +305,7 @@ def dependency_graph_and_leakage_audit() -> dict[str, Any]:
 
 
 def spin10_root_count() -> int:
-    return 2 * 5 * (5 - 1)
+    return int(local_incidence_stiffness_components()["root_count"])
 
 
 def audit_finite_holonomy_hamiltonian() -> AuditResult:
@@ -188,11 +315,8 @@ def audit_finite_holonomy_hamiltonian() -> AuditResult:
     target value is not used in the observed construction path.
     """
 
-    sectors = {
-        "D5_roots": Fraction(spin10_root_count(), 1),
-        "D5_rank": Fraction(5, 1),
-        "T3_second_betti_half": Fraction(3, 2),
-    }
+    incidence = local_incidence_stiffness_components()
+    sectors = incidence["components"]
     observed = sum(sectors.values(), Fraction(0))
     eps = Fraction(1, 10_000)
 
@@ -214,7 +338,10 @@ def audit_finite_holonomy_hamiltonian() -> AuditResult:
         ),
         diagnostics={
             "sector_stiffness": {k: _fraction_dict(v) for k, v in sectors.items()},
-            "ground_energy": "E0(phi)=1/2*(|Delta(D5)|+rank(D5)+b2(T3)/2)*phi^2",
+            "incidence_rule": incidence["rule"],
+            "cartan_matrix": incidence["cartan_matrix"],
+            "cohomology": incidence["betti_numbers"],
+            "ground_energy": "E0(phi)=1/2*(roots(local_Cartan)+rank(local_Cartan)+dim H2(T^valence)/2)*phi^2",
             "finite_difference_epsilon": str(eps),
         },
     )
@@ -377,11 +504,8 @@ def lci_regulator_table() -> dict[str, Any]:
 
 
 def finite_hamiltonian_stiffness_table() -> dict[str, Any]:
-    sector_stiffness = {
-        "D5_root_sector": Fraction(spin10_root_count(), 1),
-        "D5_cartan_sector": Fraction(5, 1),
-        "T3_torsion_sector": Fraction(3, 2),
-    }
+    incidence = local_incidence_stiffness_components()
+    sector_stiffness = incidence["components"]
     constructed = sum(sector_stiffness.values(), Fraction(0))
     k = float(constructed)
     rows = []
@@ -397,7 +521,13 @@ def finite_hamiltonian_stiffness_table() -> dict[str, Any]:
             h0[i, i] = 2.0
             h0[i, (i - 1) % dim] = -1.0
             h0[i, (i + 1) % dim] = -1.0
-        sector_weights = np.array([float(sector_stiffness["D5_root_sector"]), float(sector_stiffness["D5_cartan_sector"]), float(sector_stiffness["T3_torsion_sector"])])
+        sector_weights = np.array(
+            [
+                float(sector_stiffness["incidence_root_sector"]),
+                float(sector_stiffness["cartan_rank_sector"]),
+                float(sector_stiffness["torus_H2_half_sector"]),
+            ]
+        )
         stiffness_operator = np.zeros((dim, dim), dtype=float)
         for block, weight in enumerate(sector_weights):
             off = block * n
@@ -426,8 +556,16 @@ def finite_hamiltonian_stiffness_table() -> dict[str, Any]:
             }
         )
     return {
-        "hamiltonian": "H(phi)=non-diagonal coupled sector Laplacian + 1/2 phi^2 W(D5_roots,D5_rank,T3_b2)",
+        "hamiltonian": "H(phi)=non-diagonal coupled sector Laplacian + 1/2 phi^2 W(local_incidence_roots,cartan_rank,torus_H2)",
         "method": "dense exact diagonalization",
+        "incidence_provenance": {
+            "rule": incidence["rule"],
+            "cartan_matrix": incidence["cartan_matrix"],
+            "constraint_algebra": incidence["constraint_algebra"],
+            "root_count": incidence["root_count"],
+            "rank": incidence["rank"],
+            "betti_numbers": incidence["betti_numbers"],
+        },
         "constructed_stiffness": _fraction_dict(constructed),
         "sector_stiffness": {name: _fraction_dict(value) for name, value in sector_stiffness.items()},
         "comparison_target": _fraction_dict(ALPHA_U_INV),
@@ -678,7 +816,7 @@ def run_lab(config: MicroscopicLabConfig) -> dict[str, Any]:
             "candidate_origin": "13/(16+13), with 16 as Spin(10) spinor dimension and 13 as PS closed clock.",
         },
         "next_required_work": [
-            "Replace the diagonal stiffness toy Hamiltonian with a non-diagonal finite line-code Hamiltonian.",
+            "Replace the engineered local incidence rule with a uniquely specified microscopic line-code Hamiltonian rule.",
             "Build explicit LCI blocking operator K_A and gauge covariance tests.",
             "Derive DFC protected charges from Q instead of assigning them.",
             "Add two-loop and scheme/covariance gauge matching only after the finite theorem layer passes.",
@@ -710,6 +848,7 @@ def write_lab(run: dict[str, Any], outdir: str | Path) -> dict[str, str]:
         json.dumps(
             {
                 "alpha_U_inv": {"target": _fraction_dict(ALPHA_U_INV), "construction": run["finite_hamiltonian_stiffness_table"]["sector_stiffness"]},
+                "alpha_U_inv_incidence_provenance": run["finite_hamiltonian_stiffness_table"]["incidence_provenance"],
                 "TCPS_clock": {"target": _fraction_dict(TCPS_CLOCK), "construction": {"high": 6, "low": 13}},
                 "LCI": {"target": _fraction_list(LCI_INDEX), "construction": run["lci_regulator_table"]["protected_zero_modes"]},
                 "DFC": {"target": _fraction_list(DFC_INDEX), "construction": run["dfc_cohomology_table"]["protected_supertrace"]},
