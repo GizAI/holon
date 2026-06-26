@@ -1,0 +1,123 @@
+{
+  "target_charge6": [
+    67,
+    45,
+    27
+  ],
+  "number_of_nonnegative_integer_solutions": 1792,
+  "minimal_dimension": 62,
+  "number_of_minimizers": 1,
+  "unique_minimizer": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1
+  ],
+  "rows": [
+    {
+      "name": "S_R=(1,1,3)_R",
+      "charge6": [
+        0,
+        0,
+        2
+      ],
+      "dimension": 3,
+      "multiplicity": 1,
+      "dimension_cost": 3
+    },
+    {
+      "name": "h_L=(1,2,1)",
+      "charge6": [
+        0,
+        1,
+        0
+      ],
+      "dimension": 2,
+      "multiplicity": 1,
+      "dimension_cost": 2
+    },
+    {
+      "name": "h_R=(1,1,2)",
+      "charge6": [
+        0,
+        0,
+        1
+      ],
+      "dimension": 2,
+      "multiplicity": 1,
+      "dimension_cost": 2
+    },
+    {
+      "name": "q_C=(4,1,1)",
+      "charge6": [
+        1,
+        0,
+        0
+      ],
+      "dimension": 4,
+      "multiplicity": 1,
+      "dimension_cost": 4
+    },
+    {
+      "name": "Q_CL=(4,2,1)",
+      "charge6": [
+        2,
+        4,
+        0
+      ],
+      "dimension": 8,
+      "multiplicity": 1,
+      "dimension_cost": 8
+    },
+    {
+      "name": "X_LR=(1,2,2)_D",
+      "charge6": [
+        0,
+        8,
+        8
+      ],
+      "dimension": 4,
+      "multiplicity": 1,
+      "dimension_cost": 4
+    },
+    {
+      "name": "G_4=(15,1,1)_D",
+      "charge6": [
+        32,
+        0,
+        0
+      ],
+      "dimension": 15,
+      "multiplicity": 2,
+      "dimension_cost": 30
+    },
+    {
+      "name": "G_L=(1,3,1)_D",
+      "charge6": [
+        0,
+        16,
+        0
+      ],
+      "dimension": 3,
+      "multiplicity": 2,
+      "dimension_cost": 6
+    },
+    {
+      "name": "G_R=(1,1,3)_D",
+      "charge6": [
+        0,
+        0,
+        16
+      ],
+      "dimension": 3,
+      "multiplicity": 1,
+      "dimension_cost": 3
+    }
+  ],
+  "statement": "Unique BHF threshold hierarchy under beta-charge closure plus dimension minimality."
+}

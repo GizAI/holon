@@ -1,6 +1,17 @@
 # Holon Research Archive
 
-This repository is split into two top-level research tracks.
+This repository is split into three top-level research tracks.
+
+## `ocean/`
+
+BHF-OCEAN final v0.2 canonical package, including compact claims docs,
+final audit engine, frozen outputs, source inventory, and manuscript.
+
+Start with:
+
+- `ocean/README_ko.md`
+- `ocean/docs/FINAL_KO_COMPACT.md`
+- `ocean/manuscript/bhf_ocean_manuscript_v0_2.md`
 
 ## `fpphysics/`
 
